@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Azophi;
+namespace App\Controller\Layout\Layout;
 
 use \App\Utils\View;
 use \App\Controller\Layout\Layout as LayoutPage;
@@ -16,9 +16,10 @@ use DateTime;
 use DateTimeZone;
 use IntlDateFormatter;
 
+
 class Home extends LayoutPage
 {
-    // Variável responsável por definir quantos dias de ocupação serão exibidos
+// Variável responsável por definir quantos dias de ocupação serão exibidos
     const diasOcupacao = 7;
     // Variável responsável por definir os setores que serão buscados no filtro
     const convenios = "'110','111','112','113','114','150','200','201','202','01','011','02','03','032','033','035','036','037','038','039','041','042','043','044','045','046','048','049','05','050','051','053','058','06','061','064','066','068','069','070','079','08','083','084','09','091','092','094','1','10','11','12','13','15','16','19','2','21','23','28','30','32','33','34','35','36','37','38','39','4','41','42','43','44','45','46','48','49','5','51','52','54','55','56','59','6','60','61','62','63','64','65','66','67','7','70','73','74','75','76','78','8','80','81','86','87','88','9','90','92','93','94','95','97','BDS','DZ','E7','E9','EJ','EL','EP','I37','INC','NHC'";
@@ -909,5 +910,9 @@ class Home extends LayoutPage
         $cards['paMaternidade'] = self::getPacientesPa($pacientesPAMaternidade, 'maternidade');
 
         return $cards;
-    }
+    } 
+     
+   
+   
 }
+
