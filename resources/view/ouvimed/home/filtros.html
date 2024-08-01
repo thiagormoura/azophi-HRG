@@ -1,0 +1,331 @@
+<div class="row mt-2">
+
+    <div class="col-12">
+
+        <div class="card collapsed-card">
+
+            <div class="card-header" id="filtros" style="cursor:pointer">
+                <h3 class="card-title"> <i class="fas fa-info-circle mr-2"></i>Filtros de buscas</h3>
+                <div class="card-tools col-12 col-md-1 text-right">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card-body pb-2 pt-1 px-3">
+
+                <!-- Datas da manifestação -->
+                <div class="row">
+
+                    <!-- Datas -->
+                    <div class="col-12 col-sm-12 mt-2 filters">
+
+                        <div class="d-flex flex-column">
+
+                            <label>Intervalo de datas</label>
+
+                            <div class="row">
+
+                                <div class="col-12">
+
+                                    <div class="input-group mb-3">
+
+                                        <input 
+                                            type="text" 
+                                            id="startDateOuvimed"
+                                            placeholder="Selecione a data inicial"
+                                            class="form-control text-center w-100" 
+                                            autocomplete="off" 
+                                            required
+                                            value="" />
+
+                                        <input 
+                                            type="text" 
+                                            id="endDateOuvimed" 
+                                            placeholder="Selecione a data final"
+                                            class="form-control text-center w-100" 
+                                            autocomplete="off" 
+                                            required>
+
+                                        <button 
+                                            class="btn btn-dark" 
+                                            id="search-calendar-ouvimed">
+                                            <i class="far fa-search"></i>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <!-- Setores envolvidos e Identificação de manifestação-->
+                <div class="row">
+
+                    <!-- Setores envolvidos -->
+                    <div class="col-12 col-sm-12 col-lg-6 col-xl-6 mt-2 filters">
+
+                        <div class="form-group">
+                            <label for="gleitos-released-filter">Setores Envolvidos :</label>
+                            {{select-setores-envolvidos}}
+                        </div>
+
+                    </div>
+
+                    <!-- Identificação da manifestação -->
+                    <div class="col-12 col-sm-12 col-lg-6 col-xl-6 filters">
+
+                        <div class="form-group">
+
+                            <p class="fw-bold">Identificação da Manifestação</p>
+
+                            <ul class="nav flex-row">
+
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input 
+                                            type="checkbox" 
+                                            class="custom-control-input" 
+                                            name="identificacao" 
+                                            id="identificacaoElogio"
+                                            value="ELOGIO" checked>
+                                        <label 
+                                            class="custom-control-label" 
+                                            for="identificacaoElogio">Elogio</label>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input 
+                                            type="checkbox" 
+                                            class="custom-control-input" 
+                                            name="identificacao" 
+                                            id="identificacaoReclamacao"
+                                            value="RECLAMACAO" checked>
+                                        <label 
+                                            class="custom-control-label" 
+                                            for="identificacaoReclamacao">Reclamação</label>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input 
+                                            type="checkbox" 
+                                            class="custom-control-input" 
+                                            name="identificacao"
+                                            id="identificacaoSolicitacao" 
+                                            value="SOLICITACAO" checked>
+                                        <label 
+                                            class="custom-control-label" 
+                                            for="identificacaoSolicitacao">Solicitação</label>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input 
+                                            type="checkbox" 
+                                            class="custom-control-input" 
+                                            name="identificacao"
+                                            id="identificacaoInformacao" 
+                                            value="INFORMACAO" checked>
+                                        <label 
+                                            class="custom-control-label" 
+                                            for="identificacaoInformacao">Informação</label>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input 
+                                            type="checkbox" 
+                                            class="custom-control-input" 
+                                            name="identificacao"
+                                            id="identificacaoSugestao" 
+                                            value="SUGESTAO" checked>
+                                        <label 
+                                            class="custom-control-label" 
+                                            for="identificacaoSugestao">Sugestão</label>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input 
+                                            type="checkbox" 
+                                            class="custom-control-input" 
+                                            name="identificacao"
+                                            id="identificacaoCritica" 
+                                            value="CRITICA" checked>
+                                        <label 
+                                            class="custom-control-label" 
+                                            for="identificacaoCritica">Crítica/Comentário</label>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input 
+                                            type="checkbox" 
+                                            class="custom-control-input" 
+                                            name="identificacao"
+                                            id="identificacaoDenuncia" 
+                                            value="DENUNCIA" checked>
+                                        <label 
+                                            class="custom-control-label" 
+                                            for="identificacaoDenuncia">Denúncia</label>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                
+                </div>
+
+                <!-- Veiculo e status de manifestação -->
+                <div class="row">
+
+                    <!-- Veiculo de manifestação -->
+                    <div class="col-12 col-sm-12 col-lg-6 col-xl-6 filters">
+                        <div class="form-group">
+                            <p class="fw-bold">Veículo de Manifestação</p>
+
+                            <ul class="nav flex-row">
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="veiculo" id="veiculoPresencial"
+                                            value="PRESENCIAL" checked>
+                                        <label class="custom-control-label" for="veiculoPresencial">Presencial</label>
+                                    </div>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="veiculo" id="veiculoTelefone"
+                                            value="TELEFONE" checked>
+                                        <label class="custom-control-label" for="veiculoTelefone">Telefone</label>
+                                    </div>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="veiculo"
+                                            id="veiculoCaixa" value="CAIXA_SUGESTOES" checked>
+                                        <label class="custom-control-label" for="veiculoCaixa">Caixa Sugestões</label>
+                                    </div>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="veiculo"
+                                            id="veiculoEmail" value="EMAIL" checked>
+                                        <label class="custom-control-label" for="veiculoEmail">E-mail</label>
+                                    </div>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="veiculo"
+                                            id="veiculoRedeSocial" value="REDE_SOCIAL" checked>
+                                        <label class="custom-control-label" for="veiculoRedeSocial">Rede Social</label>
+                                    </div>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="veiculo"
+                                            id="veiculoOutro" value="OUTRO" checked>
+                                        <label class="custom-control-label" for="veiculoOutro">Outro</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- status -->
+                    <div class="col-12 col-sm-12 col-lg-6 col-xl-6 filters">
+
+                        <div class="form-group">
+
+                            <p class="fw-bold">Status da Manifestação:</p>
+
+                            <ul class="nav flex-row">
+
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input 
+                                            type="checkbox" 
+                                            class="custom-control-input" 
+                                            name="status" 
+                                            id="statusAberto"
+                                            value="A" 
+                                            checked>
+                                        <label 
+                                            class="custom-control-label" 
+                                            for="statusAberto">Em Aberto
+                                        </label>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input 
+                                            type="checkbox" 
+                                            class="custom-control-input" 
+                                            name="status" 
+                                            id="statusProcessamento"
+                                            value="EA" 
+                                            checked>
+                                        <label 
+                                            class="custom-control-label" 
+                                            for="statusProcessamento">Em Processamento
+                                        </label>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input 
+                                            type="checkbox" 
+                                            class="custom-control-input" 
+                                            name="status"
+                                            id="statusFinalizado" 
+                                            value="F" 
+                                            checked>
+                                        <label 
+                                            class="custom-control-label" 
+                                            for="statusFinalizado">Finalizado
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input 
+                                            type="checkbox" 
+                                            class="custom-control-input" 
+                                            name="status"
+                                            id="statusCancelado" 
+                                            value="C">
+                                        <label 
+                                            class="custom-control-label" 
+                                            for="statusCancelado">Cancelado
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

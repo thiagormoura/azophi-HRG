@@ -1,0 +1,38 @@
+<div class="accordion accordion-admin-user mb-2" id="accordion{{id}}">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading-{{id}}">
+            <a class="accordion-button collapsed {{text-vinculado}}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{id}}" aria-expanded="false" aria-controls="collapse-{{id}}">
+                <div class="row col-12">
+                    <div class="col-6">{{sistema}}</div>
+                </div>
+            </a>
+        </h2>
+        <div id="collapse-{{id}}" class="accordion-collapse collapse" aria-labelledby="heading-{{id}}" data-bs-parent="#accordion{{id}}">
+            <div class="accordion-body p-0">
+            
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-center align-items-center">
+                        <div class="col-11 text-muted">{{descricao}}</div>
+                        <div class="col-1">
+                            <div class="d-flex justify-content-center align-items-center flex-column col-12">
+                                <p class="mb-0">Acesso</p>
+                                <div class="wrapper-tri-switch">
+                                    <label for="permissions-{{id}}-op1" class="tri-switch-label1 admin-user"></label><input type="radio" value="nothing" name="sistema-{{id}}"
+                                    class="tri-switch-option1" id="permissions-{{id}}-op1" >
+                                    <label for="permissions-{{id}}-op2" class="tri-switch-label2 admin-user"></label><input type="radio" value="custom" name="sistema-{{id}}"
+                                    class="tri-switch-option2" id="permissions-{{id}}-op2" disabled>
+                                    <label for="permissions-{{id}}-op3" class="tri-switch-label3 admin-user"></label><input type="radio" value="all" name="sistema-{{id}}"
+                                    class="tri-switch-option3" id="permissions-{{id}}-op3" >
+                                    
+                                    <div class="tri-switch-background"></div>
+                                    <div class="toggle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    {{permissoes-check}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

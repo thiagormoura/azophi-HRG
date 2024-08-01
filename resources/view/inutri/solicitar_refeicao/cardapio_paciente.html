@@ -1,0 +1,94 @@
+<form method="POST">
+  <fieldset class="form-group fieldset-info mb-0" data-registro="{{registro}}">
+    <input type="hidden" value="{{cardapio}}" name="cardapio">
+    <div class="form-group mx-auto px-0 col-12">
+      <div class="card card-navy">
+        <div class="bg-navy text-white py-3 d-flex justify-content-between align-items-center px-4" style="border-bottom:
+        .5px solid #fff">
+          <h2 class="card-title" style="font-size: 1.3rem">{{nome}}</h2>
+          <h2 class="card-title" style="font-size: 1rem">{{data-prescricao}}</h2>
+        </div>
+        <div class="card-header rounded-0">
+          <h3 class="card-title"><i class="fal fa-info-circle mr-1"></i>Informações do
+            Pedido</h3>
+        </div>
+        <div class="card-body">
+
+          <div class="form-group text-left">
+            <label for="solicitante">Solicitante</label>
+            <div class="input-group">
+              <input type="text" class="form-control" maxlength="50" value="{{solicitante}}" name="solicitante"
+                id="solicitante" disabled>
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fal fa-users"></i></span>
+              </div>
+            </div>
+            <!-- /.input group -->
+          </div>
+          <div class="form-group text-left">
+            <label for="destinatario">Destinatário da refeição</label>
+            <div class="input-group">
+              <input type="text" class="form-control" maxlength="60" value="{{destinatario}}" name="destinatario"
+                id="destinatario" required disabled>
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fal fa-users"></i></span>
+              </div>
+            </div>
+            <!-- /.input group -->
+          </div>
+          <!-- /.form group -->
+          <div class="form-group text-left">
+            <label>Destino</label>
+            <div class="input-group" for="destino">
+              <input type="hidden" name="leito" value="{{leito}}" id="leito">
+              <input type="hidden" name="unidade" value="{{unidade}}" id="destino">
+              <input type="text" class="form-control" maxlength="150" value="{{unidade-leito}}" required disabled>
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fal fa-map-marker-exclamation"></i></span>
+              </div>
+            </div>
+            <!-- /.input group -->
+          </div>
+          <!-- /.form group -->
+          <div class="form-group text-left">
+            <label>Observação (opcional)</label>
+            <div class="input-group" for="observacao">
+              <textarea type="text" class="form-control" maxlength="300" name="observacao" id="observacao"
+                style="max-height: 9rem; min-height: 3rem;"></textarea>
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fal fa-sticky-note"></i></span>
+              </div>
+            </div>
+            <!-- /.input group -->
+          </div>
+          <!-- /.form group -->
+
+
+        </div>
+        <!-- /.card-body -->
+      </div>
+
+    </div>
+  </fieldset>
+  <fieldset class="form-group fieldset-pedido">
+    <div class="form-group col-12 mx-auto px-0 comida-container">
+
+      <div class="card card-navy">
+        <div class="card-header">
+          <h3 class="card-title"><i class="fal fa-chevron-square-down mr-1"></i></i>Selecione as
+            opções que desejar</h3>
+        </div>
+        <div class="card-body">
+          <div class="bs-stepper-header" role="tablist">
+            <div class="form-group text-left">
+              <label for="opcoes">Informe o que deseja:</label>
+              {{grupos}}
+            </div>
+          </div>
+          <div class="form-row justify-content-center mb-4">
+            <button type="submit" class="btn submit-button btn-primary btn-solicitar-paciente" disabled>Fazer Pedido</button>
+          </div>
+        </div>
+
+  </fieldset>
+</form>

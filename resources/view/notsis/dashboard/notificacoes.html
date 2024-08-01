@@ -1,0 +1,28 @@
+<div class="row my-3 col-md-10 col-12 col-sm-12 col-lg-10 col-xl-10 mx-auto px-0">
+  <div
+    class="col-12 col-md-12 col-sm-12 col-12 mx-auto justify-content-center align-items-start text-center text-light rounded pt-1 r d-flex flex-wrap"
+    style="background-color: #192549;">
+    <p class="d-block fw-bold col-md-12 mb-1 badge bg-azul-esverdeado" style="font-size: .9rem;">Informações das
+      notificações.</p>
+    <div class="col-6 col-md-6 col-sm-12 col-12">
+      <div class="col-md-12 d-flex flex-wrap">
+        <div class="col-6 col-md-6 px-0 mx-0">
+          <label for=""><i class="fal fa-apple-crate"></i> Total de notificações</label>
+        </div>
+        <div class="col-6 col-md-6 px-0 mx-0">
+          <label for=""><i class="fal fa-box"></i> Total de incidentes</label>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="input-group mb-3">
+          <input type="text" value="{{total-notificacoes}}" class="form-control text-center" readonly>
+          <input type="text" value="{{total-incidentes}}" class="form-control text-center" readonly>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="mt-2 col-md-10 col-12 col-sm-12 col-lg-10 col-xl-10 py-1 px-0 mx-auto">
+  {{graficos}}
+</div>

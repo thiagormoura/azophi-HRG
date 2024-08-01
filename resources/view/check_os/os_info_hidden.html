@@ -1,0 +1,92 @@
+<div class="p-0">
+    <div>
+        <div class="row mb-2 mb-md-1">
+            <div class="col-12 col-md-2">
+                <label for="registro">Registro</label>
+                <input type="text" class="form-control input-infos py-0 px-1 h-50 input-os" id="registro" value="{{registro}}" readonly>
+            </div>
+            <div class="col-12 col-md-10 mt-2 mt-md-0">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control input-infos py-0 px-1 h-50" id="nome" value="{{nome}}" readonly>
+            </div>
+        </div>
+        <div class="row mb-2 mb-md-1">
+            <div class="col-6 col-lg-3 mb-2 mb-lg-0">
+                <label for="sexo">Sexo</label>
+                <input type="text" class="form-control input-infos py-0 px-1 h-50" id="sexo" value="{{sexo}}" readonly>
+            </div>
+            <div class="col-6 col-lg-3 mb-2 mb-lg-0">
+                <label for="cpf">CPF</label>
+                <input type="text" class="form-control input-infos py-0 px-1 h-50" id="cpf" value="{{cpf}}" readonly>
+            </div>
+            <div class="col-6 col-lg-3">
+                <label for="rg">RG</label>
+                <input type="text" class="form-control input-infos py-0 px-1 h-50" id="rg" value="{{rg}}" readonly>
+            </div>
+            <div class="col-6 col-lg-3">
+                <label for="dataNasc">Data de Nascimento</label>
+                <input type="date" class="form-control input-infos py-0 px-1 h-50" id="dataNasc" value="{{data-nascimento}}" readonly>
+            </div>
+        </div>
+        <div class="row mb-2 mb-md-1">
+            <div class="col-4">
+                <label for="convenio">Convenio</label>
+                <input type="text" class="form-control input-infos py-0 px-1 h-50" id="convenio" value="{{convenio}}" readonly>
+            </div>
+            <div class="col-4">
+                <label for="mat">MAT</label>
+                <input type="text" class="form-control input-infos py-0 px-1 h-50" id="mat" value="{{mat}}" readonly>
+            </div>
+            <div class="col-4">
+                <label for="data_lancamento">Lançamento</label>
+                <input type="text" class="form-control input-infos py-0 px-1 h-50" id="data_lancamento" value="{{data-lancamento}}" readonly>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="row mb-2 mb-md-1">
+            <div class="col-12 col-md-6 mb-2 mb-md-0">
+                <label for="unidade">Unidade</label>
+                <input type="text" class="form-control input-infos py-0 px-1 h-50" id="unidade" value="{{unidade}}" readonly>
+            </div>
+            <div class="col-12 col-md-6">
+                <label for="leito">Leito</label>
+                <input type="text" class="form-control input-infos py-0 px-1 h-50" id="leito" value="{{leito}}" readonly>
+            </div>
+        </div>
+        <div class="row mb-2 mb-md-1">
+            <div class="col-9 col-md-10">
+                <label for="solicitante">Solicitante</label>
+                <input type="text" class="form-control input-infos py-0 px-1 h-50" id="solicitante" value="{{solicitante}}" readonly>
+            </div>
+            <div class="col-3 col-md-2">
+                <label for="crm">CRM</label>
+                <input type="text" class="form-control input-infos py-0 px-1 h-50" id="crm" value="{{crm}}" readonly>
+            </div>
+        </div>
+        <div class="row mb-2 mb-md-1">
+            <div class="col-12">
+                <label for="indicacao">Indicação Clinica</label>
+                <input type="text" class="form-control input-infos py-0 px-1 h-50" id="indicacao" value="{{indicacao-clinica}}" readonly>
+            </div>
+        </div>
+        
+    </div>
+    <div id="exames" class="table-responsive">
+        <table class="table mt-3">
+            <thead>
+                <th>#</th>
+                <th>Obs</th>
+                <th>QT.</th>
+                <th>Nome do Exame</th>
+                <th>Amostra</th>
+                <th>Cód. Exame</th>
+                <th>Status</th>
+                <!-- <th>Ações</th> -->
+            </thead>
+            <tbody>
+                {{rows-exames}}
+            </tbody>
+        </table>
+    </div>
+</div>

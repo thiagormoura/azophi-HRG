@@ -1,0 +1,44 @@
+<div class="modal fade" id="modalObs" tabindex="-1" data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog ">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Observações</h5>
+			</div>
+			<div class="modal-body">
+				<form onsubmit="return false;" data-type="{{tipo}}">
+					<input type="hidden" name="id_questionario" id="id_questionario" value="{{id_questionario}}">
+					<div class="form-row">
+						<div class="form-group col-12">
+							<label for="uni">Unidade / Serviço avaliado</label>
+							<select class="custom-select" name="uni" id="uni" required>
+								<option value="" selected disabled>Selecione uma unidade</option>
+								{{unidades}}
+							</select>
+						</div>
+						<div class="form-group col-12">
+							<label for="nome">Nome</label>
+							<input type="text" id="nome" class="form-control">
+						</div>
+						<div class="form-group col-12">
+							<label for="cont_1">Contato 1</label>
+							<input type="text" id="cont_1" class="form-control" >
+						</div>
+						<div class="form-group col-12">
+							<label for="cont_2">Contato 2</label>
+							<input type="text" id="cont_2" class="form-control">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-12">
+							<label for="observacao">Observações</label>
+							<textarea class="form-control" id="observacao" rows="4"></textarea>
+						</div>
+					</div>
+					<hr>
+					<button type="submit" id="sub" class="btn btn-primary">Salvar respostas</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{{modalScript}}

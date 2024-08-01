@@ -1,0 +1,20 @@
+<section class="cotainer text-center">
+    <div class="mt-2 position-relative" style="top: 2rem; z-index: 1;">
+        <img src="{{URL}}/resources/img/user.svg" class="user-image img-circle elevation-2" alt="User Image" width="100">
+    </div>
+    <div class="d-flex justify-content-center mt-1 mb-5 h-75">
+        <div class="card w-lg-50 w-md-75">
+            <div class="card-body shadow-lg">
+                <h5 class="display-5 p-2">{{usuario}}</h5>
+                <div class="text-left px-4">
+                    <p>Email: {{email}}</p>
+                    <p>CPF: {{cpf}}</p>
+                </div>
+                <small class="text-muted">Registrado desde: {{date-registered}}</small><br>
+                <a href="{{URL}}/logout" class="text-decoration-none">        
+                    <button class="btn btn-danger rounded-0 mt-3 px-4">Sair</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

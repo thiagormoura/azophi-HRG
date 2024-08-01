@@ -1,0 +1,36 @@
+<div
+  class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed accent-blue">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" style="margin-left: 0 !important;">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h4 class="m-0"><i class="fad fa-question"></i> SisNot</h4>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a class="text-light text-decoration-underline"
+                  href="{{URL}}/sisnot/{{notificacao}}">Voltar</a></li>
+              <li class="breadcrumb-item active">{{title}}</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="container-md mt-5 text-center d-flex justify-content-center flex-column"
+          style="overflow-x: hidden;">
+          <!-- {{info-notificacao}} -->
+          {{forms}}
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- /.content-wrapper -->
+</div>

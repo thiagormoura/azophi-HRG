@@ -1,0 +1,72 @@
+<div class="container mt-3">
+    <div class="card card-navy collapsed-card">
+
+        <div class="card-header" id="filtros" style="cursor:pointer">
+            <h3 class="card-title"> <i class="fas fa-info-circle mr-2"></i>Filtros de buscas</h3>
+            <div class="card-tools text-right">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card-body pb-2 pt-1 px-3" style="background: #f4f6f9;">
+            <div class="row">
+                <div class="col-12 col-sm-12 mt-2 filters">
+                    <div class="d-flex flex-column">
+                        <label for="calendar-monex">Selecione as datas desejadas</label>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group mb-3">
+                                    <input type="text" id="startDateMonexm"
+                                        placeholder="Selecione a data inicial"
+                                        class="form-control text-center w-100" autocomplete="off" required
+                                        value="" />
+                                    <input type="text" id="endDateMonexm" placeholder="Selecione a data final"
+                                        class="form-control text-center w-100" autocomplete="off" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 filters">
+                    <label for="pacientesRegistros">Pacientes</label>
+                    <select id="pacientesRegistros">
+                        <option value='' selected disabled>Selecione os pacientes</option>
+                    </select>
+                </div>
+                <div class="col-12 filters">
+                    <label for="exames">Exames</label>
+                    <select id="exames">
+                        <option value='' selected disabled>Selecione os exames</option>
+                        {{exames}}
+                    </select>
+                </div>
+                <div class="col-12 d-grid mt-2">
+                    <button id="searchFilters" type="button" class="btn btn-navy"><i
+                        class="far fa-search"></i> Buscar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card" id="cardExame">
+        <div class="card-header">
+            <h3 class="card-title">Listagem de OS</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-sm compact cell-border" id="pacientes">
+                    <thead>
+                        <th>Nome</th>
+                        <th>Registro</th>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="divModal"></div>

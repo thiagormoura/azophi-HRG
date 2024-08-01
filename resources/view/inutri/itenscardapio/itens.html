@@ -1,0 +1,22 @@
+<tr>
+  <td class="px-0 py-1 align-middle">
+      <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input change-status" id="customSwitch{{id}}" {{checked}}>
+          <label class="custom-control-label font-weight-normal" for="customSwitch{{id}}">Ativo</label>
+      </div>
+  </td>
+  <td class="px-0 py-1">
+      <input type="hidden" name="comida-id[]" value="{{id}}" class="form-control" data-status="{{status}}" disabled />
+      <input type="text" name="comida-nome[]" value="{{nome}}" class="form-control border-right-0 rounded-0 rounded-left" data-status="{{status}}" disabled />
+  </td>
+  <td class="px-0 py-1">
+      <div class="input-group">
+          <select class="form-control border-left-0 rounded-0 rounded-right" name="comida-categoria[]" data-status="{{status}}" disabled>
+                  {{categorias}}
+          </select>
+          <div class="input-group-append">
+              <button class="btn btn-outline-secondary bg-danger btn-cancel border-0" type="button"><i class="fas fa-lock"></i></button>
+          </div>
+      </div>
+  </td>
+</tr>

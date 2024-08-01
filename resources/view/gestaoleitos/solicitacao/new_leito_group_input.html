@@ -1,0 +1,54 @@
+<div class="card-body">
+    <fieldset class="col-12">
+        <div class="form-group row">
+            <div class="col-12">
+                <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="gleitos-caract-leitos" value="1">
+                    <label for="gleitos-caract-leitos" class="custom-control-label">Ignorar caraterísticas do
+                        leito</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <div class="form-group row">
+                    <div class="col-12">
+                        <label for="gleitos-unidade-internacao" class="col-form-label pb-0">Nova Unidade</label>
+                        <select id="gleitos-unidade-internacao" class="form-control">
+                            <option selected disabled>Selecione uma Unidade</option>
+                            {{unidades-internacao}}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group row">
+                    <div class="col-12">
+                        <label for="gleitos-leitos" class="col-form-label pb-0">Novo Leito</label>
+                        <select id="gleitos-leitos" class="form-control">
+                            <option selected disabled>Selecione um Leito</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <div class="col-6">
+                <div class="form-group row">
+                    <div class="col-6 offset-12">
+                        <button id="gleitos-confirmar-alteracao-reserva" class="btn btn-navy btn-sm w-100">Confirmar Alteração</button>
+                    </div>
+                    <div class="col-6">
+                        <button id="gleitos-cancelar-alteracao-reserva" class="btn btn-danger btn-sm w-100">Cancelar Alteração de Reserva</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group row">
+                    <div class="col-6"></div>
+                    <div class="col-6"></div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

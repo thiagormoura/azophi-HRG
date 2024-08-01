@@ -1,0 +1,18 @@
+<tr class="cardapio-content" data-id="{{id}}">
+    <td class="px-0 align-middle">
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input change-status" id="customSwitch{{id}}" {{checked}}>
+            <label class="custom-control-label font-weight-normal" for="customSwitch{{id}}">Ativo</label>
+        </div>
+    </td>
+    <td class="ps-3 d-flex justify-content-between align-items-end">
+        <input type="hidden" name="id-cardapio[]" value="{{id}}" class="form-control" data-status="{{status}}"
+            disabled />
+        <p class="cardapio-nome m-0">{{nome}}</p>
+    </td>
+    <td class="text-center">
+        <a class="btn-edit text-primary" href="#">
+            <i class="fas fa-pen "></i>
+        </a>
+    </td>
+</tr>

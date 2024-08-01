@@ -1,0 +1,43 @@
+<div class="col-md-4 col-sm-12 col-lg-3 col-xl-3 containerCard px-1 {{personalizado}}" data-categoria="{{categoria}}">
+  <div class="card mb-3" name="pedido{{id-pedido}}" data-pedido="{{id-pedido}}" data-solicitante="{{id-solicitante}}"
+    data-current-situation="{{data}}">
+    <div class="card-header bg-{{situation}} active text-light">
+      <h6 class="car-subtitle info-box-number fst-italic">Solicitado às {{solicitado}} por {{solicitante}}</h6>
+      <h6 class="car-subtitle info-box-number"><span style="padding-right: 6px;"><i class="fas fa-clipboard"
+            style="padding-left: 2px;"></i></span>
+        {{cardapio}}
+      </h6>
+      <h6 class="car-subtitle info-box-number" id="user_name"><span style="padding-right: 5px;"><i
+            class="fas fa-{{tipo-usuario}}"></i></span>
+        {{destinatario}}
+      </h6>
+      <!-- <h6 class="car-subtitle info-box-number" id="user_name"><span><i class="fas fa-heart"></i> </span>
+        {{destintario}}
+      </h6> -->
+      <h6 class="car-subtitle info-box-number"><span style="padding-right: 7px;"><i class="fas fa-map-marker-alt"
+            style="padding-left: 1px;"></i></span>
+        {{destino}}
+      </h6>
+      </strong></h6>
+      <h6 class="car-subtitle info-box-number horario"><i>{{situation-label}} - </i><strong>
+          {{horario}}
+        </strong></h6>
+    </div>
+    <div class="card-body px-3 pb-1 mx-1">
+      {{observacao}}
+      <ul class="list-group list-unstyled list-group-flush">
+        <li class="list-group-item px-2 pb-0 d-flex justify-content-between font-weight-bold" style="font-size: 15px;">
+          <span class="col-md-9 col-sm-9 col-9">Item pedido</span><span
+            class="col-md-3 col-sm-3 col-3 text-center">Porção</span>
+        </li>
+        {{comida-pedido}}
+      </ul>
+    </div>
+    <div class="card-footer bg-transparent">
+      {{itens}}
+      <div class="d-flex justify-content-center">
+        {{buttons}}
+      </div>
+    </div>
+  </div>
+</div>

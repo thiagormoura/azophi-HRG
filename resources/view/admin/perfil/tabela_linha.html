@@ -1,0 +1,20 @@
+<tr data-perfil="{{id}}">
+  <td>
+    {{numero-linha}}
+  </td>
+  <td>
+    {{nome}}
+  </td>
+  <td>
+    {{descricao}}
+  </td>
+  <td>
+    <i class="fas fa-circle-notch {{status-color}} me-1 status-perfil-icon"></i> {{status}}
+  </td>
+  <td>
+    <a href="{{URL}}/admin/perfil/{{id}}/edit" class="text-info me-2"><i class="fas fa-cog" data-bs-toggle="tooltip"
+        data-bs-placement="top" title="Editar Perfil"></i></a>
+    <a onclick="return false" class="{{icon-color}} cursor-pointer admin-edit-perfil-status"><i class="fas fa-{{icon}}"
+        data-bs-toggle="tooltip" data-bs-placement="top" title="Alterar status do perfil"></i></a>
+  </td>
+</tr>

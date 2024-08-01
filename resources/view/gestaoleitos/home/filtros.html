@@ -1,0 +1,140 @@
+<div class="col-12">
+    <div class="card collapsed-card">
+
+        <div class="card-header" id="filtros" style="cursor:pointer">
+            <h3 class="card-title"> <i class="fas fa-info-circle mr-2"></i>Filtros de buscas</h3>
+            <div class="card-tools col-12 col-md-1 text-right">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card-body pb-2 pt-1 px-3">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg-6 col-xl-6 mt-2 filters">
+
+                    <div class="form-group">
+                        <label for="gleitos-released-filter">Unidade reservada/liberada:</label>
+                        <select class="form-control" name="released-filter" id="gleitos-released-filter">
+                            <option value="" selected disabled>Selecione uma unidade</option>
+                            {{unidades-liberada}}
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-sm-12 col-lg-6 col-xl-6 mt-2 filters">
+
+                    <div class="form-group">
+                        <label for="gleitos-accomodation-filter">Tipo de Leito:</label>
+                        <select class="form-control" name="accomodation-filter" id="gleitos-accomodation-filter">
+                            {{acomodacoes}}
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg-6 col-xl-6 filters">
+                    <div class="form-group">
+                        <br>
+                        <label for="gleitos-solicitation-filter">Unidades solicitante:</label>
+                        <select class="form-control" name="solicitation-filter" id="gleitos-solicitation-filter">
+                            <option value="" selected disabled>Selecione uma unidade</option>
+                            {{unidades-solicitantes}}
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-lg-6 col-xl-6 filters">
+                    <!-- checkbox -->
+                    <div class="form-group">
+                        <p class="fw-bold">Status da solicitação:</p>
+
+                        <ul class="nav flex-row">
+                            <li class="nav-item mx-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="status" id="statusAberto"
+                                        value="A" checked>
+                                    <label class="custom-control-label" for="statusAberto">Em Aberto</label>
+                                </div>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="status" id="statusPreparo"
+                                        value="P" checked>
+                                    <label class="custom-control-label" for="statusPreparo">Em Preparo</label>
+                                </div>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="status"
+                                        id="statusLiberado" value="L" checked>
+                                    <label class="custom-control-label" for="statusLiberado">Liberado</label>
+                                </div>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="status"
+                                        id="statusAdmitido" value="RU">
+                                    <label class="custom-control-label" for="statusAdmitido">Admitido</label>
+                                </div>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="status"
+                                        id="statusCancelado" value="C">
+                                    <label class="custom-control-label" for="statusCancelado">Solicitação
+                                        Cancelada</label>
+                                </div>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="status"
+                                        id="statusEncerrado" value="E">
+                                    <label class="custom-control-label" for="statusEncerrado">Solicitação
+                                        Encerrada</label>
+                                </div>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="status"
+                                        id="statusReservaEncerrada" value="RC">
+                                    <label class="custom-control-label" for="statusReservaEncerrada">Reserva
+                                        Encerrada</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title"><i class="fas fa-th mr-1"></i> Solicitações</h3>
+        </div>
+        <div class="card-body table-responsive">
+            <table id="gleitos-tabela-solicitacoes" class="table table-hover table-sm">
+                <thead class='font_table_solic'>
+                    <tr>
+                        <th class="pr-0">#</th>
+                        <th class="pr-0">Registro</th>
+                        <th class="pr-0">Paciente</th>
+                        <th class="pr-0">Data/Hora Solicitação</th>
+                        <th class="pr-0">Setor Solicitante</th>
+                        <th class="pr-0">Tipo de Leito</th>
+                        <th class="pr-0">Status</th>
+                        <th class="pr-0">Unidade Reservada/Liberada</th>
+                        <th class="pr-0">Leito compatível</th>
+                        <th class="pr-0"></th>
+                    </tr>
+                </thead>
+                <tbody class='font_table_solic'></tbody>
+            </table>
+        </div>
+    </div>
+</div>

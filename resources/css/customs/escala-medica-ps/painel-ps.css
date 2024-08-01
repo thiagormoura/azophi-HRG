@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+html,
+body {
+    height: 100%;
+}
+
+h2 {
+    font-family: 'Montserrat';
+}
+
+.box-primary {
+    padding: 30px 50px 30px 50px;
+    border: 1px solid black;
+}
+
+.box-primary-2 {
+    padding: 30px 15px 30px 15px;
+    background-color: rgba(240, 240, 240, 0.41);
+    /* border: 1px solid black; */
+}
+
+.titulo-painel {
+    padding: 8px 0;
+    background-color: green !important;
+    border-bottom: 4px solid #20315f;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.logo-nav {
+    width: 65px;
+    height: auto;
+    padding: 5px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.nome_painel {
+    color: rgb(255, 255, 255);
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Oswald', sans-serif;
+    font-size: 45px;
+}
+
+.bg-hrg {
+    background-color: #20315f !important;
+    border-bottom: 4px solid green;
+}
+
+.info-medico {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15pt;
+}
+
+span {
+    font-size: 11pt;
+}
+
+td {
+    height: 85px !important;
+}
+
+i {
+    padding: 10px;
+    /* background-color: #20315f; */
+    color: white;
+    border-radius: 50%;
+    position: relative;
+    /* margin-right: 10px; */
+}
+
+footer {
+    /* width: 100%; */
+    /* position: absolute !important;
+            bottom: 0;
+            left: 0; */
+    border-top: 1px solid #5a5a5a83;
+    background-color: rgba(37, 187, 18, 0.575);
+}
+
+.responsavel {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.table td {
+    padding-bottom: 0 !important;
+}

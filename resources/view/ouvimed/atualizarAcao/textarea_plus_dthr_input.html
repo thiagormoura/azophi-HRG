@@ -1,0 +1,62 @@
+<div class="row mt-3 align-items-center">
+
+    <div class="col-4">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="input-group">
+
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Usuario:</span>
+                    </div>
+
+                    <input type="text" class="form-control" value="{{inUsuario_value}}" {{inUsuario_disabled}}>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="input-group">
+                    
+                    <input 
+                        id="{{inDate_id}}" 
+                        name="inDateInput" 
+                        type="date" 
+                        class="form-control"
+                        value="{{inDate_value}}" 
+                        {{inDate_disabled}}>
+
+                    <input 
+                        id="{{inHour_id}}" 
+                        name="inHourInput"
+                        type="time" 
+                        class="form-control"
+                        value="{{inHour_value}}"
+                        {{inHour_disabled}}>
+
+                </div>
+                
+            </div>
+
+        </div>
+
+        
+    </div>
+
+    <div class="col-7 pr-0">
+        <textarea id="{{ta_id}}" name="taAcao" type="text" class="form-control" autocomplete="off" {{ta_disabled}}>{{ta_text}}</textarea>
+    </div>
+
+    <div class="col-1">
+        <button type="button" name="btnRemoverAcao" class="btn btn-danger" {{btnRemover_disabled}}>X</button>
+    </div>
+
+</div>

@@ -1,0 +1,252 @@
+<div class="container-fluid">
+
+    <!-- Formulario -->
+    <form id="form">
+        <div class="row justify-content-center">
+
+            <div class="col-11">
+
+                <div class="card">
+
+                    <div class="card-body card-persona text-left">
+
+                        <!-- Identificação do Autor -->
+                        <div class="row">
+                            <div class="col-12">
+                                <b><u>Identificação do Autor</u></b>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <!-- Nome do autor -->
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+
+                                <b>Autor</b>
+
+                                <div class="input-group">
+                                    <input id="inAutor" type="text" class="form-control" autocomplete="off">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <input id="cbAutorAnonimo" type="checkbox">&nbsp;<span for="cbAutorAnonimo">Anônimo?</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Data e hora da manifestação -->
+                            <div class="col-12 mt-2 col-sm-12 mt-sm-0 col-md-6 col-lg-6">
+                                <b>Data e hora da manifestação</b>
+                                <div class="input-group">
+                                    <input id="inDtManifestacao" type="date" class="form-control" required>
+                                    <input id="inHrManifestacao" type="time" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-2">
+                                <b>Paciente</b>
+                            </div>
+
+                            <div class="col-12">
+
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input class="custom-control-input" type="radio"
+                                        name="rbPaciente" id="rbInserirPac"
+                                        value="1" required>
+                                    <label class="custom-control-label"
+                                        for="rbInserirPac">Inserir manualmente</label>
+                                </div>
+
+                                <div class="custom-control custom-radio custom-control-inline d-none">
+                                    <input class="custom-control-input" type="radio"
+                                        name="rbPaciente" id="rbBuscarPac"
+                                        value="2" disabled>
+                                    <label class="custom-control-label"
+                                        for="rbBuscarPac">Buscar na base de dados</label>
+                                </div>
+
+                            </div>
+
+                            <div class="col-12 mt-2 col-sm-6 col-lg-6 d-none">
+                                <b>Nome paciente</b>
+                                <select id="slPaciente" class="custom-select">
+                                    <option value="" selected disabled>Selecione um paciente</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                <input id="inPaciente" type="text" class="form-control d-none" placeholder="Digite o nome do paciente" autocomplete="off">
+                            </div>
+
+                            <div class="col-4 mt-2 col-sm-6 col-lg-3 d-none">
+                                <b>Registro</b>
+                                <input id="inRegistroPac" type="text" class="form-control" placeholder="Digite o registro" autocomplete="off" disabled>
+                            </div>
+
+                            <div class="col-8 mt-2 col-sm-12 col-lg-3 d-none">
+                                <b>Telefone</b>
+                                <div class="input-group">
+                                    <input id="inTelefonePac" type="text" class="form-control" placeholder="Digite o telefone" autocomplete="off">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                        <!-- Veiculo da manifestação -->
+                        <div class="row">
+
+                            <div class="col-12">
+
+                                <b><u>Veiculo de manifestação</u></b><br>
+
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input class="custom-control-input" type="radio"
+                                        name="rbVeiculoManifestacao" id="rbPresencial"
+                                        value="PRESENCIAL" required>
+                                    <label class="custom-control-label"
+                                        for="rbPresencial">Presencial</label>
+                                </div>
+
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input class="custom-control-input" type="radio"
+                                        name="rbVeiculoManifestacao" id="rbTelefone"
+                                        value="TELEFONE">
+                                    <label class="custom-control-label"
+                                        for="rbTelefone">Telefone</label>
+                                </div>
+
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input class="custom-control-input" type="radio"
+                                        name="rbVeiculoManifestacao" id="rbCaixaSugestoes"
+                                        value="CAIXA_SUGESTOES">
+                                    <label class="custom-control-label"
+                                        for="rbCaixaSugestoes">Caixa Sugestões</label>
+                                </div>
+
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input class="custom-control-input" type="radio"
+                                        name="rbVeiculoManifestacao" id="rbEmail" value="EMAIL">
+                                    <label class="custom-control-label"
+                                        for="rbEmail">E-mail</label>
+                                </div>
+
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input class="custom-control-input" type="radio"
+                                        name="rbVeiculoManifestacao" id="rbRedeSocial"
+                                        value="REDE_SOCIAL">
+                                    <label class="custom-control-label" for="rbRedeSocial">Rede
+                                        Social</label>
+                                </div>
+
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input class="custom-control-input" type="radio"
+                                        name="rbVeiculoManifestacao" id="rbOutro" value="OUTRO">
+                                    <label class="custom-control-label"
+                                        for="rbOutro">Outro</label>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Inputs de texto caso veiculo seja Rede social ou Outro -->
+                        <div class="row mt-2 d-none">
+                            <div class="col-12">
+                                <b>Rede Social</b>
+                                <input id="inRedeSocial" type="text" class="form-control"
+                                    placeholder="Digite o nome da rede social" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="row mt-2 d-none">
+                            <div class="col-12">
+                                <b>Outro</b>
+                                <input id="inOutro" type="text" class="form-control"
+                                    placeholder="Digite o veiculo de manifestação" autocomplete="off">
+                            </div> 
+                        </div>
+
+                        <hr>
+
+                        <!-- Identificação da manifestação -->
+                        <div class="row">
+
+                            <div class="col-12">
+
+                                <b><u>Identificações e descrições da manifestação</u></b><br>
+
+                            </div>
+
+                        </div>
+
+                        <div id="divAppendIdentificacao">
+
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-12">
+                                <button id="btnAddIdentificacao" type="button" class="btn btn-success">Adicionar identificação</button>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-12 ">
+                                <button type="submit"
+                                    class="btn btn-primary float-right">Salvar</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+
+</div>
+
+<style>
+    .sidebar-dark-blue .nav-sidebar>.nav-item>.nav-link.active,
+    .sidebar-light-blue .nav-sidebar>.nav-item>.nav-link.active {
+        background-color: #001f3f;
+        color: white;
+    }
+
+    @media (min-width: 992px) {
+
+        .sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused,
+        .sidebar-mini.sidebar-collapse .main-sidebar:hover {
+            width: 250px;
+            margin-right: 15px;
+        }
+    }
+
+    aside {
+        margin-right: 15px;
+    }
+
+    #sideBarButton {
+        color: white;
+    }
+
+    .card-persona {
+        font-size: 14px;
+        font-family: "Source Sans Pro";
+        font-weight: 500;
+        color: #505050;
+        text-align: center;
+    }
+</style>

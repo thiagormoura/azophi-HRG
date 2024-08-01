@@ -1,0 +1,88 @@
+<div class="modal fade" id="modalItemCardapio" tabindex="-1" role="dialog" aria-labelledby="modalItemCardapioLabel"
+    aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalItemCardapioLabel">
+                    {{nome-cardapio}} - {{data-formatada}}
+                </h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input type="hidden" class="changed" id="idCardapio" name="idCardapio" value="{{id}}">
+                    <input type="hidden" class="changed" id="dataSemana" name="dataSemana" value="{{data}}">
+                    {{grupos}}
+                </form>
+                <div class="form-group px-2">
+                    <button type="button" class="btn btn-outline-secondary col-md-12 btn-add-option">Adicionar
+                        Opção</button>
+                </div>
+                {{copia-cardapio}}
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success btn-save">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    //Button adicionar opção
+    $('.modal-body').on('click', '.btn-add-option', function () {
+        var modalBody = $(this).closest('.modal-body');
+        var form = $(modalBody).find('form');
+        var fieldsets = $(modalBody).find('fieldset');
+        if (fieldsets.length < 5) {
+            var coutNewField = parseInt(fieldsets.length) + 1;
+            $.ajax({
+                url: "addGroup",
+                type: "GET",
+                dataType: "html"
+            }).done(function (responseText) {
+                var parsed = $.parseHTML(responseText);
+                var element = $(parsed).filter('fieldset');
+                $(element).find('.legend-group').text('Opção ' + coutNewField);
+                $(form).append(element);
+            }).fail(function (jqXHR, textStatus) {
+                console.log("Request failed: " + textStatus);
+            }).always(function () { });
+        }
+    });
+
+    //Button adicionar item
+    $('.modal-body').on('click', '.btn-add-item', function () {
+        var containerItens = $(this).closest('.container-item-cardapio');
+        var buttonAddItem = $(this);
+        var selectsCount = $(containerItens).find('.item-cardapio').length;
+        console.log(selectsCount);
+        if (selectsCount < 10) {
+            $.ajax({
+                url: "addItemCardapio",
+                type: "GET",
+                dataType: "html"
+            }).done(function (responseText) {
+                $(buttonAddItem).closest('div').before(responseText);
+            }).fail(function (jqXHR, textStatus) {
+                console.log("Request failed: " + textStatus);
+            }).always(function () { });
+            
+        }
+    });
+
+    $('.modal-body').on('click', '.btn-remove-item', (e) => {
+        let btnRemove = $(e.currentTarget);
+        let itemCardapio = $(btnRemove).closest('.item-cardapio');
+        let itensCardapio = $(btnRemove).closest('fieldset').find('.item-cardapio');
+        if (itensCardapio.length > 1) {
+            itemCardapio.remove();
+            return;
+        }
+        $(itemCardapio).find('input, select').val('');
+    });
+</script>

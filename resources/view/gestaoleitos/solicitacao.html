@@ -1,0 +1,29 @@
+<div class="wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row py-1">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-white">Solicitação de Vagas</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><u><a class="text-white" href="{{URL}}/gestaoleitos">Início</a></u></li>
+                        <li class="breadcrumb-item active">Solicitação de Vagas</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="content mt-3">
+        <div class="container-fluid">
+            <form id="solicitacao-form" method="POST" class="d-flex flex-wrap">
+                {{paciente}}
+                {{solicitacao}}
+            </form>
+            <!-- /.row (main row) -->
+        </div><!-- /.container-fluid -->
+    </section>
+
+</div>
+<div id="divToPutModal"></div>

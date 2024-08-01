@@ -1,0 +1,57 @@
+<div
+    class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed accent-blue">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="margin-left: 0 !important;">
+        <!-- Content Header (Page header) -->
+        <div class="content-header mb-3">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">
+                            <i class="fas fas fa-calendar-alt mr-1"></i>
+                            Meus cardápios
+                        </h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a class="text-light text-decoration-underline"
+                                    href="{{URL}}/inutri">Início</a></li>
+                            <li class="breadcrumb-item active">Meus cardápios</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="card card-secondary card-outline">
+                    <div class="card-body">
+                        <div id="divCardapio"></div>
+                        <form onsubmit="event.preventDefault()" class="col-md-12 form-cardapio mt-2">
+                            <table id="table-cardapio" class="table table-cardapio responsive m-0 ">
+                                <thead>
+                                    <tr>
+                                        <th class="pl-2" style="width: 10%;">Status</th>
+                                        <th>Cardápios</th>
+                                        <th style="width: 5%;">Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{cardapios}}
+                                </tbody>
+                            </table>
+                            <div class="form-group">
+                                <button type="button" name="submit" class="btn btn-primary btn-add">Adicionar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content -->
+</div>
+</div>

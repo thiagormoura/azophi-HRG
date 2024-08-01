@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel AGM</title>
+    <link rel="icon" href="{{URL}}/resources/img/favicon.ico" type="image/x-icon">
+
+    <!-- IcoFont - Icones para aplicações // https://icofont.com/icons -->
+    <link rel="stylesheet" href="{{URL}}/resources/css/customs/painelagm/icons/icofont.min.css">
+    <!-- Bootstrap 5.0 -->
+    <link rel="stylesheet" href="{{URL}}/resources/css/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="{{URL}}/resources/css/customs/painelagm/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-primary bg-primary">
+            <div class="container d-flex justify-content-center">
+                <div class="row nome_painel">
+                    MAPA CIRURGICO - HRG
+                    <img src="{{URL}}/resources/img/escalamedica/logo_hrg_cruz.jpg" class="logo-nav"
+                        alt="logo hospital rio grande">
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <div class="titulo-legenda">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="tot-cirurgia text-center" data-index-count="{{index}}" data-count="{{total-cirurgias}}">
+                            TOTAL DE CIRURGIA(s):
+                            {{total-cirurgias}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid legenda-tempo py-1">
+            <div class="row">
+                <div class="d-flex">
+                    <div class="titulo-legenda-tempo">
+                        Legendas:
+                    </div>
+                    <div>
+                        <i class="icofont-exclamation-circle" style="color: green;"></i> Mais de 45 minutos
+                        &nbsp&nbsp
+                    </div>
+                    <div>
+                        <i class="icofont-exclamation-circle" style="color: #f2994e;"></i> Entre 45 e 20 minutos
+                        &nbsp&nbsp
+                    </div>
+                    <div>
+                        <i class="icofont-exclamation-circle" style="color: #e81818;"></i> Faltam menos de 20 minutos
+                        &nbsp&nbsp
+                    </div>
+                    <div>
+                        <i class="icofont-exclamation-circle" style="color: #3e70d0;"></i> Está na hora ou passou do
+                        horário
+                        &nbsp&nbsp
+                    </div>
+                    <div>
+                        <i class="icofont-paper icofont-1x"></i>
+                        OPME
+                        &nbsp&nbsp
+                    </div>
+                    <div>
+                        <i class="icofont-blood icofont-1x"></i>
+                        Reserva de Sangue
+                        &nbsp&nbsp
+                    </div>
+                    <div>
+                        <i class="icofont-heartbeat icofont-1x"></i>
+                        UTI
+                        &nbsp&nbsp
+                    </div>
+                    <div>
+                        <i class="icofont-xray icofont-1x"></i> Inten. de Imagem
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive">
+            {{table}}
+        </div>
+
+    </main>
+
+
+    <!-- Inicio de Footer -->
+    <footer class="d-flex justify-content-around">
+        <strong>Núcleo de Desenvolvimento</strong>
+        <p><a href="diretoria.php" target="_blank">Hospital Rio
+                Grande</a> Copyright©2022</p>
+        <div class="float-right d-none d-sm-inline-block">
+            <b>Versão</b> 2.0
+        </div>
+    </footer>
+
+
+</body>
+    <!-- Scripts Js -->
+    <script> const _URL = '{{URL}}'; </script>
+    <script src="{{URL}}/resources/js/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="{{URL}}/resources/js/customs/painelagm/painel.js"></script>
+</html>

@@ -1,0 +1,399 @@
+/* --------------- Colors -------------------- */
+.bg-pendente.active{
+  background-color: #87829B !important;
+  color: #fff !important;
+}
+.bg-progresso.active{
+  background-color: #838a32 !important;
+  color: #fff !important;
+}
+.bg-pronto.active{
+  background-color: #45803C !important;
+  color: #fff !important;
+}
+.bg-entregando.active{
+  background-color: #3D7135 !important;
+  color: #fff !important;
+}
+.bg-entregue.active{
+  background-color: #34612E !important;
+  color: #fff !important;
+}
+.bg-cancelado.active{
+  background-color: #8D2B2D !important;
+  color: #fff !important;
+}
+.bg-cardapio{
+  background-color: #152a5f !important;
+}
+.btn-cardapio{
+  background-color: #152a5f !important;
+  color: #fff !important;
+}
+.btn-cardapio:hover{
+  background-color: #3a5366 !important;
+}
+
+.bg-pendente{
+  border: none !important;
+  border-top: 3px solid #87829B !important;
+  color: #343a40 !important;
+}
+.bg-pendente:hover{
+  color: #fff !important;
+  background-color: #87829B !important;
+}
+.bg-progresso{
+  border: none !important;
+  border-top: 3px solid #838a32 !important;
+  color: #343a40 !important;
+}
+.bg-progresso:hover{
+  color: #fff !important;
+  background-color: #838a32 !important;
+}
+.bg-pronto{
+  border: none !important;
+  border-top: 3px solid #45803C !important;
+  color: #343a40 !important;
+}
+.bg-pronto:hover{
+  color: #fff !important;
+  background-color: #45803C !important;
+}
+.bg-entregando{
+  border: none !important;
+  border-top: 3px solid #3D7135 !important;
+  color: #343a40 !important;
+}
+.bg-entregando:hover{
+  color: #fff !important;
+  background-color: #3D7135 !important;
+}
+.bg-entregue{
+  border: none !important;
+  border-top: 3px solid #34612E !important;
+  color: #343a40 !important;
+}
+.bg-entregue:hover{
+  color: #fff !important;
+  background-color: #34612E !important;
+}
+.bg-cancelado{
+  border: none !important;
+  border-top: 3px solid #8D2B2D !important;
+  color: #343a40 !important;
+}
+.bg-cancelado:hover{
+  color: #fff !important;
+  background-color: #8D2B2D !important;
+}
+
+/* -------------------- Fim Colors ----------------------- */
+
+.selectize-dropdown, .selectize-input, .selectize-input input{
+font-size: 1rem !important;
+}
+.bootstrap-select .dropdown-toggle:focus, .bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+  border-color: #80bdff !important;
+  outline: none!important;
+  outline: none!important;
+  outline-offset: -2px;
+}
+.selectize-dropdown [data-selectable].option.active{
+  color: #fff !important;
+  background-color: #569ff7 !important;
+}
+.close-notify{
+  right: 0 !important;
+  margin: -0.4rem 0.4rem 0 0 !important;
+}
+.no-background{
+  background-color: initial !important;
+}
+.container-notify{
+  height: 85vh;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+.container-notify::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+.container-notify::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Handle */
+.container-notify::-webkit-scrollbar-thumb {
+  background: #888;
+}
+/* Handle on hover */
+.container-notify::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.box-shadow-card{
+  box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+}
+
+#itemAdicionalContainer, #observacoesContainer{
+  height: 1.75rem;
+}
+#observacoesContainer .collapse,
+#observacoesContainer .collapsing, 
+#itemAdicionalContainer .collapse,
+#itemAdicionalContainer .collapsing {
+    height: 0rem;
+    /* [NUM_OF_LINES] x [LINE_HEIGHT] */
+}
+
+#observacoesContainer .collapse,
+#itemAdicionalContainer .collapse {
+    position: relative;
+    /* For ...'s content absolute positioning */
+    display: block;
+    overflow: hidden;
+}
+
+#observacoesContainer .collapse.show,
+#itemAdicionalContainer .collapse.show {
+    height: auto;
+    /* You need to reset the height when not collapsed */
+}
+
+#observacoesContainer .collapse.show:before,
+#itemAdicionalContainer .collapse.show:before {
+    display: none;
+    /* Of course you don't want to display ... */
+}
+
+#observacoesContainer a.collapsed:after {
+    content: 'Exibir observações';
+}
+
+#observacoesContainer a:not(.collapsed):after {
+    content: 'Ocultar observações';
+}
+
+#itemAdicionalContainer a.collapsed:after {
+  content: 'Itens adicionais';
+}
+
+#itemAdicionalContainer a:not(.collapsed):after {
+  content: 'Ocultar itens adicionais';
+}
+
+.containerCard .card-header i{
+  color: #e3e3e3;
+}
+
+.mb-07{
+  margin-bottom: 0.7rem !important;
+}
+
+.alert-danger{
+  background-color: #e56361 !important;
+}
+
+legend.scheduler-border {
+  width: inherit !important;
+  /* Or auto */
+  /* padding: 0 10px !important; */
+  /* To give a bit of padding on the left and right */
+  border-bottom: none !important;
+}
+
+.btn-close-option {
+  position: relative;
+  left: 0;
+  top: -9px;
+  border: none;
+  border-radius: 0px 3px 0px 3px;
+  padding: 1px 7px;
+  font-size: 15px;
+}
+
+.container-button-close{
+  justify-content: space-between;
+  display: flex;
+  margin: .5rem 0 1rem .25rem;
+}
+
+.mt--1 {
+  margin-top: -25px !important;
+}
+
+.col-md-8-1 {
+  -ms-flex: 0 0 66.666667%;
+  flex: 0 0 66.666667%;
+  max-width: 67.666667%;
+}
+
+.content-wrapper{
+  margin: 0 !important;
+  margin-left: 0 !important;
+}
+.footer-main{
+  background: #fff;
+  border-top: 1px solid #dee2e6 !important;
+  color: #869099;
+  padding: 0.3rem;
+  margin-left: 0 !important;
+}
+
+details.observacao-pedido>summary {
+  list-style-type: none;
+  color: #e3e3e3;
+}
+
+details.observacao-pedido>summary::-webkit-details-marker {
+  display: none;
+}
+
+details.observacao-pedido>summary::before {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  content: "\f05a";
+}
+
+details.observacao-pedido[open]>summary::before {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  content: "\f05a";
+}
+details.observacao-pedido[open]{
+  padding: 0 5px;
+}
+details.observacao-pedido[open], details.observacao-pedido[open]>summary {
+  background-color: #ffffff;
+  color: black ;
+  border-radius: 4px;
+}
+
+/* Personaliação solicitante */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.input-group .button-minus,
+.input-group .button-plus {
+    min-width: 38px;
+    width: auto;
+    transition: all 300ms ease;
+    background-color: #fff;
+
+    font-weight: 700;
+    /* background-color: red; */
+    height: 38px;
+    padding: 0;
+    width: 38px !important;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.input-group .button-minus:disabled,
+.input-group .button-plus:disabled {
+    background-color: #fff;
+    color: #cccccc;
+    cursor: not-allowed;
+}
+
+.button-minus {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.button-plus {
+    border-radius: 0px 10px 10px 0px;
+}
+
+input[type="number"] {
+    padding: 0;
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+}
+
+.border-bottom:last-child {
+    border-bottom: none !important;
+}
+
+.border-bottom-input {
+    border: 0 !important;
+    border-bottom: 1px solid #dee2e6 !important;
+    border-radius: 0;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Fim Personaliação solicitante */
+
+@media screen and (max-width: 1600px) {
+  .label-item-cardapio{
+    width: 67% !important;
+   }
+
+}
+
+@media screen and (max-width: 768px) {
+  .legendas-pedido{
+    border-radius: 0 !important;
+  }
+  .legendas-pedido a{
+    border-radius: 0 !important;
+    width: 12rem !important;
+    margin: 0 !important;
+    font-size: 0.7rem;
+    font-weight: 500;
+   }
+   .label-item-cardapio{
+    width: 47% !important;
+   }
+}
+
+@media screen and (max-width: 480px) {
+  .legendas-pedido{
+    border-radius: 0 !important;
+  }
+ .legendas-pedido a{
+  border-radius: 0 !important;
+  width: 5rem !important;
+  margin: 0 !important;
+  font-size: 0.6rem;
+ }
+ .input-group .button-minus,
+ .input-group .button-plus {
+     min-width: 30px !important;
+     height: 30px !important;
+ }
+ .pocao-quantidade{
+  flex: none !important;
+  width: 25px !important;
+ }
+ .container-qtd-btns {
+   flex: 0 1 0 !important;
+ }
+ .list-cardapio:last-child{
+  margin-bottom: 5px !important;
+}
+
+}
+
+@media screen and (max-width: 409px) {
+
+.input-group .button-minus,
+.input-group .button-plus {
+    min-width: 50px !important;
+    height: 30px !important;
+}
+.pocao-quantidade{
+flex: none !important;
+width: 50px !important;
+}
+
+}
+
+@media screen and (max-width: 325px) {
+.label-item-cardapio{
+  width: 45% !important;
+}
+
+}

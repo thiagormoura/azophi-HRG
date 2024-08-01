@@ -1,0 +1,187 @@
+.pac_unimed {
+   
+    padding: 5px 0px 5px 0px;
+    color: #ffffff;
+    background-color: #4682B4;
+    text-align: center;
+    font-weight: bold;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.titulo {
+    padding: 5px 0px 5px 0px;
+    color: #ffffff;
+    background-color: #4682B4;
+    text-align: center;
+    font-weight: bold;
+    font-weight: 600;
+    font-size: 14px;
+}
+.tituloAtencao {
+    color: #ffffff;
+    background-color: #bc0000;
+}
+.categoria {
+    background-color: #4682B4;
+    text-align: left;
+    font-weight: bold;
+    padding: 15px;
+    font-size: 20px;
+    color: white;
+}
+.p_CLASSE_CSS {
+    border-right-color: #cca898;
+    border-style: solid;
+    border-width: thin;
+}
+.conteudo {
+    background-color: #E0FFFF;
+}
+.google-visualization-table-table {
+    font-family: arial, helvetica;
+    font-size: 10pt;
+    cursor: default;
+    margin: 0;
+    background: white;
+    border-spacing: 0;
+}
+.tabela_titulo {
+    background-color: rgba(155, 191, 255, 0.41);
+    font-size: 15px;
+}
+
+.tabela_pva {
+    background-color: rgba(155, 191, 255);
+    font-size: 13px;
+}
+.resultado_index {
+    font-size: 14px;
+    font-weight: 700;
+    background-color: rgba(204, 168, 152, 0.22);
+}
+.resultado_values {
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
+.unidade {
+    padding: 1.5px;
+    border-color: rgba(70, 130, 180, 0.52);
+    border-style: solid;
+    border-width: thin;
+    border-radius: 1px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    text-align: center;
+}
+.min-height-200 {
+    min-height: 200px;
+}
+.min-height-350 {
+    min-height: 350px;
+}
+.min-height-368 {
+    min-height: 368px;
+}
+.footer {
+    position: static;
+    bottom: 0;
+    padding-left: 1px;
+    padding-right: 1px;
+    background-color: #4682B4;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 500;
+    font-size: 12px;
+}
+.col-md-4-border,
+col-md-6-border {
+    border-color: rgb(70, 130, 180);
+    border-style: solid;
+    border-width: medium;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+/* PERSNALIZADO */
+
+.row-categoria {
+    margin-top: 10px;
+    border-color: #000d76;
+    border-style: ridge;
+    border-width: thin;
+}
+.cabecalho {
+    font-family: monospace;
+    font-size: 8.5px;
+    text-align: left;
+    color: gray;
+}
+.titulo > .observacao {
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: 200;
+}
+.div_teste {
+    width: 200px;
+    height: 100px;
+    background: #f00;
+    position: absolute;
+    z-index: 100;
+    top: 30%;
+    left: 40;
+}
+
+.card_titulo{
+    color:  darkblue;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    padding: 0px;
+    height: 100px;
+}
+
+.card_texto_valor{
+    color:  darkblue;
+    font-size: 280px;
+    font-weight: 700;
+    text-align: center;
+    height: 500px;
+    padding-top: 60px;
+}
+.card_texto_valor_rodape{
+    color:  darkblue;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    height: 150px;    
+}
+
+.col_tempo_espera{
+    
+    color:  darkblue;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    
+}
+
+.row_titulo{
+    background-color: darkblue;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    
+}
+
+.card-body{
+    padding: 0.75rem;
+}
+
+.margin-force{
+    margin-bottom: 15px;
+}

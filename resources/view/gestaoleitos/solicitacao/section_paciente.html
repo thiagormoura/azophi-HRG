@@ -1,0 +1,21 @@
+<div class="col-md-4 col-12 mb-3">
+    <div class="sticky-md-top" style="top:.5rem !important;">
+        {{historico}}
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Paciente</h3>
+            </div>
+            <div class="card-body">
+                <fieldset id="gleitos-fieldset-patient" class="col-12" {{paciente-disabled}}>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <label for="gleitos-paciente" class="col-form-label pb-0">Paciente</label>
+                            {{pacientes}}
+                        </div>
+                    </div>
+                    {{paciente-data}}
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="modal fade" data-modify="0" data-id="{{id_questionario}}" id="showPerguntas" tabindex="-1" role="dialog" aria-labelledby="showPerguntasLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="showPerguntasLabel">Perguntas</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="table table-bordered" id="perguntas">
+            <thead>
+              <th>Nome</th>
+              <th>Categoria</th>
+            </thead>
+            <tbody>
+              {{perguntas}}
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button id="addPergunta" class="btn btn-success">Adicionar perguntas</button>
+          <button id="removePergunta" class="btn btn-danger">Remover perguntas</button>
+        </div>
+      </div>
+    </div>
+  </div>

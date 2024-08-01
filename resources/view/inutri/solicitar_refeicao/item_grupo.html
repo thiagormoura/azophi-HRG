@@ -1,0 +1,14 @@
+
+  <div class="form-group form-inline d-flex justify-content-between col-md-12 text-left border-bottom py-2 m-0">
+  <label class="form-label font-weight-normal" for="exampleRadios">
+    {{nome}}
+  </label>
+  <div class="form-group col-md-5 col-sm-8 col-4 input-group">
+    <button type="button" class="button-minus form-control no-background col-4 border-0">-</button>
+    <input type="number" data-id="{{id-comida}}" step="1" max="{{porcao}}"
+      min="0" value="0" name="quantity[]"
+      class="border form-control no-background text-center col-4 border-0" readonly>
+    <button type="button" class="button-plus form-control no-background col-4 border-0">+</button>
+  </div>
+</div>
+<!-- /.input group -->

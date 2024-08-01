@@ -1,0 +1,91 @@
+<div class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed ">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="margin-left: 0 !important;">
+        <!-- Content Header (Page header) -->
+        <div class="content-header " style="border-bottom: solid 1px gray;">
+            <div class="container-fluid">
+                <div class="row py-1">
+                    <div class="col-sm-6">
+                        <h1 class="m-0"><i class="fa fas fa-key"></i> Gerenciamento de chaves</h1>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div>
+        </div>
+
+        <section class="mt-3 mb-1 container shadow-none">
+            <div class="card card-tabs" id="tab-chaves">
+                <div class="card-header p-0 pt-1">
+                    <ul class="nav nav-tabs d-flex justify-content-center" role="tablist" id="nav-bar">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active px-5 text-dark" id="one-tab" data-bs-toggle="pill" href="#one" role="tab"
+                                aria-controls="#one" aria-selected="true">
+                                Armários
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link px-5 text-dark" id="two-tab" data-bs-toggle="pill" href="#two" role="tab"
+                                aria-controls="#two" aria-selected="false">
+                                Histórico
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show container shadow-none" id="one" role="tabpanel"
+                            aria-labelledby="one-tab">
+                            <div class="flex-wrap justify-content-center">
+                                <div class="row justify-content-center">
+                                    <label for="filter-select-keys">Filtro: </label>
+                                    <div class="col-sm-5 my-2">
+                                        <select name="keys-select" id="filter-select-keys" class="custom-select">
+                                            <option value="1" class="option">Por ordem ascendente</option>
+                                            <option value="2" class="option">Por ordem descendente</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4 my-2">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="btn-check" type="checkbox" name="inlineRadioOptions"
+                                                        id="locked-radius" autocomplete="off" checked>
+                                                    <label class="btn btn-outline-danger mx-2"
+                                                        for="locked-radius">Emprestados</label>
+                                                    <input class="btn-check" type="checkbox" name="inlineRadioOptions"
+                                                        id="free-radius" autocomplete="off" checked>
+                                                    <label class="btn btn-outline-success mx-2"
+                                                        for="free-radius">Liberados</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center mt-2">
+                                    <div class="armarios container flex-wrap d-flex shadow-none">
+                                        {{armarios}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade table-responsive" id="two" role="tabpanel" aria-labelledby="two-tab">
+                            {{filtros}}
+                            <div class="table-responsive">
+                                <table id="tableHistorico" class="table table-bordered w-100">
+                                    <thead>
+                                        <th>ID</th>
+                                        <th>DATA/HORA</th>
+                                        <th>NUMERO ARM.</th>
+                                        <th>AÇÃO</th>
+                                        <th>MATRICULA</th>
+                                        <th>FUNCIONÁRIO</th>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="divModal"></div>
+        </section>
+    </div>
+</div>

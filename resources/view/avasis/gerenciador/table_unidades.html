@@ -1,0 +1,21 @@
+<tr>
+    <td class="px-0 py-1">
+        <div class="custom-control custom-switch text-center" style="padding-left: 2rem !important;">
+            <input type="checkbox" class="custom-control-input change-status-unidade" id="customSwitchUnidade{{id}}"
+                {{status_check}}>
+            <label class="custom-control-label font-weight-normal" for="customSwitchUnidade{{id}}"></label>
+        </div>
+    </td>
+    <td class="px-0 py-1">
+        <div class="input-group">
+            <input type="hidden" name="unidade-id[]" value="{{id}}" class="form-control" data-status="{{status}}"
+                disabled />
+            <input type="text" name="unidade-nome[]" value="{{unidade}}"
+                class="form-control border-right-0 rounded-0 rounded-left" data-status="{{status}}" disabled />
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary bg-danger btn-cancel-unidade border-0" type="button"><i
+                        class="fas fa-lock"></i></button>
+            </div>
+        </div>
+    </td>
+</tr>

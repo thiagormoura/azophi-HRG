@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{{URL}}/resources/css/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <!-- <link rel="stylesheet" href="{{URL}}/resources/css/fontawesome-free/css/all.min.css"> -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- Flatpickr -->
+  <link rel="stylesheet" href="{{URL}}/resources/css/flatpickr/css/flatpickr.min.css">
+  <!-- Sweet Alert -->
+  <link rel="stylesheet" href="{{URL}}/resources/css/sweetalert2/sweetalert2.css">
+  <!-- Selectize -->
+  <link rel="stylesheet" href="{{URL}}/resources/css/selectize/css/selectize.bootstrap4.css">
+  <!-- Datatables  -->
+  <link rel="stylesheet" href="{{URL}}/resources/css/datatables/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="{{URL}}/resources/css/datatables-checkboxes/dataTables.checkboxes.css">
+  <!-- Utils  -->
+  <link rel="stylesheet" href="{{URL}}/resources/css/utils/utils.css">
+  <!-- Navbar central de serviÃ§os -->
+  <link rel="stylesheet" href="{{URL}}/resources/css/layout/layout.css">
+  <link rel="stylesheet" href="{{URL}}/resources/css/adminlte/adminlte.min.css">
+  <link rel="stylesheet" href="{{URL}}/resources/css/customs/sisnot/main.css">
+  <!-- Customs -->
+  {{links-css}}
+  <title>{{title}}</title>
+
+</head>
+
+
+<body>
+  {{header}}
+
+  <div class="position-fixed top-0 start-50 translate-middle-x p-3 fw-bold d-none" style="z-index: 9999999">
+    <div id="errorToastMain" class="toast align-items-center text-white border-0" role="alert" aria-live="assertive"
+      aria-atomic="true" data-bs-delay="3000">
+      <div class="d-flex">
+        <div class="toast-body" id="toast-message">
+          {{mensagem}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="position-fixed bottom-0 end-0 p-3 invisible" style="z-index: 9999999">
+    <div id="notification-toast" class="toast align-items-center text-dark bg-white" role="alert" aria-live="assertive"
+      aria-atomic="true" data-bs-delay="3000">
+      <div class="toast-header bg-light">
+        <img src="{{URL}}/resources/img/central-servicos.png" width="100px" class="rounded me-2 me-auto" alt="...">
+        <small id="notification-sistema"></small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="notification-body">
+
+      </div>
+    </div>
+  </div>
+  <div class="loader-div">
+    <div class="loader mb-0"></div>
+    <h1 class="text-center mt-4">Carregando...</h1>
+  </div>
+  <main>
+    {{content}}
+  </main>
+  {{footer}}
+</body>
+<!-- Scripts Js -->
+<script> const _URL = '{{URL}}'; </script>
+<!-- Jquery -->
+<script src="{{URL}}/resources/js/jquery/jquery.min.js"></script>
+<!-- Jquery Mask -->
+<script src="{{URL}}/resources/js/jquery-mask/jquery.mask.min.js"></script>
+<!-- Bootstrap -->
+<script src="{{URL}}/resources/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Script layout -->
+<script src="{{URL}}/resources/js/layout/layout.js"></script>
+<!-- Script AdminLTE -->
+<script src="{{URL}}/resources/js/adminlte/adminlte.min.js"></script>
+<!-- SweetAlert2 -->
+<script src="{{URL}}/resources/js/sweetalert2/sweetalert2.js"></script>
+<!-- JQuery Validation -->
+<script src="{{URL}}/resources/js/jquery-validation/jquery.validate.min.js"></script>
+<script src="{{URL}}/resources/js/jquery-validation/additional-methods.min.js"></script>
+<!-- Utils -->
+<script src="{{URL}}/resources/js/customs/utils.js"></script>
+<!-- Flatpickr -->
+<script src="{{URL}}/resources/js/flatpickr/flatpickr.min.js"></script>
+<script src="{{URL}}/resources/js/flatpickr/rangePlugin.min.js"></script>
+<!-- Selectize -->
+<script src="{{URL}}/resources/js/selectize/js/standalone/selectize.min.js"></script>
+<!-- Datatables -->
+<script src="{{URL}}/resources/js/datatables/js/jquery.dataTables.min.js"></script>
+<script src="{{URL}}/resources/js/datatables-checkboxes/dataTables.checkboxes.min.js"></script>
+<!-- Canvas Js -->
+<script src="{{URL}}/resources/js/canvasjs/canvasjs.min.js"></script>
+<!-- Customs JS -->
+{{scripts}}
+</html>

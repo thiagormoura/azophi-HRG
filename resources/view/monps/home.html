@@ -1,0 +1,49 @@
+<div
+  class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed accent-blue">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" style="margin-left: 0 !important;">
+    <!-- Content Header (Page header) -->
+    <div class="content-header" style="border-bottom: solid 1px gray;">
+      <div class="container-fluid">
+        <div class="row py-1">
+          <div class="col-sm-6">
+            <h1 class="m-0"><i class="fad fa-users"></i> Monitoramento Pronto Socorro</h1>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div>
+    </div>
+    <section class="my-1">
+      <!-- Box  -->
+      <div class="row mx-3 mt-2" id="monps-paciente-filas">
+        {{pacientes-filas}}
+      </div>
+
+      <div class="mt-2 mx-3 p-3 card card-azul-hrg card-outline">
+        <div id="toolbar" class="card-header mb-2 px-0">
+          <p class="d-inline-block me-2 mb-1"><span class="fw-bold">TF:</span> Tempo na fila.</p>
+          <p class="d-inline-block me-2 mb-1"><span class="fw-bold">TH:</span> Tempo hospitalar.</p>
+          <p class="d-inline-block me-2 mb-1"><span class="fw-bold">Med:</span> Medicamentos.</p>
+          <p class="d-inline-block me-2 mb-1"><span class="fw-bold">CR:</span> Classificação de risco.</p>
+          <p class="d-inline-block me-2 mb-1"><span class="fw-bold">(R):</span> Reavaliação.</p>
+        </div>
+
+        <div class="table-responsive">
+          <table id="tabelaMonitoramento" class="table table-hover">
+            <caption>Tabela referente aos dados dos pacientes</caption>
+            <thead>
+              <tr>
+                <th class="text-start">Paciente</th>
+                <th class="text-center">TF</th>
+                <th class="text-center">TH</th>
+                <th class="text-center">Med</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{linhas-paciente}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div><!-- /.container-fluid -->
+</div>

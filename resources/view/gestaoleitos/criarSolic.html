@@ -1,0 +1,593 @@
+<div class="wrapper">
+    <div class="content-header " style="border-bottom: solid 1px gray;">
+        <div class="container-fluid">
+            <div class="row py-1">
+                <div class="col-sm-6">
+                    <h1 class="m-0"><i class="fas fa-procedures"></i> Gestão de Leitos</h1>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div>
+    </div>
+    <div class="content-header mt-2" style="background-color: #f4f6f9 !important;">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h4 class="m-0 text-dark">Solicitação de Vagas</h4>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{{URL}}/gestaoleitos">Início</a></li>
+                        <li class="breadcrumb-item active text-dark">Solicitação de Vagas</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="content">
+        <div class="container-fluid">
+
+            <form id="Formulario" method="POST">
+                <div class="row">
+                    <section class="col-lg-12 connectedSortable">
+                        <div class="card">
+                            <div class="tab-content p-0">
+                                <table class="table table-sm">
+                                    <tbody class='font_table_solic'>
+                                        <tr id="ticket1">
+                                            <td colspan="6">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-xs-1 col-sm-6" id="part1"
+                                                        style="text-align: left;">
+                                                        <fieldset class="col-md-12 col-xs-1 col-sm-12">
+
+                                                            <b>Paciente</b>
+                                                            <br>
+                                                            <div
+                                                                class="custom-control custom-radio custom-control-inline">
+                                                                <input class="custom-control-input" type="radio"
+                                                                    name="paci" id="paci1" value="I" disabled>
+                                                                <label class="custom-control-label" for="paci1">Paciente
+                                                                    interno</label>
+                                                            </div>
+
+                                                        </fieldset>
+
+                                                        <br>
+
+
+                                                        <fieldset class="col-md-12 col-xs-1 col-sm-12" disabled>
+
+                                                            <div class="form-row">
+                                                                <div class="form-group col-12 col-md-12 d-none">
+                                                                    <label for="origem">Origem</label>
+                                                                    <input type="text" id="origem" class="form-control">
+                                                                </div>
+                                                            </div>
+
+                                                        </fieldset>
+
+                                                        <fieldset class="col-md-12 col-xs-1 col-sm-12" disabled
+                                                            required>
+
+                                                            <b>Nome do Paciente</b>
+                                                            <br>
+                                                            <input type="text" class="form-control" id="inNomePaciente"
+                                                                name="inNomePaciente" autocomplete="off"></input>
+                                                            <br>
+                                                            <input type="hidden" id="registro"></input>
+
+                                                        </fieldset>
+
+                                                        <fieldset class="col-md-12 col-xs-1 col-sm-12 d-none">
+                                                            <b>Paciente</b><br>
+                                                            <div class="form-group">
+                                                                <select id="nome_paciente" class="form-control w-100">
+                                                                    <option value=""></option>
+                                                                    <?php
+                                                                        foreach ($npaciente->read() as $pc) :
+                                                                            if(count($npaciente->readMysearch2($pc['PACIENTE_REGISTRO'])) == 0):
+                                                                    ?>
+                                                                    <option
+                                                                        value="<?php echo $pc['PACIENTE_REGISTRO']; ?>">
+                                                                        <?php echo $pc['PACIENTE_NOME']; ?>
+                                                                    </option>
+                                                                    <?php
+                                                                            endif;
+                                                                        endforeach;
+                                                                    ?>
+                                                                </select>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <fieldset class="col-md-6 col-xs-1 col-sm-12 float-left"
+                                                            disabled>
+                                                            <b>Data de nascimento</b>
+                                                            <input type="date" min="1900-01-01" max=""
+                                                                class="form-control" id="inIdade" placeholder=""
+                                                                name="inIdade" required>
+                                                        </fieldset>
+
+                                                        <fieldset class="col-md-6 col-xs-1 col-sm-12" disabled>
+                                                            <b>Idade</b>
+                                                            <input type="text" class="form-control" id="idade"
+                                                                placeholder="" required>
+                                                        </fieldset>
+
+                                                        <br>
+
+                                                        <fieldset class="col-md-6 col-xs-1 col-sm-12 float-left"
+                                                            disabled>
+                                                            <b>Sexo</b>
+                                                            <div class="form-group">
+                                                                <select class="form-control" id="slsEXO" name="slsEXO"
+                                                                    required>
+                                                                    <option value="">Selecione o sexo: </option>
+                                                                    <option value="M"> Masculino</option>
+                                                                    <option value="F"> Feminino</option>
+                                                                    <option value="O"> Outro</option>
+                                                                </select>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <fieldset class="col-md-6 col-xs-1 col-sm-6" disabled>
+                                                            <b>Convênio</b>
+                                                            <input type="text" class="form-control" id="inConvenio"
+                                                                placeholder="" name="inConvenio" autocomplete="off">
+                                                        </fieldset>
+
+                                                        <br>
+
+                                                        <fieldset class="col-12" style="text-align: left;" disabled>
+                                                            <b>Acomodação</b><br>
+                                                            <div class="row">
+                                                                <div
+                                                                    class="ml-2 col-2 custom-control custom-radio custom-control-inline">
+                                                                    <input type="radio" class="custom-control-input"
+                                                                        name="rbAcomodacao" id="rd1"
+                                                                        value="APARTAMENTO">
+                                                                    <label class="custom-control-label"
+                                                                        for="rd1">Apartamento</label>
+                                                                </div>
+                                                                <div
+                                                                    class="col-3 custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" id="rd2"
+                                                                        type="radio" name="rbAcomodacao"
+                                                                        value="ENFERMARIA">
+                                                                    <label class="custom-control-label"
+                                                                        for="rd2">&nbsp;Enfermaria</label>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <br>
+
+                                                        <fieldset class="col-12" style="text-align: left;" disabled>
+                                                            <b>Precauções</b>
+                                                            <br>
+                                                            <div class="row">
+                                                                <div class="col-4">
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox"
+                                                                            class="custom-control-input"
+                                                                            id="precaucoes_a" name="cbPrecaucaoContato"
+                                                                            value="26">
+                                                                        <label class="custom-control-label"
+                                                                            for="precaucoes_a">Contato</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox"
+                                                                            class="custom-control-input"
+                                                                            id="precaucoes_b" name="cbPrecaucaoContato"
+                                                                            value="22">
+                                                                        <label class="custom-control-label"
+                                                                            for="precaucoes_b">Vigilância</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox"
+                                                                            class="custom-control-input"
+                                                                            id="precaucoes_c" name="cbPrecaucaoContato"
+                                                                            value="23">
+                                                                        <label class="custom-control-label"
+                                                                            for="precaucoes_c">Goticulas</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox"
+                                                                            class="custom-control-input"
+                                                                            id="precaucoes_d" name="cbPrecaucaoContato"
+                                                                            value="24">
+                                                                        <label class="custom-control-label"
+                                                                            for="precaucoes_d">Protetor</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox"
+                                                                            class="custom-control-input"
+                                                                            id="precaucoes_e" name="cbPrecaucaoContato"
+                                                                            value="25">
+                                                                        <label class="custom-control-label"
+                                                                            for="precaucoes_e">Aerosol</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <br>
+
+                                                        <fieldset class="col-12" style="text-align: left;" disabled>
+                                                            <b>Riscos</b><br>
+                                                            <div class="row">
+                                                                <div class="col-4">
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox"
+                                                                            class="custom-control-input" id="risco_a"
+                                                                            name=cbRiscoQueda value="39">
+                                                                        <label class="custom-control-label"
+                                                                            for="risco_a">Queda</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <br>
+
+                                                        <fieldset class="col-12" disabled>
+                                                            <b>Diagnostico da internação</b>
+                                                            <div class="form-group">
+                                                                <textarea class="form-control" id="diag" rows="2"
+                                                                    autocomplete="off" required>
+                                                                </textarea>
+                                                            </div>
+                                                            <br>
+                                                        </fieldset>
+
+                                                        <br>
+
+                                                    </div>
+
+                                                    <!-- Parte "direita(verde)" do formulario -->
+                                                    <div class="col-md-6 col-xs-1 col-sm-6" id="part2"
+                                                        style="background-color: rgba(198, 253, 158, 0.66); text-align: left;">
+
+                                                        <fieldset class="col-md-12 col-xs-1 col-sm-12">
+                                                            <b>Perfil do paciente</b>
+                                                            <div class="form-group">
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio"
+                                                                        name="perfil" id="rd3" value="Cl" required <?php
+                                                                        if ($pac[0]['SOLICITACAO_PERFIL']=="Cl" )
+                                                                        echo "Checked" ; ?>>
+                                                                    <label class="custom-control-label"
+                                                                        for="rd3">Clinico</label>
+                                                                </div>
+
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio"
+                                                                        name="perfil" id="rd4" value="Cr" <?php if
+                                                                        ($pac[0]['SOLICITACAO_PERFIL']=="Cr" )
+                                                                        echo "Checked" ; ?>>
+                                                                    <label class="custom-control-label"
+                                                                        for="rd4">Cirurgico</label>
+                                                                </div>
+
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio"
+                                                                        name="perfil" id="rd6" value="Ou" <?php if
+                                                                        ($pac[0]['SOLICITACAO_PERFIL']=="Ou" )
+                                                                        echo "Checked" ; ?>>
+                                                                    <label class="custom-control-label"
+                                                                        for="rd6">Outro</label>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <fieldset class="col-md-12 col-xs-1 col-sm-12">
+                                                            <div class="form-row">
+                                                                <div class="form-group mr-4">
+                                                                    <b>COVID</b><br>
+                                                                    <div
+                                                                        class="custom-control custom-radio custom-control-inline">
+                                                                        <input type="radio" class="custom-control-input"
+                                                                            id="cvdS" name="cvd" value="1" required>
+                                                                        <label class="custom-control-label"
+                                                                            for="cvdS">Sim</label>
+                                                                    </div>
+                                                                    <div
+                                                                        class="custom-control custom-radio custom-control-inline">
+                                                                        <input type="radio" class="custom-control-input"
+                                                                            name="cvd" id="cvdN" value="0">
+                                                                        <label class="custom-control-label"
+                                                                            for="cvdN">Não</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <b>Suspeito</b><br>
+                                                                    <div
+                                                                        class="custom-control custom-radio custom-control-inline">
+                                                                        <input type="radio" class="custom-control-input"
+                                                                            id="cvdsusS" name="cvdsus" value="1"
+                                                                            disabled>
+                                                                        <label class="custom-control-label"
+                                                                            for="cvdsusS">Sim</label>
+                                                                    </div>
+                                                                    <div
+                                                                        class="custom-control custom-radio custom-control-inline">
+                                                                        <input type="radio" class="custom-control-input"
+                                                                            name="cvdsus" id="cvdsusN" value="0"
+                                                                            disabled>
+                                                                        <label class="custom-control-label"
+                                                                            for="cvdsusN">Não</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row">
+                                                                <div class="form-group col-8">
+                                                                    <b>Observação</b><br>
+                                                                    <textarea class="form-control" id="cvd_obs" rows="4"
+                                                                        style="max-height: 8em" disabled></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <fieldset class="col-md-8 col-xs-1 col-sm-8 pt-2 float-left"
+                                                            style="text-align: left;">
+                                                            <b>Acomodação solicitada</b><br>
+                                                            <div class="row">
+                                                                <div
+                                                                    class="ml-2 col-3 custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" id="rd7"
+                                                                        type="radio" name="rbAcomodacao1" value="Apt"
+                                                                        required>
+                                                                    <label class="custom-control-label"
+                                                                        for="rd7">&nbsp;Apartamento</label>
+                                                                </div>
+
+                                                                <div
+                                                                    class="col-3 custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio"
+                                                                        name="rbAcomodacao1" value="Enf" id="rd8">
+                                                                    <label class="custom-control-label"
+                                                                        for="rd8">&nbsp;Enfermaria</label>
+                                                                </div>
+
+                                                                <div
+                                                                    class="col-3 custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio"
+                                                                        name="rbAcomodacao1" value="Uti" id="rd9">
+                                                                    <label class="custom-control-label"
+                                                                        for="rd9">&nbsp;UTI</label>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <fieldset class="col-md-4 col-xs-1 col-sm-4 pt-2"
+                                                            style="text-align: left;">
+                                                            <b>Pediátrico?</b><br>
+                                                            <div class="row">
+                                                                <div
+                                                                    class="ml-2 col-4 custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" id="rd21"
+                                                                        type="radio" name="rbAcomodacaoType" value="1"
+                                                                        required>
+                                                                    <label class="custom-control-label"
+                                                                        for="rd21">&nbsp;Sim</label>
+                                                                </div>
+
+                                                                <div
+                                                                    class="col-4 custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio"
+                                                                        name="rbAcomodacaoType" value="0" id="rd22">
+                                                                    <label class="custom-control-label"
+                                                                        for="rd22">&nbsp;Não</label>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <fieldset class="col-md-12 col-xs-1 col-sm-12 pt-3">
+                                                            <b>Data/Hora da admissão</b>
+                                                            <div class="form-group">
+                                                                <div class="input-group">
+                                                                    <input class="form-control" type="date"
+                                                                        min="<?php echo date(" Y-m-d");?>"
+                                                                    max="
+                                                                    <?php echo date("Y-m-d",strtotime("+10years",strtotime(date("Y-m-d"))));?>"
+                                                                    name="admissao1" id="admissao1"
+                                                                    >
+                                                                    <input class="form-control" type="time" min=<?php
+                                                                        echo date("H:i");?>
+                                                                    max="23:59"
+                                                                    name="admissao2"
+                                                                    id="admissao2"
+                                                                    >
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <fieldset class="col-md-12 col-xs-1 col-sm-12">
+                                                            <b>Isolamento</b> <br>
+                                                            <div class="form-group ml-4">
+
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio"
+                                                                        name="iso" value="1" required id="rd12">
+                                                                    <label class="custom-control-label"
+                                                                        for="rd12">Sim</label>
+                                                                </div>
+
+                                                                <div
+                                                                    class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" id="rd13"
+                                                                        type="radio" name="iso" value="0">
+                                                                    <label class="custom-control-label"
+                                                                        for="rd13">Não</label>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <fieldset class="col-md-12 col-xs-1 col-sm-12">
+                                                            <b>Motivo da Solicitação </b>
+                                                            <div class="form-group">
+                                                                <select class="form-control" id="slTarefa"
+                                                                    name="slTarefa" required>
+                                                                    <option value="" selected>Selecione um
+                                                                        motivo:
+                                                                    </option>
+                                                                    <option value="ADCIRE">
+                                                                        Admissão Cirúrgica
+                                                                        Eletiva
+                                                                    </option>
+                                                                    <option value="ADCIRU">
+                                                                        Admissão Cirúrgica
+                                                                        Urgência
+                                                                    </option>
+                                                                    <option value="ADCLIU">
+                                                                        Admissão Clínica
+                                                                        Urgência
+                                                                    </option>
+                                                                    <option value="TROINS">
+                                                                        Transferência Outra
+                                                                        Instituíção
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <fieldset class="col-md-12 col-xs-1 col-sm-12">
+                                                            <b>Médico Assistente</b>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" name="medico"
+                                                                    id="medico" required autocomplete="off"></input>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <fieldset class="col-md-12 col-xs-1 col-sm-12">
+                                                            <br>
+                                                            <b>Unidade / Setor Solicitante</b>
+                                                            <div class="form-group">
+                                                                <select class="form-control" id="sel2"
+                                                                    name="slUnidadeSolicitante" required>
+                                                                    <option value="" selected>Selecione a Unidade:
+                                                                    </option>
+                                                                    <?php
+                                                                        foreach ($leitostip as $codigo => $leitipo):
+                                                                    ?>
+                                                                    <option value="<?php echo $codigo;?>">
+                                                                        <?php echo $leitipo ?>
+                                                                    </option>
+                                                                    <?php
+                                                                        endforeach;
+                                                                    ?>
+                                                                </select>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <fieldset class="ml-2" style="display: inline-table;">
+                                                            <b>Prioridade</b> <br>
+                                                            <div class="row" id="prior">
+                                                                <p class="col-2 ml-auto mr-0">Muito urgente</p>
+
+                                                                <div
+                                                                    class="col-1 custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio"
+                                                                        name="rbPrioridade" value="5" id="rd14"
+                                                                        required>
+                                                                    <label class="custom-control-label"
+                                                                        for="rd14">&nbsp;5</label>
+                                                                </div>
+                                                                <div
+                                                                    class="col-1 custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio"
+                                                                        name="rbPrioridade" value="4" id="rd15">
+                                                                    <label class="custom-control-label"
+                                                                        for="rd15">4&nbsp;</label>
+                                                                </div>
+                                                                <div
+                                                                    class="col-1 custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio"
+                                                                        name="rbPrioridade" value="3" id="rd16">
+                                                                    <label class="custom-control-label"
+                                                                        for="rd16">&nbsp;3</label>
+                                                                </div>
+                                                                <div
+                                                                    class="col-1 custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio"
+                                                                        name="rbPrioridade" value="2" id="rd17">
+                                                                    <label class="custom-control-label"
+                                                                        for="rd17">&nbsp;2</label>
+                                                                </div>
+                                                                <div
+                                                                    class="col-1 custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio"
+                                                                        name="rbPrioridade" value="1" id="rd18">
+                                                                    <label class="custom-control-label"
+                                                                        for="rd18">&nbsp;1</label>
+                                                                </div>
+                                                                <p class="col-3">Pouco urgente</p>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <br>
+
+                                                        <fieldset class="col-md-12 col-xs-1 col-sm-12">
+                                                            <div class="form-group">
+                                                                <b>Informações relevantes</b>
+                                                                <textarea class="form-control" rows="5" id="comment"
+                                                                    placeholder="Descreva informações clínicas relevantes"
+                                                                    name="taInformacoes" style="max-height: 10em"
+                                                                    autocomplete="off"></textarea>
+                                                            </div>
+                                                        </fieldset>
+
+                                                        <input type="hidden" name="user" id="user"
+                                                            value="<?php echo $_SESSION['gestaodeleitos']['user']['nome'].' '.$_SESSION['gestaodeleitos']['user']['sobrenome']; ?>">
+                                                        <input type="hidden" name="id" id="id_user"
+                                                            value="<?php echo $_SESSION['gestaodeleitos']['user']['id']; ?>">
+
+                                                        <!-- Fieldset do botão de solicitar (criação de solicitação) -->
+                                                        <fieldset class="col-md-12 col-xs-1 col-sm-2 mt-2 text-right">
+
+                                                            <!-- Botão de solicitar -->
+                                                            <input id="btSolicitar" type="button" class="btn btn-info"
+                                                                value="Solicitar" disabled></input>
+
+                                                            <!-- Botão de informação sobre a função solicitar -->
+                                                            <button id="BTSolicitarInfo" name="InfoBT" type="button"
+                                                                class="btn btn-outline-info">Info</button>
+
+                                                        </fieldset>
+
+                                                        <br>
+
+                                                    </div>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </section>
+                </div>
+
+            </form>
+
+            <!-- /.row (main row) -->
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+
+</div>

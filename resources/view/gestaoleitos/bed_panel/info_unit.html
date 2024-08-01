@@ -1,0 +1,55 @@
+<div class="col-12">
+    <div class="card collapsed-card unit-card" data-id="{{setor-codigo}}">
+        <div class="card-header">
+            <h3 class="card-title">{{setor-nome}}
+                <span id="{{setor-codigo}}-total" class="badge bg-navy mx-1" data-bs-toggle="tooltip"
+                    data-bs-placement="top" title="Quantidade de leitos reais">
+                    <i class="fas fa-circle"></i> {{total-leitos}}</span>
+                <span id="{{setor-codigo}}-virtual" class="badge bg-navy mx-1" data-bs-toggle="tooltip"
+                    data-bs-placement="top" title="Quantidade de leitos virtuais">
+                    <i class="fas fa-circle-notch"></i>
+                    {{leitos-virtuais}}</span>
+                <span id="{{setor-codigo}}-porcentagem-ocupacao" class="badge bg-navy mx-1" data-bs-toggle="tooltip"
+                    data-bs-placement="top" title="Porcentagem de ocupação do setor">
+                    <i class="fas fa-globe"></i>
+                    {{ocupacao-porcentagem}}%</span>
+                <span id="{{setor-codigo}}-disponiveis" class="badge bg-teal mx-1" data-bs-toggle="tooltip"
+                    data-bs-placement="top" title="Quantidade de leitos prontos para uso">
+                    <i class="fas fa-badge-check"></i>
+                    {{leitos-disponiveis}}</span>
+                <span id="{{setor-codigo}}-vagos" class="badge bg-success mx-1" data-bs-toggle="tooltip"
+                    data-bs-placement="top" title="Quantidade de leitos vagos">
+                    <i class="fas fa-lock-open-alt"></i>
+                    {{leitos-vagos}}</span>
+                <span id="{{setor-codigo}}-ocupados" class="badge bg-secondary mx-1" data-bs-toggle="tooltip"
+                    data-bs-placement="top" title="Quantidade de leitos ocupados">
+                    <i class="fas fa-procedures"></i>
+                    {{leitos-ocupados}}</span>
+                <span id="{{setor-codigo}}-reservados" class="badge bg-indigo mx-1" data-bs-toggle="tooltip"
+                    data-bs-placement="top" title="Quantidade de leitos reservados">
+                    <i class="fas fa-unlock-alt"></i>
+                    {{leitos-reservados}}</span>
+                <span id="{{setor-codigo}}-bloqueados" class="badge bg-danger mx-1" data-bs-toggle="tooltip"
+                    data-bs-placement="top" title="Quantidade de leitos bloqueados">
+                    <i class="fas fa-lock-alt"></i>
+                    {{leitos-bloqueados}}</span>
+            </h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool refresh-button">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+                <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                    <i class="fas fa-expand"></i>
+                </button>
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="d-flex flex-wrap">
+                {{leitos}}
+            </div>
+        </div>
+    </div>
+</div>

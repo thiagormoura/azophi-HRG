@@ -1,0 +1,73 @@
+<div
+    class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed accent-blue">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="margin-left: 0 !important;">
+        <!-- Content Header (Page header) -->
+        <div class="content-header mb-3">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">
+                            <i class="fas fa-calendar-check mr-1"></i>
+                            Elaborar cardápios
+                        </h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a class="text-light text-decoration-underline" href="{{URL}}/inutri">Início</a></li>
+                            <li class="breadcrumb-item active">Elaborar cardápios</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="card card-success card-outline">
+                    <div class="card-header">
+                        <div class="col-md-8 mx-auto d-flex flex-wrap">
+                            <div class="col-md-6 col-sm-12 col-xl-6 col-lg-6 col-12">
+                                <label for="perfil-select" class="font-weight-normal col-md-12 h6">Selecione o perfil
+                                    para realizar a busca</label>
+                                <select id="select-perfis" class="select-perfis select-perfisp-0"
+                                    data-placeholder="Selecione os perfis">
+                                    {{options-perfil}}
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xl-6 col-lg-6 col-12">
+                                <label for="calendar-cardapios" class="font-weight-normal col-md-12 h6">Selecione as
+                                    datas que deseja ver os cardápios</label>
+                                <div class="input-group col-md-12 calendar-cardapio-content px-0">
+                                    <input id="calendar-cardapios" name="calendario" placeholder="Selecione as datas..."
+                                        class="form-control rounded-left cursor-pointer col-md-12 bg-white" />
+                                    <div class="input-group-append">
+                                        <button class="input-button-toggle btn btn-cardapio border-0"
+                                            title="Abrir/fechar calendário" data-toggle>
+                                            <i class="fas fa-calendar-check"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="text-dark mb-0 text-center">Montar cardápio</h4>
+                        <div class="col-md-12 pl-0">
+                            <div id="divItemCardapio"></div>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <div class="mt-2 col-md-10">
+                                <div class="mt-4 row justify-content-center container-p-c">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div><!-- /.container-fluid -->

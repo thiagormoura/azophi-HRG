@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{{URL}}/resources/css/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <!-- <link rel="stylesheet" href="{{URL}}/resources/css/fontawesome-free/css/all.min.css"> -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- Google Font: Source Sans Pro -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="{{URL}}/resources/css/utils/utils.css">
+  <link rel="stylesheet" href="{{URL}}/resources/css/adminlte/adminlte.min.css">
+  <link rel="stylesheet" href="{{URL}}/resources/css/layout/layout.css">
+
+  <style>
+    .input-login {
+      border: 0;
+      height: 25px;
+      border-bottom: 1px solid #101c42;
+      border-radius: 0;
+      outline: none;
+      color: #5d5e60;
+      font-family: 'Roboto', sans-serif;
+      font-size: 15px;
+    }
+
+    .label-login {
+      font-size: 13px;
+      color: #101c42;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .button-login {
+      margin-top: 1rem;
+      padding: 6px 20px;
+      height: 38px;
+      background-color: #101c42;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      color: white;
+      border: none;
+    }
+
+    .bg-login {
+      background-color: #1c2e5f;
+    }
+
+    .bg-card-login {
+      background: linear-gradient(#9fc1ff 20%, white 20%) !important;
+    }
+
+    .button-card-login {
+      background-color: #1c2e5f
+    }
+
+    .container-login {
+      max-width: 900px;
+      max-height: 450px;
+    }
+
+    .bg-login-wallpaper {
+      background-color: #f6f6f6;
+    }
+
+    .container-login {
+      height: 100%;
+    }
+
+    @media only screen and (max-width: 767px) {
+      .container-logo {
+        height: 100px;
+      }
+
+      .container-login {
+        height: initial;
+      }
+
+      .input-login {
+        font-size: 16px;
+      }
+
+      .label-login {
+        font-size: 16px;
+      }
+
+      .button-login {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+  <title>{{title}}</title>
+</head>
+
+<body>
+  {{header}}
+  <div class="position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 9999999">
+    <div id="errorToastMain" class="toast align-items-center text-white border-0" role="alert" aria-live="assertive"
+      aria-atomic="true" data-bs-delay="3000">
+      <div class="d-flex">
+        <div class="toast-body" id="toast-message">
+          {{mensagem}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="loader-div">
+    <div class="loader mb-0"></div>
+    <h1 class="text-center mt-4">Carregando...</h1>
+  </div>
+  <main class="d-flex vw-100 bg-login" style="min-height: 100vh;">
+    {{content}}
+  </main>
+  {{footer}}
+</body>
+<!-- Jquery -->
+<script src="{{URL}}/resources/js/jquery/jquery.min.js"></script>
+<!-- JQuery Mask -->
+<script src="{{URL}}/resources/js/jquery-mask/jquery.mask.min.js"></script>
+<!-- JQuery Validation -->
+<script src="{{URL}}/resources/js/jquery-validation/jquery.validate.min.js"></script>
+<script src="{{URL}}/resources/js/jquery-validation/additional-methods.min.js"></script>
+<!-- Bootstrap -->
+<script src="{{URL}}/resources/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Script AdminLTE -->
+<script src="{{URL}}/resources/js/adminlte/adminlte.min.js"></script>
+<!-- Scripts Js -->
+<script src="{{URL}}/resources/js/customs/utils.js"></script>
+<script src="{{URL}}/resources/js/layout/layout.js"></script>
+<script src="{{URL}}/resources/js/customs/auth/script.js"></script>
+<script src="{{URL}}/resources/js/customs/ouvidoria/script.js"></script>
+
+<script>
+  const _URL = '{{URL}}';
+  $(document).ready(() => {
+    errorToastEl = document.getElementById('errorToast') ?? false;
+    var errorToast = null;
+    if (errorToastEl) {
+      errorToast = new bootstrap.Toast(errorToastEl) // Returns a Bootstrap toast instance
+      errorToast.show();
+    }
+
+    welcomeToastEl = document.getElementById('welcome-toast') ?? false;
+    if (welcomeToastEl) {
+      welcomeToast = new bootstrap.Toast(welcomeToastEl) // Returns a Bootstrap toast instance
+      welcomeToast.show();
+    }
+  })
+
+
+</script>
+
+</html>

@@ -1,0 +1,140 @@
+<div class="sidebar-collapse layout-top-nav layout-footer-fixed">
+    <div class="wrapper">
+        <div class="content-wrapper" style="height: 100vh;">
+
+            <div class="content-header bg-white shadow-sm py-1">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-12 text-center">
+                            <img src="{{URL}}/resources/img/Logo.png" style="width: 4%" alt="Hospital Rio Grande Logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="content mt-2">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="text-center"><i class="fas fa-user"></i> Clínico Geral</h5>
+                                </div>
+                                <div class="card-body p-0">
+                                    <table class="table table-hover text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>CRM</th>
+                                                <th>Médico</th>
+                                                <th>RQE</th>
+                                                <th>Idioma</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{clinico-geral}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="text-center"><i class="fas fa-heartbeat"></i> Cardiologista</h5>
+                                </div>
+                                <div class="card-body p-0">
+                                    <table class="table table-hover text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>CRM</th>
+                                                <th>Médico</th>
+                                                <th>RQE</th>
+                                                <th>Idioma</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{cardiologia}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="text-center"><i class="fas fa-skeleton"></i> Ortopedista</h5>
+                                </div>
+                                <div class="card-body p-0">
+                                    <table class="table table-hover text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>CRM</th>
+                                                <th>Médico</th>
+                                                <th>RQE</th>
+                                                <th>Idioma</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{ortopedia}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="text-center"><i class="fas fa-user-nurse"></i> Enfermeiro PSA</h5>
+                                </div>
+                                <div class="card-body p-0">
+                                    <table class="table table-hover text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>COREN</th>
+                                                <th>Nome</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{enfermeiro-psa}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="text-center"><i class="fas fa-medkit"></i> Técnico de Gesso PSA</h5>
+                                </div>
+                                <div class="card-body p-0">
+                                    <table class="table table-hover text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>COREN</th>
+                                                <th>Nome</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{tecnico-gesso-psa}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="main-footer">
+            <div class="float-left d-none d-sm-inline">
+                <p class="mb-0"><strong>Responsável Técnico:</strong> LUIZ ROBERTO LEITE FONSECA | CRM: 4132</p>
+            </div>
+        </footer>
+
+    </div>
+</div>

@@ -1,0 +1,75 @@
+<div class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed ">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="margin-left: 0 !important;">
+        <!-- Content Header (Page header) -->
+        <div class="content-header " style="border-bottom: solid 1px gray;">
+            <div class="container-fluid">
+                <div class="row py-1">
+                    <div class="col-sm-6">
+                        <h1 class="m-0"><i class="fas fa-file-spreadsheet"></i> Allog</h1>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div>
+        </div>
+
+        <section class="mt-3 mb-1 container shadow-none">
+            <div class="card card-navy">
+
+                <div class="card-header" id="filtros" style="cursor:pointer">
+                    <h3 class="card-title"> <i class="fas fa-info-circle mr-2"></i>Filtros de buscas</h3>
+                    <div class="card-tools col-12 col-md-1 text-right">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-body pb-2 pt-1 px-3" style="background: #f4f6f9;">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 mt-2 filters">
+                            <div class="d-flex flex-column">
+                                <label for="calendar-monex">Selecione as datas desejadas</label>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="input-group mb-3">
+                                            <input type="text" id="startDateMonexm"
+                                                placeholder="Selecione a data inicial"
+                                                class="form-control text-center w-100" autocomplete="off" required
+                                                value="" />
+                                            <input type="text" id="endDateMonexm" placeholder="Selecione a data final"
+                                                class="form-control text-center w-100" autocomplete="off" required>
+                                            <button class="btn btn-dark" id="search-calendar-monxem"><i
+                                                    class="far fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-lg-6 col-xl-6 filters">
+                            <label for="sectors">Sistemas</label>
+                            <select id="sectors">
+                                <option value="" selected disabled>Selecione Sistemas</option>
+                                {{sistemas}}
+                            </select>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="container">
+                <div class="row" style="min-height: 450px;">
+                    <div id="allog-users-por-sistema" class="col-12"></div>
+                </div>
+                <div class="row mt-5" style="min-height: 450px;">
+                    <div id="allog-acesso-por-semana" class="col-12"></div>
+                </div>
+                <div class="row mt-5" style="min-height: 450px;">
+                    <div id="allog-acesso-total" class="col-12"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

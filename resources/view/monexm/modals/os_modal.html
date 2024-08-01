@@ -1,0 +1,28 @@
+<div class="modal fade" id="osModal" tabindex="-1" aria-labelledby="osModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="osModalLabel">{{setor}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped table-hover mx-0 ">
+          <thead class="table-blue-hrg">
+            <tr>
+              <th class="text-center">OS</th>
+              <th class="text-center">LANCAMENTO</th>
+              <th class="text-center">RECEBIDO</th>
+              <th class="text-center">N. RECEBIDO</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{linhas-os}}
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>

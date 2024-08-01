@@ -1,0 +1,12 @@
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="form-check ps-1 bg-white border-0">
+            <input class="form-check-input ms-0 position-relative adicional-text-radio disabled-visible" type="checkbox"
+                name="{{name}}[]" value="{{value}}" data-pergunta="{{id-pergunta}}" data-resposta="{{id}}" {{disabled}} {{checked}}>
+            <label class="form-check-label ms-2 fw-normal" for="{{id}}">{{label}}</label>
+        </span>
+    </div>
+    <input type="text" style="height: 25px;"
+        class="ms-2 form-control adicional-text border-top-0 border-left-0 border-right-0 rounded-0 ps-0" name="{{name}}[]"
+        id="{{id}}" value="{{resposta}}" data-pergunta="{{id-pergunta}}" data-resposta="{{id}}" disabled>
+</div>

@@ -1,0 +1,48 @@
+<div class="modal fade" id="lockerInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="lockerInfoLabel">Armario {{numero-armario}}</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                {{body}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="{{button-id}}" class="btn btn-{{button-color}} btn-block">{{button-name}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="cadModel" tabindex="-1" aria-labelledby="cadModelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cadModelLabel">Cadastrar funcionário</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col-6">
+                <label for="name">Nome completo:</label>
+                <input type="text" name="name" class="form-control mt-2 name-input" required>
+              </div>
+              <div class="col-6">
+                <label class="label" for="matricula">Matrícula:</label>
+                <input type="text" class="form-control mt-2" name="matricula" placeholder="Matrícula" required>
+              </div>
+              <div class="col-12 mt-2 select-setor-div">
+                <label for="setor-select">Setor: </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary cad-user">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>

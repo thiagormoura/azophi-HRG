@@ -1,0 +1,169 @@
+<div class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed ">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="margin-left: 0 !important;">
+        <!-- Content Header (Page header) -->
+        <div class="content-header" style="border-bottom: solid 1px gray;">
+            <div class="container-fluid">
+                <div class="row py-1">
+                    <div class="col-sm-6">
+                        <h1 class="m-0"><i class="fas fa-chart-line"></i> Indicadores</h1>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div>
+        </div>
+
+        <section id="gleitos-indicadores-container" class="my-1 container shadow-none">
+            <div class="row">
+                {{cards}}
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Solicitação por setor</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-body" style="min-height: 450px;">
+                            <div id="gleitos-solicitacao-setor" class="col-12"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Solicitação por perfil</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-body" style="min-height: 450px;">
+                            <div id="gleitos-solicitacao-perfil" class="col-12"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Solicitação por acomodação</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-body" style="min-height: 450px;">
+                            <div id="gleitos-solicitacao-acomodacao" class="col-12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Solicitação por hora</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-body" style="min-height: 450px;">
+                            <div id="gleitos-solicitacao-hora" class="col-12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Solicitação por hora e por setor</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-body" style="min-height: 450px;">
+                            <div id="gleitos-solicitacao-hora-setor" class="col-12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Tempo médio de atendimento</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div id="gleitos-tempo-atendimento-geral" class="col-12 graph-responsive"></div>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <div id="gleitos-tempo-atendimento-perfil" class="col" style="height: 225px;">
+                                    </div>
+                                    <div id="gleitos-tempo-atendimento-acomodacao" class="col" style="height: 225px;">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Tempo médio de liberação</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div id="gleitos-tempo-liberacao-geral" class="col-12 graph-responsive"></div>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <div id="gleitos-tempo-liberacao-perfil" class="col" style="height: 225px;">
+                                    </div>
+                                    <div id="gleitos-tempo-liberacao-acomodacao" class="col" style="height: 225px;">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

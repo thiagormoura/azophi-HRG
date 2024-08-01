@@ -1,0 +1,429 @@
+/*============================================================================================================*/
+/*                                                Banner                                                      */
+/*============================================================================================================*/
+
+#banner {
+  background-image: url("img/banner2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/*============================================================================================================*/
+/*                                         Estilo Personalizado                                               */
+/*============================================================================================================*/
+
+div[class^="col-"] {
+  padding-left: 3px !important;
+  padding-right: 3px !important;
+}
+
+.card_titulo {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.card_rodape {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: -15px;
+  padding-bottom: 0px;
+}
+
+.valor {
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 0px;
+  padding: 0em;
+}
+
+/*============================================================================================================*/
+/*                                         Estilo Id's                                         */
+/*============================================================================================================*/
+
+#Tempo_da_classificacao {
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: -10px;
+  padding: 0em;
+}
+
+#Tempo_da_clmedica {
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: -10px;
+  padding: 0em;
+}
+
+#subtitulo {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#img-triagem {
+  max-width: 5%;
+  max-height: auto;
+}
+
+#recepcao {
+  max-width: 5%;
+  max-height: auto;
+}
+
+#nurse {
+  max-width: 3%;
+  max-height: auto;
+}
+
+#med {
+  max-width: 3%;
+  max-height: auto;
+}
+
+/*============================================================================================================*/
+/*                                 Definindo tamanho das telas em mobile                                      */
+/*============================================================================================================*/
+
+@media (max-width: 1440px) {
+  .card_titulo {
+    font-size: 20px;
+  }
+
+  .card_rodape {
+    font-size: 12px;
+    padding-bottom: 30px;
+  }
+
+  #subtitulo {
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+
+  #img-triagem {
+    max-width: 3%;
+  }
+
+  #nurse {
+    max-width: 2%;
+  }
+
+  #recepcao {
+    max-width: 3%;
+  }
+
+  #med {
+    max-width: 2%;
+  }
+
+  .valor {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .card_titulo {
+    font-size: 20px;
+  }
+
+  .card_rodape {
+    font-size: 12px;
+    padding-bottom: 16px;
+  }
+
+  #subtitulo {
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+
+  #img-triagem {
+    max-width: 3%;
+  }
+
+  #nurse {
+    max-width: 2%;
+  }
+
+  #recepcao {
+    max-width: 3%;
+  }
+
+  #med {
+    max-width: 2%;
+  }
+
+  .valor {
+    font-size: 37px;
+    padding-bottom: 0px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card_titulo {
+    font-size: 40px;
+  }
+
+  #subtitulo {
+    font-size: 25px;
+  }
+
+  .card_rodape {
+    font-size: 20px;
+    padding-bottom: 40px;
+  }
+
+  #img-triagem {
+    max-width: 7%;
+  }
+
+  #recepcao {
+    max-width: 7%;
+  }
+
+  #nurse {
+    max-width: 5%;
+  }
+
+  #med {
+    max-width: 5%;
+  }
+
+  .valor {
+    font-size: 80px;
+    padding-top: 9px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card_titulo {
+    font-size: 20px;
+  }
+
+  .card_rodape {
+    font-size: 20px;
+    padding-bottom: 16px;
+  }
+
+  #subtitulo {
+    font-size: 20px;
+  }
+
+  #img-triagem {
+    max-width: 7%;
+  }
+
+  #recepcao {
+    max-width: 7%;
+  }
+
+  #nurse {
+    max-width: 4%;
+  }
+
+  #med {
+    max-width: 4%;
+  }
+
+  .valor {
+    font-size: 60px;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 414px) {
+  .card_titulo {
+    font-size: 12px;
+  }
+
+  #subtitulo {
+    font-size: 10px;
+  }
+
+  .card_rodape {
+    font-size: 10px;
+    padding-bottom: 16px;
+  }
+
+  #img-triagem {
+    max-width: 10%;
+  }
+
+  #recepcao {
+    max-width: 10%;
+  }
+
+  #nurse {
+    max-width: 5%;
+  }
+
+  #med {
+    max-width: 5%;
+  }
+
+  .valor {
+    font-size: 39px;
+    padding-top: 3px;
+  }
+}
+
+@media (max-width: 411px) {
+  .card_titulo {
+    font-size: 20px;
+  }
+
+  .card_rodape {
+    font-size: 10px;
+    padding-bottom: 4px;
+  }
+
+  #subtitulo {
+    font-size: 14px;
+    padding-top: 3px;
+  }
+
+  #img-triagem {
+    max-width: 10%;
+  }
+
+  #recepcao {
+    max-width: 10%;
+  }
+
+  #nurse {
+    max-width: 5%;
+  }
+
+  #med {
+    max-width: 5%;
+  }
+
+  .valor {
+    font-size: 39px;
+    padding-top: 2px;
+  }
+}
+
+@media (max-width: 375px) {
+  .card_titulo {
+    font-size: 12px;
+  }
+
+  .card_rodape {
+    font-size: 10px;
+    padding-top: 0px;
+    padding-bottom: 7px;
+  }
+
+  #subtitulo {
+    font-size: 12px;
+    padding-top: 10px;
+  }
+
+  #img-triagem {
+    max-width: 10%;
+  }
+
+  #recepcao {
+    max-width: 10%;
+  }
+
+  #nurse {
+    max-width: 5%;
+  }
+
+  #med {
+    max-width: 5%;
+  }
+
+  .valor {
+    font-size: 30px;
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 360px) {
+  .card_titulo {
+    font-size: 12px;
+  }
+
+  .card_rodape {
+    font-size: 10px;
+    padding-bottom: 12px;
+    padding-top: 0px;
+  }
+
+  #subtitulo {
+    font-size: 10px;
+    padding-top: 0px;
+  }
+
+  #img-triagem {
+    max-width: 10%;
+  }
+
+  #recepcao {
+    max-width: 10%;
+  }
+
+  #nurse {
+    max-width: 5%;
+  }
+
+  #med {
+    max-width: 5%;
+  }
+
+  .valor {
+    font-size: 28px;
+    padding-top: 0px;
+    padding-bottom: 1px;
+  }
+}
+
+@media (max-width: 320px) {
+  .card_titulo {
+    font-size: 8px;
+  }
+
+  .card_rodape {
+    font-size: 8px;
+    padding-bottom: 9px;
+  }
+
+  #subtitulo {
+    font-size: 8px;
+    padding-top: 0px;
+  }
+
+  #img-triagem {
+    max-width: 8%;
+  }
+
+  #recepcao {
+    max-width: 8%;
+  }
+
+  #nurse {
+    max-width: 4%;
+  }
+
+  #med {
+    max-width: 4%;
+  }
+
+  .valor {
+    font-size: 23px;
+    padding-top: 4px;
+  }
+}

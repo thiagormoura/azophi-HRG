@@ -1,0 +1,21 @@
+<div id="divQuestionario"></div>
+<form onsubmit="event.preventDefault()" class="form-questionario">
+    <button type='button' name='submit'
+        class='btn d-flex btn-primary btn-add-questionario ms-auto'><span>Adicionar</span>
+        <div class='icon ml-2'><i class='fal fa-plus'></i></div>
+    </button>
+    <table id="table-questionarios" class="table table-borderless" role="grid" aria-describedby="table_recursos">
+        <thead>
+            <tr role="row">
+                <th style="width: 2%;">Status</th>
+                <th class="w-25">Nome</th>
+                <th class="w-25">Data Criação</th>
+                <th class="w-25">Tipo</th>
+                <th style="width: 10%;">Ações/Visualizar Perguntas</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{questionarios}}
+        </tbody>
+    </table>
+</form>

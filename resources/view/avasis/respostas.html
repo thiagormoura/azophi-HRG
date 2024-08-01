@@ -1,0 +1,33 @@
+<div class="container shadow-none" >
+    <main class="container h-100 col-12 col-md-8 px-0 shadow-none">
+        <div class="row mx-0 justify-content-center" id="datas" style="margin-top: 2em;margin-bottom: 5em;">
+            <div class="col-12 col-md-6 px-0 form-group mx-0 px-0">
+                <label for="data_min">Data minima</label>
+                <input type="date" id="data_min" class="dates form-control" style="border-radius: 0.25rem 0 0 .25rem;"
+                value="{{min}}" min="{{min}}" max="{{max}}"
+                >
+            </div>
+            <div class="col-12 col-md-6 form-group mx-0 px-0">
+                <label for="data_max">Data máxima</label>
+                <input type="date" id="data_max" class="dates form-control" style="border-radius: 0 .25rem .25rem 0;"
+                value="{{max}}" min="{{min}}" max="{{max}}"
+                >
+            </div>
+        </div>
+        <div class="row mx-0 justify-content-around" id="graphics" style="margin-top: 2em;margin-bottom: 5em;">
+            <div class="form-group group-first-input">
+                <label for="tipos">Tipo de relatório</label>
+                <select name="tipos" id="tipos" class="custom-select form-control">
+                    <option value="" selected disabled>Escolha um tipo de relatório</option>
+                    {{tipos}}
+                </select>
+                <div id="removable" class="mt-4"></div>
+            </div>
+        
+            <div class="w-50 col-12 mx-0 mt-4" style="margin-bottom: 30em;">
+                <div id="chartContainer"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<!-- &#9733; ESTRLINHA PLIM PLIM -->

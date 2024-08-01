@@ -1,0 +1,29 @@
+<fieldset class="border rounded {{preenchido}} my-1">
+    <div class="container-button-close">
+        <legend class="scheduler-border legend-group h6 ps-1">
+            {{legend}}
+        </legend>
+        <button class="btn-danger btn-close-option" type="button"><i class="fas fa-times"></i></button>
+    </div>
+    <input type="hidden" class="changed" name="group" value="{{id}}" />
+    <div class="form-group mb-0 mt--1">
+        <label class="col-form-label col-md-7 mr-4">Descrição</label>
+        <label class="col-form-label ml-3">Lim. Porções</label>
+        <div class="input-group form-group col-md-12">
+            <input name="opcao-grupo" type="text" value="{{descricao}}"
+                class="form-control changed group-option col-md-8-1" required>
+            <input name="quantidade-grupo" type="number" min="1" value="{{quantidade}}"
+                class="form-control col-md-3 changed group-quantity ps-2" required>
+        </div>
+    </div>
+    <div class="form-group mt-0 container-item-cardapio">
+        <label for="item-cardapio" class="col-form-label col-md-7 mr-4">Item</label>
+        <label for="porcao-cardapio" class="col-form-label ml-3">Porção</label>
+
+        {{itens}}
+
+        <div class="form-group px-2">
+            <button type="button" class="btn btn-outline-primary col-md-12 btn-add-item">Adicionar Item</button>
+        </div>
+    </div>
+</fieldset>

@@ -1,0 +1,30 @@
+<div class="modal fade" id="createQuestionario" tabindex="-1" role="dialog" aria-labelledby="createQuestionarioLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createQuestionarioLabel">Cadastrar Questionario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="addQuest">
+                    <div class="form-group">
+                        <label for="pergunta-nome" class="col-form-label">Nome</label>
+                        <input type="text" name="nome-pergunta" class="form-control" id="pergunta-nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pergunta-tipo" class="col-form-label">Tipo</label>
+                        <select name="pergunta-tipo" id="pergunta-tipo" class="form-control">
+                            <option value="Q">Questionario</option>
+                            <option value="N">NPS</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-create">Criar</button>
+            </div>
+        </div>
+    </div>
+</div>

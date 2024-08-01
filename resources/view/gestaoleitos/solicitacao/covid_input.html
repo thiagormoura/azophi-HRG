@@ -1,0 +1,13 @@
+<div class="form-group">
+    <b>Suspeito</b><br>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="suspeito-covid-s" name="suspeito-covid" value="1"
+            {{covid-suspeito}} disabled>
+        <label class="custom-control-label" for="suspeito-covid-s">Sim</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" name="suspeito-covid" id="suspeito-covid-n" value="0"
+            {{not-covid-suspeito}} disabled>
+        <label class="custom-control-label" for="suspeito-covid-n">Não</label>
+    </div>
+</div>

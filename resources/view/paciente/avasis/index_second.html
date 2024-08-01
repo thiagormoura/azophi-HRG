@@ -1,0 +1,23 @@
+    {{inicializador_perguntas}}
+    <div class="card d-none" id="second" data-id="{{id_questionario}}" style="height: 400px; width: 400px;">
+        <div class="card-header">
+            <h5 id="categ"><i class="fas fa-{{nome_categoria_to_icon}}"></i> {{nome_categoria}}</h5>
+        </div>
+        <div class="card-body">
+            <h1 id="titulo">{{pergunta}}</h1>
+        </div>
+        <div class="card-footer">
+            <form id="perguntas" onsubmit="return false;" class="carousel-item active bind">
+                <input type="hidden" value="{{id_pergunta}}" id="id">
+                <div class="form-row" id="teste">
+                    <fieldset class="rating mx-auto">
+                        <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Incrivel - 5 estrelas"></label>
+                        <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Muito bom - 4 estrelas"></label>
+                        <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Mais ou menos - 3 estrelas"></label>
+                        <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Um pouco ruim - 2 estrelas"></label>
+                        <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Horrivel - 1 estrela"></label>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+    </div>

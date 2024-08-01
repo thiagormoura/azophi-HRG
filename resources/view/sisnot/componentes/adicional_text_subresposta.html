@@ -1,0 +1,13 @@
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="form-check ps-1 bg-white border-0">
+      <input class="form-check-input ms-0 position-relative adicional-text-radio disabled-visible" type="radio"
+        name="{{name}}" value="{{value}}" {{disabled}} {{checked}}>
+      <label class="form-check-label ms-2 fw-normal" for="{{id}}">{{sub-resposta-holder}}</label>
+    </span>
+  </div>
+  <input type="text" style="height: 25px;"
+    class="form-control {{margem}} adicional-text border-top-0 border-left-0 border-right-0 rounded-0 ps-0"
+    name="{{name}}" id="{{id}}" value="{{subresposta}}" data-resposta="{{id-resposta}}" data-subresposta="{{id-sub-resposta}}"
+    {{disabled-text}}>
+</div>

@@ -1,0 +1,12 @@
+<div class="input-group item-cardapio form-group col-md-12">
+  <select name="opcao[]" class="custom-select form-control col-md-9 changed">
+      <option value="">Selecione uma comida:</option>
+      {{comidas}}
+  </select>
+
+  <input name="porcao[]" type="number" min="1" value="{{porcao}}"
+      class="form-control col-md-3  ps-2 changed">
+  <div class="input-group-append">
+      <button class="btn btn-outline-danger btn-remove-item border-0" type="button"><i class="fas fa-times"></i></button>
+  </div>
+</div>

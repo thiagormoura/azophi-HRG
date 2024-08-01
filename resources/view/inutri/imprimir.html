@@ -1,0 +1,15 @@
+<div>
+    <h1>teste</h1>
+</div>
+
+<script>
+    function printZpl(zpl) {
+        var printWindow = window.open();
+        printWindow.document.open('text/plain')
+        printWindow.document.write(zpl);
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.print();
+        printWindow.close();
+    }
+</script>

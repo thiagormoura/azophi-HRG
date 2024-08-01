@@ -1,0 +1,55 @@
+<div class="modal fade bd-example-modal-lg" id="createCardapio" tabindex="-1" role="dialog"
+  aria-labelledby="createCardapioLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createCardapioLabel">Registrar cardápio</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <input type="hidden" id="idCardapio" class="changed" value="{{id}}" name="idCardapio" />
+              <label for="cardapioNome" class="col-form-label">Nome</label>
+              <input type="text" name="nomeCardapio" class="form-control changed" value="{{nome}}" id="cardapioNome"
+                required>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="horaInicio" class="col-form-label">Hora Inicio</label>
+              <input id="horaInicio" type="text" name="horaInicio" value="{{hora-inicio}}"
+                class="form-control cursor-pointer bg-white changed" required />
+            </div>
+            <div class="form-group col-md-3">
+              <label for="horaLimite" class="col-form-label">Hora limite</label>
+              <input id="horaLimite" type="text" name="horaLimite" value="{{hora-limite}}"
+                class="form-control cursor-pointer bg-white changed" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inutri-select-dieta" class="col-form-label">Dietas Smart</label>
+              <select name="dieta" id="inutri-select-dieta" data-placeholder="Selecione a dieta">
+                <option value="" selected>Não há vinculo com dietas</option>
+                {{options}}
+              </select>
+            </div>
+          </div>
+          <div id="alertTime"></div>
+          <div class="form-group">
+            <p class="font-weight-bold mb-2">Perfis</p>
+            <ul class="list-group">
+              {{perfis}}
+            </ul>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-success btn-{{button-type}}">{{button}}</button>
+      </div>
+    </div>
+  </div>
+</div>

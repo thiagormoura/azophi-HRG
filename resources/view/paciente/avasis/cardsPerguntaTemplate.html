@@ -1,0 +1,19 @@
+<div class="card mb-0">
+    <div class="card-header">
+        <h5>{{quest-number}}: {{pergunta}}</h5>
+    </div>
+    <div class="card-body">
+        <form onsubmit="return false;" class="form perguntas carousel-item active bind">
+            <input type="hidden" value="id" id="{{id_pergunta}}">
+            <div class="form-row">
+                <fieldset class="rating mx-auto">
+                    <input type="radio" name="rating" value="5" /><label class="full" for="star5" title="Incrivel - 5 estrelas"></label>
+                    <input type="radio" name="rating" value="4" /><label class="full" for="star4" title="Muito bom - 4 estrelas"></label>
+                    <input type="radio" name="rating" value="3" /><label class="full" for="star3" title="Mais ou menos - 3 estrelas"></label>
+                    <input type="radio" name="rating" value="2" /><label class="full" for="star2" title="Um pouco ruim - 2 estrelas"></label>
+                    <input type="radio" name="rating" value="1" /><label class="full" for="star1" title="Horrivel - 1 estrela"></label>
+                </fieldset>
+            </div>
+        </form>
+    </div>
+</div>

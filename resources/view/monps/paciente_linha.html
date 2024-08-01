@@ -1,0 +1,20 @@
+<tr>
+  <td class="justify-content-start align-items-center paciente-nome" data-fila="{{fila}}" data-registro="{{registro}}"
+    data-bip="{{bip}}" data-tempo-fila="{{tempo-fila}}">
+    <p class="m-0">
+      {{pac-nome}}
+    </p>
+    <span class="badge bg-secondary {{preferencial}} preferencial-badge"><i class="fas fa-wheelchair me-1"></i>Preferencial</span>
+    <span class="badge preferencial-badge {{bg-status-fila}}">{{status-fila}}</span>
+    <span class="badge {{bg-cr}} preferencial-badge">{{pac-cr}}</span>
+  </td>
+  <td class="text-center">
+    {{pac-tempo-fila}}
+  </td>
+  <td class="text-center {{color-tempo-fila}}">
+    {{tempo-hospitalar}}
+  </td>
+  <td class="text-center">
+    {{medicacao}}/{{aplicadas}}
+  </td>
+</tr>

@@ -1,0 +1,32 @@
+{{status}}
+<div class="mx-auto d-flex align-items-center justify-content-center">
+  <div class="bg-white d-flex flex-column justify-content-start mx-4" style="height: 35rem;">
+
+    <div class="text-center mb-4 mt-5">
+      <a href="{{URL}}"><img class="w-75" src="{{URL}}/resources/img/central-servicos.png" alt="Central de Serviço"></a>
+    </div>
+
+    <div class="mx-3 d-flex justify-content-center flex-fill flex-wrap">
+      <form method="post" action="{{URL}}/login" class="col-10 d-flex flex-column justify-content-evenly">
+        <div>
+          <div class="mt-1 d-flex flex-column">
+            <label for="inputEmail" class="mb-0 label-login">Email</label>
+            <input type="email" id="inputEmail" name="email" required class="input-login px-0"
+              autofocus>
+          </div>
+
+          <div class="my-2 d-flex flex-column">
+            <label for="inputSenha" class="mb-0 label-login">Senha</label>
+            <input type="password" id="inputSenha" name="senha" class="input-login px-0" required>
+          </div>
+        </div>
+
+        <div class="text-start">
+          <button type="submit" class="button-login w-100">Entrar</button>
+          <a href="{{URL}}/login/esqueci_senha">Esqueci minha senha</a>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>

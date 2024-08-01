@@ -1,0 +1,124 @@
+<div class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed ">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="margin-left: 0 !important;">
+        <!-- Content Header (Page header) -->
+        <div class="content-header " style="border-bottom: solid 1px gray;">
+            <div class="container-fluid">
+                <div class="row py-1">
+                    <div class="col-sm-6">
+                        <h1 class="m-0"><i class="fas fa-chart-line"></i> Escala Médica PS</h1>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div>
+        </div>
+
+        <section class="mt-3 mb-1 container shadow-none">
+            <div class="row py-2">
+                <div class="col-md-8">
+                    <div class="card mb-0">
+                        <div class="card-header">
+                            <h3 class="card-title">Inserir médico do plantão</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form id="addMedico" onsubmit="event.preventDefault()">
+                                <div class="form-row">
+                                    <label for="options">Informe o médico</label>
+                                    {{list-medicos}}
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="col-md-4 ps-0" id="teste">
+                                        <label for="crm">CRM / COREN</label>
+                                        <input type="text" class="form-control" id="crm">
+                                    </div>
+                                    <div class="col-md-8 pe-0">
+                                        <label for="nomeMedico">Nome:</label>
+                                        <input type="text" class="form-control" id="nomeMedico">
+                                    </div>
+                                </div>
+
+                                <div class="form-row my-2">
+                                    <div class="custom-control custom-radio pe-3">
+                                        <input class="custom-control-input" type="radio" name="especialidade[]"
+                                            id="cardiologista" value="2">
+                                        <label for="cardiologista" class="custom-control-label">Cardiologista</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio pe-3">
+                                        <input class="custom-control-input" type="radio" name="especialidade[]"
+                                            id="clinico" value="1">
+                                        <label for="clinico" class="custom-control-label">Clinico Geral</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio pe-3">
+                                        <input class="custom-control-input" type="radio" name="especialidade[]"
+                                            id="ortopedista" value="3">
+                                        <label for="ortopedista" class="custom-control-label">Ortopedista</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio pe-3">
+                                        <input class="custom-control-input" type="radio" name="especialidade[]"
+                                            id="enf_psa" value="7">
+                                        <label for="enf_psa" class="custom-control-label">Enfermeiro PSA</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" name="especialidade[]"
+                                            id="tec_gesso" value="8">
+                                        <label for="tec_gesso" class="custom-control-label">Técnico de Gesso
+                                            PSA</label>
+                                    </div>
+                                </div>
+                                <button type="submit" id="gravarMed"
+                                    class="btn btn-success btn-sm btn-block btn-create">GRAVAR</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4 mt-md-0">
+                    <div class="small-box bg-navy">
+                        <div class="inner">
+                            <h3>Painel</h3>
+                            <p>Médicos de plantão</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <a href="{{URL}}/escalamedica/painel" class="small-box-footer"> Visualizar <i
+                                class="fas fa-arrow-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Médicos escalados</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped" id="MedicosPlantao">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">CRM</th>
+                                        <th scope="col">Médico</th>
+                                        <th scope="col">Especialidade</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

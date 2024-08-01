@@ -1,0 +1,42 @@
+<div class="container-fluid">
+
+    {{cards}}
+
+    {{table-filters}}
+
+    {{table}}
+
+</div>
+
+<style>
+    .sidebar-dark-blue .nav-sidebar>.nav-item>.nav-link.active,
+    .sidebar-light-blue .nav-sidebar>.nav-item>.nav-link.active {
+        background-color: #001f3f;
+        color: white;
+    }
+
+    @media (min-width: 992px) {
+
+        .sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused,
+        .sidebar-mini.sidebar-collapse .main-sidebar:hover {
+            width: 250px;
+            margin-right: 15px;
+        }
+    }
+
+    aside {
+        margin-right: 15px;
+    }
+
+    #sideBarButton {
+        color: white;
+    }
+
+    .card-persona {
+        font-size: 14px;
+        font-family: "Source Sans Pro";
+        font-weight: 500;
+        color: #505050;
+        text-align: center;
+    }
+</style>

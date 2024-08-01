@@ -1,0 +1,39 @@
+#pacientes tr, #examesDoPaciente tr{
+    cursor: pointer !important;
+}
+
+#pacientes.cell-border th, #examesDoPaciente.cell-border th {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+}
+
+#pacientes.cell-border td, #examesDoPaciente.cell-border td {
+    border-top: 1px solid #dddddd;
+}
+
+#pacientes.cell-border th:first-child, #examesDoPaciente.cell-border th:first-child {
+    border-left: 1px solid #dddddd;
+}
+
+#pacientes th, #examesDoPaciente th{
+    vertical-align: middle !important;
+}
+
+#pacientes tr td:last-child{
+    text-align: center;
+}
+#pacientes tr td:first-child{
+    text-align: left;
+}
+#pacientes tr td:last-child span{
+    margin-left: 10px;
+}
+
+.even:hover, .odd:hover{
+    background-color: rgb(230, 230, 230) !important;
+}
+
+#examesDoPaciente tbody tr:hover{
+    background-color: rgb(230, 230, 230) !important;
+}

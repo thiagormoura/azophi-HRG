@@ -1,0 +1,35 @@
+<div class="d-flex w-100 h-100 flex-column justify-content-between">
+    <div class="bg-white py-3 mb-3">
+        <div class="text-center">
+            <img src="{{URL}}/resources/img/central-servicos.png" style="width: 200px;" alt="Central de Serviço">
+        </div>
+    </div>
+    <div class="d-flex flex-column justify-content-center px-5 h-100">
+        <div class="row">
+            <div class="col-12">
+                <div class="card text-dark">
+                    <div class="card-header border-transparent">
+                        <h3 class="card-title">Projetos</h3>
+                    </div>
+
+                    <div class="card-body p-0">
+                        <div class="card-body table-responsive p-0" style="height: 500px;">
+                            <table class="table table-head-fixed text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>Sistema</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{rows}} 
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

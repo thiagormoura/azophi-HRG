@@ -1,0 +1,33 @@
+<div name="{{row_name}}" class="row my-3 align-items-center border-bottom pb-2">
+
+    <div class="col-6">
+
+        {{radio_buttons}}
+
+    </div>
+
+    <div class="col-5">
+
+        <textarea
+            id="{{ta_id}}" 
+            type="text" 
+            class="form-control" 
+            autocomplete="off"
+            placeholder="Digite a descrição"
+            {{ta_disabled}}>{{ta_text}}</textarea>
+    
+    </div>
+
+    <div class="col-1">
+        <button type="button" name="btnRemoverIdentificacao" class="btn btn-danger">X</button>
+    </div>
+
+    <div class="col-12 mt-1">
+
+        <b><u>Setores Envolvidos</u></b>
+
+        {{select_setores_envolvidos}}
+
+    </div>
+
+</div>

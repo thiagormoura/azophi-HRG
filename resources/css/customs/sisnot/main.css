@@ -1,0 +1,6 @@
+.info-incidente-hide{
+  /* position: absolute; */
+  display: none;
+  left: 100vw;
+  /* display: none !important; */
+}

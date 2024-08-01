@@ -1,0 +1,83 @@
+<div class="collapse" data-parent="#containerPedido" id="cardapio{{id-cardapio}}" data-id="{{id-cardapio}}">
+  <form>
+    <fieldset class="form-group fieldset-info mb-0">
+      <div class="form-group mx-auto col-md-12 col-sm-12 col-lg-8">
+
+        <div class="card card-navy">
+          <div class="card-header">
+            <h3 class="card-title"><i class="fal fa-info-circle mr-1"></i>Informações do Pedido</h3>
+          </div>
+          <div class="card-body">
+
+            <div class="form-group text-left">
+              <label for="solicitante">Solicitante</label>
+              <div class="input-group">
+                <input type="text" class="form-control" maxlength="50" value="{{solicitante}}" name="solicitante"
+                  id="solicitante" disabled>
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fal fa-users"></i></span>
+                </div>
+              </div>
+              <!-- /.input group -->
+            </div>
+            <!-- /.form group -->
+            {{destinatario}}
+            <!-- /.form group -->
+            <div class="form-group text-left">
+              <label>Destino</label>
+              <div class="input-group" for="inutri-destino">
+                <!-- <input type="text" class="form-control" maxlength="150" name="destino" id="destino" required> -->
+                <select class="inutri-destino" data-placeholder="Selecione um destino para o pedido" name="destino">
+                  {{destino}}
+                </select>
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fal fa-map-marker-exclamation"></i></span>
+                </div>
+              </div>
+              <!-- /.input group -->
+            </div>
+            <!-- /.form group -->
+            <div class="form-group text-left">
+              <label>Observação (opcional)</label>
+              <div class="input-group" for="observacao">
+                <textarea type="text" class="form-control" maxlength="300" name="observacao" id="observacao"
+                  style="max-height: 9rem; min-height: 3rem;"></textarea>
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fal fa-sticky-note"></i></span>
+                </div>
+              </div>
+              <!-- /.input group -->
+            </div>
+            <!-- /.form group -->
+
+
+          </div>
+          <!-- /.card-body -->
+        </div>
+
+      </div>
+    </fieldset>
+    <fieldset class="form-group fieldset-pedido">
+      <div class="form-group col-md-12 col-sm-12 col-lg-8 mx-auto comida-container">
+
+        <div class="card card-navy">
+          <div class="card-header">
+            <h3 class="card-title"><i class="fal fa-chevron-square-down mr-1"></i></i>Selecione as
+              opções que desejar</h3>
+          </div>
+          <div class="card-body">
+            <div class="bs-stepper-header" role="tablist">
+              <div class="form-group text-left">
+                <label for="opcoes">Informe o que deseja:</label>
+                {{grupos}}
+                {{padronizado}}
+              </div>
+            </div>
+            <div class="form-row justify-content-center mb-4">
+              <button type="submit" name="enviar" class="btn {{btn-submit}} btn-primary" disabled>Fazer Pedido</button>
+            </div>
+          </div>
+
+    </fieldset>
+  </form>
+</div>

@@ -1,0 +1,94 @@
+<div class="row my-3 col-md-10 col-12 col-sm-12 col-lg-10 col-xl-10 mx-auto px-0">
+  <div
+    class="col-12 col-md-12 col-sm-12 col-12 mx-auto justify-content-center align-items-start text-center text-light rounded pt-1 r d-flex flex-wrap"
+    style="background-color: #192549;">
+    <p class="d-block fw-bold col-md-12 mb-1" style="font-size: .9rem;">Diagnóstico
+      dos exames.</p>
+    <p class="rounded d-block my-1 col-md-12 col-sm-12 col-12 {{color-diff-time}} ">
+      <i class="far fa-clock"></i> Tempo desde o último resultado: <strong>
+        {{diff-time}}
+      </strong>
+    </p>
+    <div class="col-6 col-md-6 col-sm-12 col-12">
+      <div class="col-md-12 d-flex flex-wrap">
+        <div class="col-6 col-md-6 px-0 mx-0">
+          <label for=""><i class="far fa-file-medical-alt"></i> Total exames</label>
+        </div>
+        <div class="col-6 col-md-6 px-0 mx-0">
+          <label for=""><i class="far fa-file-medical"></i> Total Resultados</label>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="input-group mb-3">
+          <input type="text" value="{{total-exames}}" class="form-control text-center" readonly>
+          <input type="text" value="{{total-resultados}}" class="form-control text-center" readonly>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-6 col-sm-12 col-12">
+      <div class="col-md-12 d-flex flex-wrap">
+        <div class="col-6 col-md-6 px-0 mx-0">
+          <label for=""><i class="far fa-calendar"></i> Resultado primeiro exame</label>
+        </div>
+        <div class="col-6 col-md-6 px-0 mx-0">
+          <label for=""><i class="far fa-calendar-check"></i> Resultado último exame</label>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="input-group mb-3">
+          <input type="text" value="{{data-primeiro}}" class="form-control text-center" readonly>
+          <input type="text" value="{{data-ultimo}}" class="form-control text-center" readonly>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mb-2 col-md-10 col-12 col-sm-12 col-lg-10 col-xl-10 mx-auto card-azul-hrg card-outline">
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Setor</th>
+          <th class="text-center">Solicitado</th>
+          <th class="text-center">Resultado</th>
+          <th class="text-center">Coletado</th>
+          <th class="text-center">Aberto</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{linhas-tabela}}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="mt-2 col-md-10 col-12 col-sm-12 col-lg-10 col-xl-10 py-1 px-0 mx-auto">
+  <div class="loader-div2">
+    <div class="loader mb-0"></div>
+    <h1 class="text-center mt-4">Carregando...</h1>
+  </div>
+
+  <div class="row mx-0 my-1 chart-monexm card-azul-hrg card-outline">
+    <div class="col-md-6 col-sm-12 col-12 mt-1">
+      <div id="setores-exame" style="min-height: 300px;"></div>
+    </div>
+
+    <div class="col-md-6 col-sm-12 col-12 mt-1">
+      <div id="solic-semana" style="min-height: 300px;"></div>
+    </div>
+  </div>
+
+  <div class="row mx-0 my-3 chart-monexm card-azul-hrg card-outline">
+    <div class="col-md-12 col-sm-12 col-12">
+      <div id="solic-hora" style="min-height: 300px;"></div>
+    </div>
+  </div>
+
+  <div class="row mx-0 my-3 chart-monexm card-azul-hrg card-outline">
+    <div class="col-md-12 col-sm-12 col-12">
+      <div id="solic-dia" style="min-height: 300px;"></div>
+    </div>
+  </div>
+</div>
+<script src="{{URL}}/resources/js/customs/monexm/dataPoints.js"></script>

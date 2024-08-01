@@ -1,0 +1,75 @@
+<div
+  class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed accent-blue">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" style="margin-left: 0 !important;">
+    <!-- Content Header (Page header) -->
+    <div class="content-header mb-3">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">
+              <i class="fas fa-clipboard-list-check me-1"></i>
+              Pedidos
+            </h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a class="text-light text-decoration-underline"
+                  href="{{URL}}/inutri">Início</a></li>
+              <li class="breadcrumb-item active text-light">Pedidos</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="card card-primary card-outline">
+          <div class="card-header">
+            {{menu-pedidos}}
+            <div class="d-flex mt-2">
+              <div class="container-legends-pedido col-6">
+                <h6 class="mb-0">Legendas:</h6>
+                <span class="mx-1 d-block d-md-inline" style="font-size: .9rem;"><i class="fas fa-clipboard"></i>
+                  Cardápio</span>
+                <span class="mx-1 d-block d-md-inline" style="font-size: .9rem;"><i class="fas fa-map-marker-alt"></i>
+                  Destino</span>
+                <span class="mx-1 d-block d-md-inline" style="font-size: .9rem;"><i class="fas fa-heart"></i>
+                  Paciente</span>
+                <span class="mx-1 d-block d-md-inline" style="font-size: .9rem;"><i class="fas fa-user"></i>
+                  Funcionário</span>
+              </div>
+              <div class="container-filters-pedido col-6">
+                <h6 class="mb-0">Filtros:</h6>
+                <div class="d-flex flex-column flex-md-row">
+                  {{filtros}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="containerModal"></div>
+            <div id="inutri-calendario-container" class="d-none justify-content-center mb-4 align-items-center">
+              <div class="input-group calendar-cardapio-content col-md-4 px-0">
+                <input id="calendario-pedidos" name="calendario" placeholder="Selecione as datas e busque para filtrar"
+                  class="form-control rounded-left cursor-pointer bg-white" />
+                <div class="input-group-append">
+                  <button type="button" name="enviar" class="btn btn-secondary rounded-right text-white"><i
+                      class="fas fa-search"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="row row-cards">
+
+              {{pedidos}}
+              <!-- <h4 class="ml-2">Não há pedidos pendentes.</h4> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div><!-- /.container-fluid -->
+</div>

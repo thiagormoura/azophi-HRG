@@ -1,0 +1,27 @@
+{{status}}
+<div class="mx-auto d-flex align-items-center justify-content-center">
+  <div class="bg-white d-flex flex-column justify-content-start mx-4" style="height: 28rem; width: 28rem;">
+
+    <div class="text-center mb-4 mt-5">
+      <a href="{{URL}}"><img class="w-75" src="{{URL}}/resources/img/central-servicos.png" alt="Central de Serviço"></a>
+    </div>
+
+    <div class="mx-3 d-flex justify-content-center flex-fill flex-wrap">
+      <form method="post" action="{{URL}}/login/esqueci_senha" class="col-10 d-flex flex-column justify-content-evenly">
+        <div>
+          <p class="mb-1">Enviaremos um email para você com as instruções de como recuperar sua senha.</p>
+          <div class="mt-4 d-flex flex-column">
+            <label for="inputEmail" class="mb-0 label-login">Email</label>
+            <input type="email" id="inputEmail" name="email" class="input-login px-0" required>
+          </div>
+        </div>
+
+        <div class="text-start">
+          <button type="submit" class="button-login w-100 mb-2">Solicitar</button>
+          <a href="{{URL}}/login">Voltar</a>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>

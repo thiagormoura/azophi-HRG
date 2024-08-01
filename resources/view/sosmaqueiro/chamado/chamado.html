@@ -1,0 +1,46 @@
+<div class="col-md-3 sosmaqueiro-solicitacao" data-id="{{id}}" data-status="{{status}}">
+  <div class="card ">
+    <div class="card-header {{status-color}} sosmaqueiro-status">
+      <span class="fst-italic mb-0 sosmaqueiro-acao">{{acao}}</span>
+    </div>
+    <div class="card-body box-profile">
+      <p class="text-muted mb-0">{{horario-solicitacao}}</p>
+      <h3 class="profile-username my-0">{{solicitante}}</h3>
+      <p class="text-muted">{{setor-solicitante}}</p>
+
+      <ul class="list-group list-group-unbordered mb-3">
+        <!-- <li class="list-group-item">
+          <b>Solicitação</b> <span class="float-right">{{horario-solicitacao}}</span>
+        </li> -->
+        <li class="list-group-item">
+          <b>Paciente</b> <span class="float-right">{{paciente}}</span>
+        </li>
+        <li class="list-group-item">
+          <b>Setor</b> <span class="float-right">{{setor}}</span>
+        </li>
+        <li class="list-group-item">
+          <b>Leito</b> <span class="float-right">{{local}}</span>
+        </li>
+        <li class="list-group-item">
+          <b>Destino</b> <span class="float-right">{{destino}}</span>
+        </li>
+        <li class="list-group-item">
+          <b>Transporte</b> <span class="float-right">{{usando}}</span>
+        </li>
+        <li class="list-group-item">
+          <b>Recurso</b> <span class="float-right">{{recurso}}</span>
+        </li>
+      </ul>
+
+      <details class="mb-2 observacao-pedido px-0">
+        <summary class="text-dark"> Observações </summary>
+        <p>
+          {{observacoes}}
+        </p>
+      </details>
+      <div class="d-flex sosmaqueiro-buttons">
+        {{buttons}}
+      </div>
+    </div>
+  </div>
+</div>

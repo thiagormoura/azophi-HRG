@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+*{
+    margin: 0;
+}
+
+.logo-nav {
+    width: 40px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.logo-hor {
+    width: 180px;
+    padding: 2px;
+    /* background-color: white; */
+
+}
+
+.legenda-tempo {
+    background-color: rgba(214, 221, 255, 0.72);
+}
+
+.legenda-tempo .d-flex div{
+    margin: 0 12px;
+}
+
+.titulo-legenda-tempo {
+    color: rgb(20, 6, 71);
+    font-weight: 600;
+    margin-right: 10px;
+    
+}
+.tempo {
+    margin: 0 15px;
+    border: 0 1px 0 0 solid;
+}
+.tempo:nth-child(5) {
+    border-left: 5px solid #3e70d0;
+
+}
+.tempo:nth-child(4) {
+    border-left: 5px solid #e81818;
+}
+.tempo:nth-child(3) {
+    border-left: 5px solid #f2994e;
+}
+.tempo:nth-child(2) {
+    border-left: 5px solid green;
+}
+
+
+.nome_painel {
+    color: rgb(255, 255, 255);
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+}
+
+.tot-cirurgia {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18pt;
+}
+
+.legenda {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 40px;
+}
+.legenda:nth-child(0) {
+    border-left: 1px solid;
+}
+td {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.titulo-legenda {
+    margin: 5px 0 5px;
+}
+
+.icofont-blood-drop {
+    color: red;
+}
+
+.icofont-check-circled {
+    color: green;
+}
+
+tr{
+    border-top: none;
+    border-bottom: none;
+}
+
+td{
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+tbody td, tbody th{
+    vertical-align: middle;
+}
+
+tr th:first-child{
+    border-left: none;
+}
+
+footer {
+    width: 100%;
+    height: 27px;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid #5a5a5a83;
+    background-color: #fff;
+}

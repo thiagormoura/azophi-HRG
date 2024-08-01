@@ -1,0 +1,33 @@
+<div class="modal fade" id="createRecurso" tabindex="-1" role="dialog" aria-labelledby="createRecursoLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createRecursoLabel">Cadastrar recurso</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="nome" class="col-form-label">Nome</label>
+            <input type="text" name="nome" class="form-control" id="nome" required>
+          </div>
+          <div class="form-group">
+            <label for="categoria" class="col-form-label">Categoria</label>
+
+            <select id="categoria" class="categoria-recurso form-control" name="categoria"
+              data-placeholder="Selecione uma categoria" required>
+              {{categorias}}
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary btn-create">Criar</button>
+      </div>
+    </div>
+  </div>
+</div>

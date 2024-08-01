@@ -1,0 +1,71 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+		fieldset, label { margin: 0; padding: 0; }
+		/* body{ background-color: #949494; } */
+		h1 { font-size: 1.5em; margin: 10px; }
+
+		/****** Style Star Rating Widget *****/
+
+		.rating { 
+		  border: none;
+		  float: left;
+		}
+
+		.rating > input { display: none; } 
+		.rating > label:before { 
+		  margin: 5px;
+		  font-size: 3em;
+		  font-family: FontAwesome;
+		  display: inline-block;
+		  content: "\f005";
+		}
+
+		.rating > label { 
+		  	color: #b5b5b5; 
+		 	float: right; 
+		}
+		/* .container{
+			box-shadow: 10px 5px 15px #868686;
+		} */
+		#carouselExampleControls{
+			word-break: break-word;
+		}
+
+		/* #back_container{
+			background-color: #949494;
+		} */
+
+		.box-questionario{
+			padding: 2em;
+			width: 50%;
+			border-radius: 7px;
+			color: white;
+			background-color: #4279f5;
+			cursor: pointer;
+		}
+
+		.box-questionario:hover{
+			background-color: #2f65e1;
+			color: #c5c5c5;
+		}
+
+		.answered{
+			background-color: #0a9967 !important;
+			color: white !important;
+		}
+
+		.answered ::after{
+			color: white !important;
+		}
+
+
+		/***** CSS Magic to Highlight Stars on Hover *****/
+
+		.rating > input:checked ~ label, /* show gold star when clicked */
+		.rating:not(:checked) > label:hover, /* hover current star */
+		.rating:not(:checked) > label:hover ~ label { color: #de7100;  } /* hover previous stars in list */
+
+		.rating > input:checked + label:hover, /* hover current star when changing rating */
+		.rating > input:checked ~ label:hover,
+		.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+		.rating > input:checked ~ label:hover ~ label { color: #e3b381;  } 

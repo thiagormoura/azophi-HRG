@@ -1,0 +1,66 @@
+<div class="row mt-2">
+
+    <div class="col-12">
+
+        <div class="card collapsed-card">
+
+            <div class="card-header" id="filtrosDashboard" style="cursor:pointer">
+                
+                <h3 class="card-title"> 
+                    <i class="fas fa-info-circle mr-2"></i>Filtros
+                </h3>
+
+                <div class="card-tools col-12 col-md-1 text-right">
+
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-plus"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="card-body pb-2 pt-1 px-3">
+
+                <!-- Datas -->
+                <div class="row">
+
+                    <!-- Datas -->
+                    <div class="col-6 filters">
+
+                        <label>Intervalo de datas</label>
+
+                        <div class="input-group mb-3">
+
+                            <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                                <i class="fa fa-calendar"></i>&nbsp;<span></span> <i class="fa fa-caret-down"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <!-- Setores envolvidos -->
+                <div class="row">
+
+                    <!-- Setores envolvidos -->
+                    <div class="col-12 filters">
+                        
+                        <div class="form-group">
+                            <label for="slSetoresEnvolvidosDashboard">Setores Envolvidos :</label>
+                            {{select-setores-envolvidos}}
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

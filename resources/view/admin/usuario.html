@@ -1,0 +1,121 @@
+{{status}}
+<div
+  class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed accent-blue">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" style="margin-left: 0 !important;">
+    <!-- Content Header (Page header) -->
+    <div class="content-header mb-3">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">
+              <i class="fal fa-ballot mr-1"></i>
+              Usuários
+            </h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a class="text-light text-decoration-underline"
+                  href="{{URL}}/admin">Início</a></li>
+              <li class="breadcrumb-item active">Usuários</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <main class="card card-navy card-outline">
+          <div class="card-body table-responsive">
+            <table id="table-admin" class="table table-usuario">
+              <thead>
+                <tr>
+                  <th class="ps-2">#</th>
+                  <th class="ps-2">Nome</th>
+                  <th class="ps-2">Email</th>
+                  <th class="ps-2">CPF</th>
+                  <th class="ps-2">Data de criação</th>
+                  <th class="ps-2">Status</th>
+                  <th class="ps-2" style="width: 5%;">Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{usuarios}}
+              </tbody>
+            </table>
+            <button type="button" class="btn btn-azul-medio2" data-bs-toggle="modal"
+              data-bs-target="#admin-novo-usuario">Inserir novo usuário</button>
+
+            <div class="modal fade" id="admin-novo-usuario" tabindex="-1" aria-labelledby="admin-novo-usuarioLabel"
+              aria-hidden="true" data-bs-backdrop="static">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="admin-novo-usuarioLabel">Novo usuário</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form onsubmit="return false;">
+
+                      
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="AccountTypeRadio" id="inlineRadio1" value="NormalAccount">
+                          <label class="form-check-label" for="inlineRadio1">Usuario padrão</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="AccountTypeRadio" id="inlineRadio2" value="UnitAccount">
+                          <label class="form-check-label" for="inlineRadio2">Usuario para setor</label>
+                        </div>
+                     
+
+                      <div class="row">
+                        <div class="col-6">
+                          <label for="nome" class="col-form-label">Nome:</label>
+                          <input type="text" class="form-control" name="nome" id="nome" disabled required />
+                        </div>
+                        <div class="col-6">
+                          <label for="sobrenome" class="col-form-label">Sobrenome:</label>
+                          <input type="text" class="form-control" name="sobrenome" id="sobrenome" disabled required />
+                        </div>
+                      </div>
+                      <div class="col-12 ps-0">
+                        <label for="email" class="col-form-label">Email:</label>
+                        <input type="email" class="form-control" name="email" id="email" disabled required></input>
+                      </div>
+                      <div class="row">
+                        <div class="col-8">
+                          <label for="cpf" class="col-form-label">CPF:</label>
+                          <input type="text" class="form-control cpf" name="cpf" id="cpf" disabled required></input>
+                        </div>
+                        <div class="col-4">
+                          <label for="matricula" class="col-form-label">Matricula:</label>
+                          <input type="text" class="form-control" name="matricula" id="matricula" disabled />
+                        </div>
+                      </div>
+                      <div class="col-12 ps-0">
+                        <label for="admin-usuario-perfil" class="col-form-label">Perfil:</label>
+                        <select name="perfil[]" id="admin-usuario-perfil" class="form-control" disabled>
+                          <option value="" selected disabled>Selecione um perfil</option>
+                          {{options-perfil}}
+                        </select>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success" id="admin-create-usuario">Criar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+  </div>
+  <!-- /.content -->
+</div>
+<div id="modalAjax"></div>

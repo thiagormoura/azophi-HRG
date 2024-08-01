@@ -1,0 +1,37 @@
+<tr>
+    <td class="px-0 py-1 align-middle">
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input change-status-questionario" id="customSwitch{{id}}" {{status_checked}}>
+            <label class="custom-control-label font-weight-normal" for="customSwitch{{id}}">Ativo</label>
+        </div>
+    </td>
+    <td class="px-0 py-1">
+        <div class="input-group">
+            <input type="hidden" name="questionario-id[]" value="{{id}}" class="form-control" data-status="{{status}}" disabled />
+            <input type="text" name="questionario-nome[]" value="{{nome}}" class="form-control" data-status="{{status}}" disabled />
+        </div>
+    </td>
+    <td class="px-0 py-1">
+        <div class="input-group">
+            <input type="datetime-local" class="form-control" value="{{data_inicio}}" disabled>
+        </div>
+    </td>
+    <td class="px-0 py-1" style="width: 15%">
+        <div class="input-group">
+            <input type="text" class="form-control" value="{{tipo}}" disabled>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary bg-danger btn-cancel-pergunta border-0" type="button"><i class="fas fa-lock"></i></button>
+            </div>
+        </div>
+    </td>
+    <td class="px-0 py-1">
+        <div class="input-group justify-content-center">
+            <button type="button" class="btn btn-secondary perguntas" data-id="{{id}}"><i class="fas fa-eye"></i></button>
+        </div>
+    </td>
+    <!-- <td class="px-0 py-1">
+        <div class="input-group justify-content-center">
+            <button type="button" class="btn btn-warning btn-edit" data-id="{{id}}"><i class="fas fa-pencil-alt"></i></button>
+        </div>
+    </td> -->
+</tr>

@@ -1,0 +1,13 @@
+<div class="accordion-item mt-2">
+    <h3 class="accordion-header">
+        <button class="accordion-button {{status-collpase-button}}" type="button" data-bs-toggle="collapse" data-bs-target="#{{data-target}}" aria-extended="false">
+            <h5 class="titulo">Categoria: {{nome-categoria}}</h5>
+        </button>
+    </h3>
+
+    <div class="accordion-collapse {{status-collapse}}" id="{{data-target}}" aria-labelledby="{{aria-labely}}">
+        <div class="group-cards">
+            {{group-cards}}
+        </div>
+    </div>
+</div>

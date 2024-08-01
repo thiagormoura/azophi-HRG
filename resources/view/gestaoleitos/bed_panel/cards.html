@@ -1,0 +1,120 @@
+<div class="col-lg col-md-3 col-sm-6 col-12">
+    <div class="info-box bg-navy">
+        <span class="info-box-icon"><i class="fas fa-bed"></i></span>
+        <div class="info-box-content">
+            <span class="info-box-text h6 mb-0">Total de Leitos</span>
+            <span class="info-box-number h5 mb-0">{{leitos}}</span>
+        </div>
+    </div>
+</div>
+<div class="col-lg col-md-3 col-sm-6 col-12">
+    <div class="info-box bg-navy">
+        <span class="info-box-icon"><i class="fas fa-circle"></i></span>
+        <div class="info-box-content">
+            <span class="info-box-text h6 mb-0">Leitos Reais</span>
+            <span class="info-box-number h5 mb-0">{{leitos-reais}}</span>
+        </div>
+    </div>
+</div>
+<div class="col-lg col-md-3 col-sm-6 col-12">
+    <div class="info-box bg-navy">
+        <span class="info-box-icon"><i class="fas fa-circle-notch"></i></span>
+        <div class="info-box-content">
+            <span class="info-box-text h6 mb-0">Leitos Virtuais</span>
+            <span class="info-box-number h5 mb-0">{{leitos-virtuais}}</span>
+        </div>
+    </div>
+</div>
+<div class="col-lg col-md-3 col-sm-6 col-12">
+    <div class="info-box bg-navy">
+        <span class="info-box-icon"><i class="fas fa-globe"></i></span>
+        <div class="info-box-content">
+            <span class="info-box-text">Ocupação dos Leitos</span>
+            <div class="progress bg-secondary">
+                <div class="progress-bar" style="width: {{ocupacao-porcentagem}}%"></div>
+            </div>
+            <span class="progress-description">
+                {{ocupacao-porcentagem}}%
+            </span>
+        </div>
+
+    </div>
+</div>
+<div class="d-block"></div>
+<div class="col-lg col-md-3 col-sm-6 col-12">
+    <div class="info-box bg-teal">
+        <span class="info-box-icon"><i class="fas fa-badge-check"></i></span>
+        <div class="info-box-content">
+            <span class="info-box-text h6 mb-0 text-wrap">Prontos para uso</span>
+            <span class="info-box-number h5 mb-0">{{leitos-disponiveis}}</span>
+            <div class="d-flex">
+                <span class="info-box-number fw-normal">UTI<br><strong>{{leitos-disponiveis-uti}}</strong></span>
+                <span class="info-box-number fw-normal px-1">APT<br><strong>{{leitos-disponiveis-apt}}</strong></span>
+                <span class="info-box-number fw-normal px-1">ENF<br><strong>{{leitos-disponiveis-enf}}</strong></span>
+                <span class="info-box-number fw-normal">NEO<br><strong>{{leitos-disponiveis-neo}}</strong></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg col-md-3 col-sm-6 col-12">
+    <div class="info-box bg-success">
+        <span class="info-box-icon"><i class="fas fa-lock-open-alt"></i></span>
+        <div class="info-box-content">
+            <span class="info-box-text h6 mb-0">Vagos</span>
+            <span class="info-box-number h5 mb-0">{{leitos-vagos}}</span>
+            <div class="d-flex">
+                <span class="info-box-number fw-normal">UTI<br><strong>{{leitos-vagos-uti}}</strong></span>
+                <span class="info-box-number fw-normal px-1">APT<br><strong>{{leitos-vagos-apt}}</strong></span>
+                <span class="info-box-number fw-normal px-1">ENF<br><strong>{{leitos-vagos-enf}}</strong></span>
+                <span class="info-box-number fw-normal">NEO<br><strong>{{leitos-vagos-neo}}</strong></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg col-md-3 col-sm-6 col-12">
+    <div class="info-box bg-secondary">
+        <span class="info-box-icon"><i class="fas fa-procedures"></i></span>
+        <div class="info-box-content">
+            <span class="info-box-text h6 mb-0">Ocupados</span>
+            <span class="info-box-number h5 mb-0">{{leitos-ocupados}}</span>
+            <div class="d-flex">
+                <span class="info-box-number fw-normal">UTI<br><strong>{{leitos-ocupados-uti}}</strong></span>
+                <span class="info-box-number fw-normal px-1">APT<br><strong>{{leitos-ocupados-apt}}</strong></span>
+                <span class="info-box-number fw-normal px-1">ENF<br><strong>{{leitos-ocupados-enf}}</strong></span>
+                <span class="info-box-number fw-normal">NEO<br><strong>{{leitos-ocupados-neo}}</strong></span>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="col-lg col-md-3 col-sm-6 col-12">
+    <div class="info-box bg-indigo">
+        <span class="info-box-icon"><i class="fas fa-unlock-alt"></i></span>
+        <div class="info-box-content">
+            <span class="info-box-text h6 mb-0">Reservado</span>
+            <span class="info-box-number h5 mb-0">{{leitos-reservados}}</span>
+            <div class="d-flex">
+                <span class="info-box-number fw-normal">UTI<br><strong>{{leitos-reservados-uti}}</strong></span>
+                <span class="info-box-number fw-normal px-1">APT<br><strong>{{leitos-reservados-apt}}</strong></span>
+                <span class="info-box-number fw-normal px-1">ENF<br><strong>{{leitos-reservados-enf}}</strong></span>
+                <span class="info-box-number fw-normal">NEO<br><strong>{{leitos-reservados-neo}}</strong></span>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="col-lg col-md-3 col-sm-6 col-12">
+    <div class="info-box bg-danger">
+        <span class="info-box-icon"><i class="fas fa-lock-alt"></i></span>
+        <div class="info-box-content">
+            <span class="info-box-text h6 mb-0">Bloqueados</span>
+            <span class="info-box-number h5 mb-0">{{leitos-bloqueados}}</span>
+            <div class="d-flex">
+                <span class="info-box-number fw-normal">UTI<br><strong>{{leitos-bloqueados-uti}}</strong></span>
+                <span class="info-box-number fw-normal px-1">APT<br><strong>{{leitos-bloqueados-apt}}</strong></span>
+                <span class="info-box-number fw-normal px-1">ENF<br><strong>{{leitos-bloqueados-enf}}</strong></span>
+                <span class="info-box-number fw-normal">NEO<br><strong>{{leitos-bloqueados-neo}}</strong></span>
+            </div>
+        </div>
+    </div>
+</div>

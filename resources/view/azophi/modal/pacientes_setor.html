@@ -1,0 +1,38 @@
+<div class="modal fade" id="sector-azophi" tabindex="-1" aria-labelledby="sector-azophiLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-fullscreen-sm-down">
+        <div class="modal-content">
+            <div class="modal-header py-2">
+                <h5 class="modal-title" id="sector-azophiLabel">Detalhes do paciente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-3 pt-0 mw-auto" style="overflow-wrap: break-word; word-wrap: break-word; hyphens: auto;">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="mb-0 fw-bold">Unidade</p>
+                        <p class="mb-1">
+                            {{unidade}}
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <p class="mb-0 fw-bold">Total de leitos</p>
+                        <p class="mb-1">
+                            {{quantidade-leitos}}
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <p class="mb-0 fw-bold">Total de pacientes</p>
+                        <p class="mb-1">
+                            {{quantidade-pacientes}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    {{linhas-tabela}}
+                </div>
+            </div>
+            <div class="modal-footer py-1">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

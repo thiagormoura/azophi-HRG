@@ -1,0 +1,88 @@
+<div class="row col-md-10 col-12 mx-auto mt-4 px-0">
+  <div
+    class="col-12 mx-auto card card-azul-hrg card-outline d-flex flex-wrap align-items-start flex-row justify-content-center">
+
+    <div class="col-lg-2 col-md-2 col-sm-6 col-6 text-center d-flex flex-wrap flex-column justify-content-center">
+      <h6 class="text-break font-weight-bold"><i class="fas fa-file-medical "></i> Cirurgias <br> Agendadas</h6>
+      <h2 style="color: #979797">{{cirurgias-agendadas}}</h3>
+    </div>
+
+    <div class="col-lg-2 col-md-2 col-sm-6 col-6 text-center d-flex flex-wrap flex-column justify-content-center">
+      <h6 class="text-break font-weight-bold"><i class="fas fa-file-medical-alt "></i> Cirurgias <br> Realizadas
+      </h6>
+      <h2 style="color: #187818;">{{cirurgias-realizadas}}</h3>
+    </div>
+
+    <div class="col-lg-2 col-md-2 col-sm-6 col-6 text-center d-flex flex-wrap flex-column justify-content-center">
+      <h6 class="text-break font-weight-bold"><i class="fas fa-check "></i> Número de Procedimentos</h6>
+      <h2 style="color: #54aad9;">{{procedimentos}}</h3>
+    </div>
+
+    <div class="col-lg-2 col-md-2 col-sm-6 col-6 text-center d-flex flex-wrap flex-column justify-content-center">
+      <h6 class="text-break font-weight-bold"><i class="fas fa-times "></i> Cirurgias <br> Suspensas</h6>
+      <h2 style="color: #E74C3C;">{{cirurgias-suspensas}}</h3>
+    </div>
+
+    <div class="col-lg-2 col-md-2 col-sm-6 col-6 text-center d-flex flex-wrap flex-column justify-content-center">
+      <h6 class="text-break font-weight-bold"><i class="fas fa-user "></i> Pacientes <br> Cirurgiados</h6>
+      <h2 style="color: #0b6020;">{{pacientes-cirurgiados}}</h3>
+    </div>
+  </div>
+</div>
+<div class="row col-md-10 col-12 mx-auto mt-4 px-0">
+  <div class="col-12 mx-auto px-0 card card-azul-hrg card-outline"
+    id="azophicc-accordion-tabela">
+    <div class="card-header">
+      <h5 class="card-title"></i>Procedimentos agendados</h5>
+      <div class="card-tools">
+        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+          <i class="fas fa-minus"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div id="toolbar" class="mb-2 card-header">
+        <p class="d-inline-block me-2 mb-1"><span class="text-success"><i class="fas fa-info-circle"></i></span> Mais
+          de
+          45min</p>
+        <p class="d-inline-block me-2 mb-1"><span class="text-warning"><i class="fas fa-info-circle"></i></span> Entre
+          20min
+          e 45min</p>
+        <p class="d-inline-block me-2 mb-1"><span class="text-danger"><i class="fas fa-info-circle"></i></span> Menos
+          de
+          20min</p>
+        <p class="d-inline-block me-2 mb-1"><span class="text-primary"><i class="fas fa-info-circle"></i></span>
+          Agora/passou do horário</p>
+        <p class="d-inline-block me-2 mb-1"><span class="text-azul-esverdeado"><i class="fas fa-info-circle"></i></span>
+          Convênio</p>
+        <p class="d-inline-block me-2 mb-1"><span class="text-secondary"><i class="fas fa-info-circle"></i></span>
+          Internação</p>
+      </div>
+      <div
+        class="col-12 col-md-12 col-sm-12 col-12 mx-auto d-flex flex-wrap align-items-start flex-row justify-content-center card-body">
+
+        <div class="table-responsive">
+          <table id="azophicc-tabela-agendadas" class="table table-usuario ">
+            <thead>
+              <tr>
+                <th>Horário</th>
+                <th>Sala</th>
+                <th>Paciente</th>
+                <th>Médico</th>
+                <th>Procedimento</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{cirurgias-agendadas-tabela}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-10 col-12 col-sm-12 col-lg-10 col-xl-10 py-1 px-0 mx-auto mb-1">
+  {{graficos}}
+</div>

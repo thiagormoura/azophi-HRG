@@ -1,0 +1,440 @@
+<div
+    class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed accent-blue">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="margin-left: 0 !important;">
+        <!-- Content Header (Page header) -->
+        <div class="content-header" style="border-bottom: solid 1px gray;">
+            <div class="container-fluid">
+                <div class="row py-1">
+                    <div class="col-sm-6">
+                        <h1 class="m-0"><i class="fas fa-chart-line"></i> Azophi</h1>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div>
+        </div>
+
+        <div id="azophi-sticky" class="sticky-top " style="top: -1px">
+            <div class="container bg-white p-2 shadow-sm rounded-bottom text-sm">
+                <div class="stepper d-flex align-items-center justify-content-center">
+                    <div class="d-flex position-relative me-3" style="z-index: 2;">
+                        <a href="#azophi-internacao-table" class="d-flex">
+                            <div class="d-flex flex-column pr-1">
+                                <div class="rounded-circle bg-primary text-white" style="padding: 0px 8px;">1</div>
+                            </div>
+                            <div class="d-none d-md-block">
+
+                                <span class="text-dark">Internação</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex position-relative me-3" style="z-index: 3;">
+                        <a href="#azophi-pacientes-dias-card" class="d-flex">
+                            <div class="d-flex flex-column pr-1">
+                                <div class="rounded-circle bg-primary text-white" style="padding: 0px 8px;">2</div>
+                            </div>
+                            <div class="d-none d-md-block">
+
+                                <span class="text-dark">Pacientes +7 dias</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex position-relative me-3" style="z-index: 4;">
+                        <a href="#azophi-ocupacao-geral-card" class="d-flex">
+                            <div class="d-flex flex-column pr-1">
+                                <div class="rounded-circle bg-primary text-white" style="padding: 0px 8px;">3</div>
+                            </div>
+                            <div class="d-none d-md-block">
+                                <span class="text-dark">Ocupação Geral</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex position-relative me-3" style="z-index: 5;">
+                        <a href="#azophi-pronto-atendimento-card" class="d-flex">
+                            <div class="d-flex flex-column pr-1">
+                                <div class="rounded-circle bg-primary text-white" style="padding: 0px 8px;">4</div>
+                            </div>
+                            <div class="d-none d-md-block">
+
+                                <span class="text-dark">Pronto Atendimento</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex">
+                        <a href="#azophi-altas-admissoes-card" class="d-flex">
+                            <div class="d-flex flex-column pr-1" style="z-index: 6;">
+                                <div class="rounded-circle bg-primary text-white" style="padding: 0px 8px;">5</div>
+                            </div>
+                            <div class="d-none d-md-block">
+                                <span class="text-dark">Altas e admissões</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="my-1 container shadow-none">
+            <div class="row py-2">
+                <div class="d-flex justify-content-between col-12">
+                    <label for="select-convenios" class="ps-0">Convênios</label>
+                </div>
+                <div class="col-12">
+                    <select id="azophi-select-convenios" data-placeholder="Selecione os convênios">
+                        {{options}}
+                    </select>
+                    <button class="btn btn-dark col-md-12 justify-content-between" id="azophi-search-convenios"
+                        type="button">Buscar</button>
+                </div>
+            </div>
+            <div class="row">
+                {{cards}}
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Internação HRG (Ontem)</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="azophi-internacao-table" class="card-body p-0 table-responsive">
+                            <table id="internacaoOntemHRG" class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th class="pe-1">Unidade</th>
+                                        <th class="text-center px-1">Leitos</th>
+                                        <th class="text-center px-1">Pac.</th>
+                                        <th class="text-center px-1">Res.</th>
+                                        <th class="text-center px-1">Vagas</th>
+                                        <th class="ps-1">Ocup.</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{internacao-hrg-ontem}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Internação HRG (Hoje)</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-0 table-responsive">
+                            <table id="internacaoHojeHRG" class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th class="pe-1">Unidade
+                                        <th class="text-center px-1">Leitos</th>
+                                        <th class="text-center px-1">Pac.</th>
+                                        <th class="text-center px-1">Iso.</th>
+                                        <th class="text-center px-1">Res.</th>
+                                        <th class="text-center px-1">Vagas</th>
+                                        <th class="ps-1">Ocup.</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{internacao-hrg}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Internação Maternidade (Ontem)</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-0 table-responsive">
+                            <table id="internacaoOntemMaternidade" class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th class="pe-1">Unidade
+                                        <th class="text-center px-1">Leitos</th>
+                                        <th class="text-center px-1">Pac.</th>
+                                        <th class="text-center px-1">Res.</th>
+                                        <th class="text-center px-1">Vagas</th>
+                                        <th class="ps-1">Ocup.</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{internacao-maternidade-ontem}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Internação Maternidade (Hoje)</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-0 table-responsive">
+                            <table id="internacaoHojeMaternidade" class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th class="pe-1">Unidade
+                                        <th class="text-center px-1">Leitos</th>
+                                        <th class="text-center px-1">Pac.</th>
+                                        <th class="text-center px-1">Iso.</th>
+                                        <th class="text-center px-1">Res.</th>
+                                        <th class="text-center px-1">Vagas</th>
+                                        <th class="ps-1">Ocup.</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{internacao-maternidade}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Internação (Convênios)</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-body" style="min-height: 450px;">
+                            <div id="azophi-internacao-convenios" class="col-12"></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Pacientes +7 Dias (Convênios)</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-body" style="min-height: 450px;">
+                            <div id="azophi-pacientes-convenios" class="col-12"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div id="azophi-pacientes-dias-card" class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Pacientes +7 Dias</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-0 table-responsive">
+                            <table id="pacientes7Dias" class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th class="">Unidade
+                                        <th class="text-center">Pacientes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{pacientes-7dias}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="azophi-ocupacao-geral-card" class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Ocupação Geral</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-body" style="min-height: 450px;">
+                            <div id="azophi-ocupacao-geral" class="col-12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="azophi-pronto-atendimento-card" class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Pronto Atendimento HRG (Ontem)</h5>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-center mb-0">
+                                        <strong>Convênios</strong>
+                                    </p>
+                                    <div class="col-12" style="min-height: 380px;">
+                                        <div id="azophi-pa-hrg-ontem" class="col-12"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{pa-hrg-ontem}}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Pronto Atendimento HRG (Hoje)</h5>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-center mb-0">
+                                        <strong>Convênios</strong>
+                                    </p>
+                                    <div class="col-12" style="min-height: 380px;">
+                                        <div id="azophi-pa-hrg-hoje" class="col-12"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{pa-hrg-hoje}}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Pronto Atendimento Maternidade (Ontem)</h5>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-center mb-0">
+                                        <strong>Convênios</strong>
+                                    </p>
+                                    <div class="col-12" style="min-height: 380px;">
+                                        <div id="azophi-pa-maternidade-ontem" class="col-12"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{pa-maternidade-ontem}}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Pronto Atendimento Maternidade (Hoje) </h5>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-center mb-0">
+                                        <strong>Convênios</strong>
+                                    </p>
+                                    <div class="col-12" style="min-height: 380px;">
+                                        <div id="azophi-pa-maternidade-hoje" class="col-12"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{pa-maternidade-hoje}}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Pronto Atendimento HRG</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-body" style="min-height: 450px;">
+                            <div id="azophi-pa-pacientes" class="col-12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="azophi-altas-admissoes-card" class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Altas e Admissões (Últimos 7 dias)</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-body" style="min-height: 450px;">
+                            <button id="btn-azophi-altas-admissoes"
+                                class="btn btn-primary btn-sm d-flex invisible ms-auto align-items-center"><i
+                                    class="fas fa-arrow-circle-left"></i>
+                                <span class="ms-1">Voltar</span></button>
+                            <div id="azophi-altas-admissoes" class="col-12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

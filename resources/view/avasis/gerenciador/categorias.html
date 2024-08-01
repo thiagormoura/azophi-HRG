@@ -1,0 +1,17 @@
+<div id="divCategoria"></div>
+<form onsubmit="event.preventDefault()" class="form-categorias">
+	<button type='button' name='submit' class='btn d-flex btn-primary btn-add-categoria ms-auto'><span>Adicionar</span>
+		<div class='icon ml-2'><i class='fal fa-plus'></i></div>
+	</button>
+	<table id="table-categorias" class="table table-borderless" role="grid" aria-describedby="table_recursos">
+		<thead>
+			<tr role="row">
+				<th style="width: 2%;">Status</th>
+				<th class="w-100">Nome</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{categorias}}
+		</tbody>
+	</table>
+</form>

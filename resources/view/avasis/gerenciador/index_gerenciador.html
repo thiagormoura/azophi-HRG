@@ -1,0 +1,71 @@
+<div class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed ">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="margin-left: 0 !important;">
+        <!-- Content Header (Page header) -->
+        <div class="content-header " style="border-bottom: solid 1px gray;">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0"><i class="fas fa-play"></i> Avasis</h1>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div>
+        </div>
+
+        <section class="mt-3 container shadow-none">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="card">
+                        <div class="card-header p-0 pt-1">
+                            <ul class="nav nav-tabs justify-content-center" id="avasis-list-" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="avasis-questionario-tab" data-bs-toggle="pill"
+                                        href="#avasis-questionario" role="tab" aria-controls="avasis-questionario"
+                                        aria-selected="true">Questionários</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="avasis-perguntas-tab" data-bs-toggle="pill"
+                                        href="#avasis-perguntas" role="tab" aria-controls="avasis-perguntas"
+                                        aria-selected="false">Perguntas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="avasis-categorias-tab" data-bs-toggle="pill"
+                                        href="#avasis-categorias" role="tab" aria-controls="avasis-categorias"
+                                        aria-selected="false">Categorias</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="avasis-unidades-tab" data-bs-toggle="pill"
+                                        href="#avasis-unidades" role="tab" aria-controls="avasis-unidades"
+                                        aria-selected="false">Unidades</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="tab-content" id="avasis-list-content">
+                                <div class="tab-pane fade show active" id="avasis-questionario" role="tabpanel"
+                                    aria-labelledby="avasis-questionario-tab">
+                                    {{questionarios}}
+                                </div>
+                                <div class="tab-pane fade" id="avasis-perguntas" role="tabpanel"
+                                    aria-labelledby="avasis-perguntas-tab">
+                                    {{perguntas}}
+                                </div>
+                                <div class="tab-pane fade" id="avasis-categorias" role="tabpanel"
+                                    aria-labelledby="avasis-categorias-tab">
+                                    {{categorias}}
+                                </div>
+                                <div class="tab-pane fade" id="avasis-unidades" role="tabpanel"
+                                    aria-labelledby="avasis-unidades-tab">
+                                    {{unidades}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div id="divModalPerguntasToQuestionario"></div>

@@ -1,0 +1,49 @@
+<div class="modal fade" id="osModalExame" tabindex="-1" aria-labelledby="osModalExameLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="osModalExameLabel">#{{os-serie-number}} / {{ssm-num}}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-1">
+                <div class="row mb-2 mb-md-1">
+                    <div class="col-12 col-lg-10 mb-2 mb-md-0">
+                        <label for="nomeExame">Nome</label>
+                        <input type="text" class="form-control input-infos py-0 px-1 h-50" id="nomeExame" value="{{nome}}" readonly>
+                    </div>
+                    <div class="col-12 col-lg-2">
+                        <label for="quantidade">Quantidade</label>
+                        <input type="text" class="form-control input-infos py-0 px-1 h-50" id="quantidade" value="{{quantidade}}" readonly>
+                    </div>
+                </div>
+                <div class="row mb-2 mb-md-1 mt-3">
+                    <div class="col-12 col-md-4">
+                        <label for="amostra">Amostra</label>
+                        <input type="text" class="form-control input-infos py-0 px-1 h-50" id="amostra" value="{{amostra}}" readonly>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <label for="cod_exame">Cod. Exame</label>
+                        <input type="text" class="form-control input-infos py-0 px-1 h-50" id="cod_exame" value="{{cod-exame}}" readonly>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <label for="status">Status</label>
+                        <input type="text" class="form-control input-infos py-0 px-1 h-50" id="status" value="{{status}}" readonly>
+                    </div>
+                </div>
+                <div class="row mb-2 mb-md-1 mt-3">
+                    <label for="justificativa">Justificativa</label>
+                    <div class="col-12">
+                        {{justificativas}}
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="obs">Observações</label>
+                    <textarea id="obs" class="form-control" style="border: 1px solid #ced4da !important;" cols="30" rows="10">{{observacao}}</textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="submitObsExame" type="button" class="btn btn-danger btn-block">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>

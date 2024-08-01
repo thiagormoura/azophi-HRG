@@ -1,0 +1,23 @@
+<div class="modal fade" data-modify="0" id="showQuestionario" tabindex="-1" role="dialog" aria-labelledby="showQuestionarioLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="showQuestionarioLabel">Selecionar questionario</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered" cellspacing="0" width="100%" id="questionarios">
+                    <thead>
+                        <th>Nome</th>
+                        <th>Data de criação</th>
+                    </thead>
+                    <tbody id="startBodyQuestionario">
+                        {{questionarios}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

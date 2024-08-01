@@ -1,0 +1,104 @@
+<div class="form-group row">
+    <div class="col-12">
+        <label for="gleitos-dtnascimento-paciente" class="col-form-label pb-0">Data de
+            nascimento</label>
+        <div>
+            <input disabled type="date" class="form-control" id="gleitos-dtnascimento-paciente"
+                placeholder="Data de Nascimento" name="data-nascimento" value="{{data-nascimento}}">
+        </div>
+    </div>
+    <div class="col-6">
+        <label for="gleitos-idade-paciente" class="col-form-label pb-0">Idade</label>
+        <div>
+            <input disabled type="text" class="form-control" id="gleitos-idade-paciente" placeholder="Idade"
+                name="idade" value="{{idade}}">
+        </div>
+    </div>
+    <div class="col-6">
+        <label for="gleitos-genero-paciente" class="col-form-label pb-0">Gênero</label>
+        <div>
+            <input disabled type="text" class="form-control" id="gleitos-genero-paciente" placeholder="Gênero"
+                name="genero" value="{{genero}}">
+        </div>
+    </div>
+</div>
+<div class="form-group row">
+    <div class="col-12">
+        <label for="gleitos-convenio-paciente" class="col-form-label pb-0">Convênio</label>
+        <div>
+            <input disabled type="text" class="form-control" id="gleitos-convenio-paciente" placeholder="Convênio"
+                name="convenio" value="{{convenio}}">
+        </div>
+    </div>
+</div>
+<div class="form-group row">
+    <div class="col-12">
+        <label class="col-form-label pb-0">Acomodação do
+            contrato</label>
+        <div class="row">
+            {{acomodacao-contrato}}
+            <div class="col offset-12"></div>
+        </div>
+    </div>
+</div>
+<div class="form-group row">
+    <div class="col-12">
+        <label class="col-form-label pb-0">Precauções</label>
+
+        <div class="row justify-content-start">
+            <div class="col">
+                <div class="custom-control custom-checkbox">
+                    <input disabled class="custom-control-input" type="checkbox" {{precaucoes-contato}}
+                        id="gleitos-precaucoes-contato" value="contato" name="gleitos-precaucoes">
+                    <label for="gleitos-precaucoes-contato" class="custom-control-label">Contato</label>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="custom-control custom-checkbox">
+                    <input disabled class="custom-control-input" type="checkbox" {{precaucoes-vigilancia}}
+                        id="gleitos-precaucoes-vigilancia" value="vigilancia" name="gleitos-precaucoes">
+                    <label for="gleitos-precaucoes-vigilancia" class="custom-control-label">Vigilância</label>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="custom-control custom-checkbox">
+                    <input disabled class="custom-control-input" type="checkbox" {{precaucoes-goticulas}}
+                        id="gleitos-precaucoes-goticulas" value="goticulas" name="gleitos-precaucoes">
+                    <label for="gleitos-precaucoes-goticulas" class="custom-control-label">Goticulas</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-checkbox">
+                    <input disabled class="custom-control-input" type="checkbox" {{precaucoes-protetor}}
+                        id="gleitos-precaucoes-protetor" value="protetor" name="gleitos-precaucoes">
+                    <label for="gleitos-precaucoes-protetor" class="custom-control-label">Protetor</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-checkbox">
+                    <input disabled class="custom-control-input" type="checkbox" {{precaucoes-aerosol}}
+                        id="gleitos-precaucoes-aerosol" value="aerosol" name="gleitos-precaucoes">
+                    <label for="gleitos-precaucoes-aerosol" class="custom-control-label">Aerosol</label>
+                </div>
+            </div>
+            <div class="col offset-md-12"></div>
+        </div>
+    </div>
+</div>
+<div class="form-group row">
+    <div class="col-12">
+        <label class="col-form-label pb-0">Riscos</label>
+
+        <div class="row">
+            <div class="col">
+                <div class="custom-control custom-checkbox">
+                    <input disabled class="custom-control-input" type="checkbox" {{riscos-queda}}
+                        id="gleitos-riscos-queda" value="queda" name="gleitos-riscos">
+                    <label for="gleitos-riscos-queda" class="custom-control-label">Queda</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

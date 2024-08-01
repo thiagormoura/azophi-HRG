@@ -1,0 +1,58 @@
+<div class="col-md-12 col-sm-12 col-lg-8 card px-0 form-incidente mx-auto">
+  <div class="card-navy header-card px-0">
+    <div class="card-header">
+      <h3 class="card-title"><i class="fal fa-info-circle mr-1"></i> Informações da notificação</h3>
+    </div>
+    <div class="card-body">
+      <div class="form-group text-left d-flex">
+        <div class="col-6 pe-1 ps-0">
+          <label for="text">Data do incidente</label>
+          <input placeholder="Selecione a data do incidente" value="{{data}}" class="form-control" disabled
+            style="cursor: default !important;" />
+        </div>
+        <div class="col-6 ps-1 pe-0">
+          <label for="text">Horário do incidente</label>
+          <input placeholder="Selecione o horário do incidente" value="{{horario}}" class="form-control rounded-left"
+            disabled style="cursor: default !important;" />
+        </div>
+      </div>
+      <!-- /.form group -->
+      <div class="form-group text-left">
+        <label for="text">Registro do paciente</label>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Insira o registro do paciente" value="{{registro}}"
+            id="text" disabled>
+          <div class="input-group-append">
+            <span class="input-group-text"><i class="fal fa-pen"></i></span>
+          </div>
+        </div>
+        <!-- /.input group -->
+      </div>
+      <!-- /.form group -->
+      <div class="form-group text-left">
+        <label for="text">Origem do incidente</label>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Insira a origem do incidente" value="{{origem}}"
+            id="text" disabled>
+          <div class="input-group-append">
+            <span class="input-group-text"><i class="fal fa-check-circle"></i></span>
+          </div>
+        </div>
+        <!-- /.input group -->
+      </div>
+      <!-- /.form group -->
+      <div class="form-group text-left">
+        <label for="text">Setor notificador</label>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Insira o setor notificador" value="{{notificador}}"
+            id="text" disabled>
+          <div class="input-group-append">
+            <span class="input-group-text"><i class="fal fa-check-circle"></i></span>
+          </div>
+        </div>
+        <!-- /.input group -->
+      </div>
+      <!-- /.form group -->
+    </div>
+  </div>
+</div>

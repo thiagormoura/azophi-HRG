@@ -1,0 +1,56 @@
+<div
+    class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed accent-blue">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="margin-left: 0 !important;">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0 text-dark">
+                            <i class="fal fa-ballot mr-1"></i>
+                            Gerenciar grupos
+                        </h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="{{URL}}/inutri">Início</a></li>
+                            <li class="breadcrumb-item active">Gerenciar grupos</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="card card-secondary card-outline">
+                    <div class="card-body">
+                        <div id="divCardapio"></div>
+                        <form onsubmit="event.preventDefault()" class="col-md-12 form-grupo mt-2">
+                            <table id="table-grupo"
+                                class="table table-grupo table-borderless table-hover responsive m-0 ">
+                                <thead>
+                                    <tr>
+                                        <th class="pl-0" style="width: 10%;">Status</th>
+                                        <th>Grupos</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{grupos}}
+                                </tbody>
+                            </table>
+                            <div class="form-group">
+                                <button type="button" name="submit" class="btn btn-primary btn-add">Adicionar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content -->
+</div>
+</div>

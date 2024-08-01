@@ -1,0 +1,7 @@
+#tab-chaves a.active{
+    font-weight: bold !important;
+}
+
+#tableHistorico tr{
+    text-align: center;
+}

@@ -1,0 +1,59 @@
+.even, 
+.odd,
+#startDateMonexm,
+#endDateMonexm{
+    cursor: pointer !important;  
+}
+
+.even:hover,
+.odd:hover,
+#startDateMonexm:hover,
+#endDateMonexm:hover{
+    background-color: rgb(230, 230, 230) !important;
+}
+
+#osModal tr{
+    cursor: pointer !important;
+}
+
+.modal-body .form-control{
+    border: none !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #ccc !important;
+    background-color: #fff !important;
+    color: #222 !important;
+}
+#tableOS.cell-border th {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+}
+
+#tableOS.cell-border td {
+    border-top: 1px solid #dddddd;
+}
+
+#tableOS.cell-border th:first-child {
+    border-left: 1px solid #dddddd;
+}
+
+#tableOS th{
+    vertical-align: middle !important;
+}
+
+#tableOS tr td:last-child{
+    text-align: left;
+}
+#tableOS tr td:last-child span{
+    margin-left: 10px;
+}
+
+#exames tbody tr:hover{
+    background-color: #e6e5e5 !important;
+}
+
+.alert-navy{
+    background-color: #034385;
+    border: none;
+    color: white !important;
+}

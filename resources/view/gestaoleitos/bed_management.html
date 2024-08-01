@@ -1,0 +1,36 @@
+<div class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed ">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="margin-left: 0 !important;">
+        <!-- Content Header (Page header) -->
+        <div class="content-header" style="border-bottom: solid 1px gray;">
+            <div class="container-fluid">
+                <div class="row py-1">
+                    <div class="col-sm-6">
+                        <h1 class="m-0"><i class="fas fa-unlock-alt"></i> Gestão de Leitos - Gerenciador de Leitos</h1>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div>
+        </div>
+
+        <section class="my-1 container shadow-none">
+            <div class="row pt-2">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="col-md-4 col-12 px-0">
+                                <select id="gleitos-setores-gerenciador" class="custom-select form-control-border ">
+                                    {{setores}}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="gleitos-leitos-gerenciador" class="d-flex flex-wrap">
+                                {{leitos}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

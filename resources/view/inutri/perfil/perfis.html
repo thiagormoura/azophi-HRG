@@ -1,0 +1,28 @@
+<tr data-editavel="{{editavel}}">
+  <td class="px-0 py-1 align-middle">
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input change-perfil-status" data-definicao="status"
+        id="statusSwitch{{id}}" {{status-perfil}} {{disable-inputs}}>
+      <label class="custom-control-label font-weight-normal" for="statusSwitch{{id}}">Ativo</label>
+    </div>
+  </td>
+  <td class="py-1 text-center align-middle">
+
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input change-perfil-status" data-definicao="padronizado"
+        id="padraoSwitch{{id}}" {{padronizado-perfil}} {{disable-inputs}}>
+      <label class="custom-control-label" for="padraoSwitch{{id}}">Sim</label>
+    </div>
+  </td>
+  <td class="px-0 py-1">
+    <div class="input-group">
+      <input type="hidden" name="perfil-id[]" id="idPerfil" value="{{id}}" class="form-control" data-status="{{status}}" disabled />
+      <input type="text" name="perfil-nome[]" value="{{nome}}"
+        class="form-control border-right-0 rounded-0 rounded-left" data-status="{{status}}" disabled />
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary bg-danger btn-cancel border-0" type="button"><i
+            class="fas fa-lock"></i></button>
+      </div>
+    </div>
+  </td>
+</tr>

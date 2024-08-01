@@ -1,0 +1,114 @@
+<div class="modal fade" id="modalMonPs" tabindex="-1" aria-labelledby="modalMonPsLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-fullscreen-sm-down">
+    <div class="modal-content">
+      <div class="modal-header py-2">
+        <h5 class="modal-title" id="modalMonPsLabel">Detalhes do paciente</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-3 pt-0">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-4">
+            <p class="mb-0 fw-bold">Registro</p>
+            <p class="mb-1">
+              {{registro}}
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-4 col-4">
+            <p class="mb-0 fw-bold">Senha</p>
+            <p class="mb-1">
+              {{bip}}
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-4 col-4">
+            <p class="mb-0 fw-bold">Reavaliação</p>
+            <p class="mb-1">
+              {{reavaliacao}}
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-4">
+            <p class="mb-0 fw-bold">C. de risco</p>
+            <span class="badge {{bg-cr}} preferencial-badge">{{pac-cr}}</span>
+          </div>
+          <div class="col-md-4 col-sm-4 col-4">
+            <p class="mb-0 fw-bold">Medicação</p>
+            <p class="mb-1">
+              {{medicacao}}/{{aplicadas}}
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-4 col-4">
+            <p class="mb-0 fw-bold">Tempo hosp.</p>
+            <p class="mb-1">
+              {{tempo-hospitalar}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-12">
+            <p class="mb-0 fw-bold">Nome do paciente</p>
+            <p class="mb-1">
+              {{nome}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-12">
+            <p class="mb-0 fw-bold">Nome do médico</p>
+            <p class="mb-1">
+              {{nome-medico}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-6">
+            <p class="mb-0 fw-bold">Chegada H.</p>
+            <p class="mb-0">Retirada de senha</p>
+
+            <p class="mb-1">{{hora-chegada}}</p>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="table-responsive col-md-12 col-sm-12 col-12">
+
+            <table class="table table-striped">
+              <thead>
+                <th class="fw-bold">Fila</th>
+                <th class="fw-bold">Status</th>
+                <th class="fw-bold">Tempo</th>
+              </thead>
+              <tbody>
+                {{filas}}
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+
+        <p class="mb-0 fw-bold">Pedidos de Exames</p>
+        <div class="row">
+          <div class="table-responsive col-md-12 col-sm-12 col-12">
+            <table class="table">
+              <thead>
+                <th class="fw-bold">Mod.</th>
+                <th class="fw-bold">Abert.</th>
+                <th class="fw-bold">Exec.</th>
+                <th class="fw-bold">Res.</th>
+                <th class="fw-bold">Total</th>
+              </thead>
+              <tbody>
+                {{lab-collapse}}
+                {{img-collapse}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer py-1">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>

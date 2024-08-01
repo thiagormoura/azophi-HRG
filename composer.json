@@ -1,0 +1,14 @@
+{
+  "name:":"hrg/centralservicos",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "require": {
+    "firebase/php-jwt": "^5.4",
+    "phpmailer/phpmailer": "^6.0",
+    "mike42/escpos-php": "^3.0",
+    "robgridley/zebra": "^2.0"
+  }
+}

@@ -1,0 +1,13 @@
+<li class="list-group-item d-flex">
+    <div class="col-11 pt-2">
+        <label class="form-check-label" for="permissao-{{id}}">
+            {{descricao}}
+        </label>
+    </div>
+    <div class="col-1 pt-2 text-center">
+        <div class="custom-control custom-checkbox big-checkbox">
+            <input class="custom-control-input admin-permissao-check" type="checkbox" id="permissao-{{id}}" name="permissao[]" value="{{id}}" {{checked}}>
+            <label for="permissao-{{id}}" class="custom-control-label big-checkbox"></label>
+        </div>
+    </div>
+</li>

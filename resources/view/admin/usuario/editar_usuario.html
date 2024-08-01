@@ -1,0 +1,165 @@
+{{status}}
+<div
+  class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed accent-blue">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" style="margin-left: 0 !important;">
+    <!-- Content Header (Page header) -->
+    <div class="content-header mb-3">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">
+              <i class="fal fa-ballot mr-1"></i>
+              Usuários
+            </h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a class="text-light text-decoration-underline"
+                  href="{{URL}}/admin/usuario">Voltar</a></li>
+              <li class="breadcrumb-item active">Usuários</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+
+            <!-- Profile content -->
+            <div class="card card-primary card-outline">
+              <div class="card-body box-profile">
+                <div class="text-center">
+                  <img class="profile-user-img img-fluid img-circle" src="{{brincadeira}}"
+                    alt="User profile picture">
+                </div>
+                <h3 class="profile-username text-center">{{nome}} {{sobrenome}}</h3>
+                <p class="text-muted text-center cpf">{{cpf}}</p>
+                <ul class="list-group list-group-unbordered mb-3">
+                  <li class="list-group-item">
+                    <b>No sistema desde</b> <span class="float-right">{{data-criacao}}</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-9">
+            <div class="card">
+              <div class="card-header border-bottom-0 p-0">
+                <ul class="nav nav-tabs" id="tab-usuario" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#admin-usuario-informacoes" id="informacoes-tab"
+                      data-bs-toggle="pill" role="tab" aria-controls="admin-usuario-informacoes"
+                      aria-selected="true">Informações</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#admin-usuario-permissoes" id="permissoes-tab"
+                      data-bs-toggle="pill" role="tab" aria-controls="admin-usuario-permissoe"
+                      aria-selected="true">Permissões</a></li>
+                </ul>
+              </div><!-- /.card-header -->
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane show active" id="admin-usuario-informacoes" role="tabpanel"
+                    aria-labelledby="informacoes-tab">
+                    <form class="form-horizontal" method="POST"  action="{{URL}}/admin/usuario/{{id}}/edit">
+                      <div class="form-group row">
+                        <div class="col-12 col-md-6">
+                          <label for="inputNome" class="col-form-label">Nome</label>
+                          <div>
+                            <input type="text" class="form-control" id="inputNome" placeholder="Nome" name="nome"
+                              value="{{nome}}">
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="inputSobrenome" class="col-form-label">Sobrenome</label>
+                          <div>
+                            <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome"
+                              name="sobrenome" value="{{sobrenome}}">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-12 col-md-6">
+                          <label for="inputEmail" class="col-form-label">Email</label>
+                          <div>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email"
+                              value="{{email}}">
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="inputCpf" class="col-form-label">CPF</label>
+                          <div>
+                            <input type="text" class="form-control cpf" id="inputCpf" placeholder="Cpf" name="cpf"
+                              value="{{cpf}}">
+                          </div>
+                          <div class="form-check" style="padding-left: 1.5rem !important;">
+                            <input class="form-check-input" type="checkbox" value="true" name="isSetor" id="isSetor">
+                            <label class="form-check-label" for="isSetor">
+                              É setor?
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-12 col-md-6">
+                          <label for="inputMatricula" class="col-form-label">Matricula</label>
+                          <div>
+                            <input type="text" class="form-control" id="inputMatricula" placeholder="Matricula"
+                              name="matricula" value="{{matricula}}">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group mt-3 row">
+                        <div class="col-12 col-lg-12">
+                          <button type="button" class="btn btn-success w-100" id="admin-edit-usuario"><i class="fas fa-save"></i> Salvar
+                            alterações</button>
+                        </div>
+                        <div class="col-12 col-lg-6 mt-2">
+                          {{reset-senha}}
+                        </div>
+                        <div class="col-12 col-lg-{{isset-reset-senha}} mt-2">
+                          <button type="button" class="btn btn-{{status-color}} w-100 admin-edit-usuario-status" data-status="{{status-user}}"><i class="fas fa-user{{status-icon}}"></i> {{status-name-button}}</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.tab-pane -->
+                  <div class="tab-pane" role="tabpanel" aria-labelledby="permissoes-tab" id="admin-usuario-permissoes">
+                    <form method="POST" action="{{URL}}/admin/usuario/{{id}}/edit/permissao">
+                      <div class="col-12 ps-0">
+                        <label for="admin-usuario-perfil" class="col-form-label">Perfil:</label>
+                        <select name="perfil[]" id="admin-usuario-perfil" class="form-control">
+                          <option value="" selected disabled>Selecione um perfil</option>
+                          {{options-perfil}}
+                        </select>
+                      </div>
+                      <div class="col-12 mt-3 text-center mx-auto">
+                        <h2 class="text-between-line" style="border-bottom: 1px solid rgba(0,0,0,.125)!important"><span class="bg-white">ou defina as permissões para este usuário</span></h2>
+                      </div>
+                      {{permissoes}}
+                      <div class="form-group row mt-2">
+                        <div class="col-6">
+                          <button type="button" class="btn btn-success w-100" id="admin-edit-usuario-permissao">Salvar alterações</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.tab-pane -->
+                </div>
+                <!-- /.tab-content -->
+              </div><!-- /.card-body -->
+            </div>
+            <!-- /.nav-tabs-custom -->
+          </div>
+          <!-- /.col -->
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>

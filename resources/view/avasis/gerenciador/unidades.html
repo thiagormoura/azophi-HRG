@@ -1,0 +1,18 @@
+<div id="divPergunta"></div>
+<form onsubmit="event.preventDefault()" class="form-unidades">
+    <button type='button' name='submit' class='btn d-flex btn-primary btn-add-unidade ms-auto'
+        onclick='createUnidade'><span>Adicionar</span>
+        <div class='icon ml-2'><i class='fal fa-plus'></i></div>
+    </button>
+    <table id="table-unidades" class="table table-borderless" role="grid" aria-describedby="table_recursos">
+        <thead>
+            <tr role="row">
+                <th style="width: 2%;">Status</th>
+                <th class="w-100">Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{unidades}}
+        </tbody>
+    </table>
+</form>

@@ -1,0 +1,34 @@
+<div class="form-group row">
+    <div class="col-12">
+        <div class="custom-control custom-checkbox">
+            <input class="custom-control-input" type="checkbox" id="gleitos-caract-leitos" value="1">
+            <label for="gleitos-caract-leitos" class="custom-control-label">Ignorar caraterísticas do
+                leito</label>
+        </div>
+    </div>
+</div>
+<div class="form-group row">
+    <div class="col-6">
+        <div class="form-group row">
+            <div class="col-12">
+                <label for="gleitos-unidade-internacao" class="col-form-label pb-0">Unidades de
+                    internação</label>
+                <select name="leito" id="gleitos-unidade-internacao" class="form-control">
+                    <option value selected disabled>Selecione uma unidade para exibir os leitos</option>
+                    {{unidades-internacao}}
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group row">
+            <div class="col-12">
+                <label for="gleitos-leitos" class="col-form-label pb-0">Leitos
+                    disponíveis</label>
+                <select name="leito" id="gleitos-leitos" class="form-control">
+                    <option value selected disabled>Selecione um leito</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>

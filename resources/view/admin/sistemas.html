@@ -1,0 +1,120 @@
+{{status}}
+<div
+    class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed accent-blue">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="margin-left: 0 !important;">
+        <!-- Content Header (Page header) -->
+        <div class="content-header mb-3">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">
+                            <i class="fas fa-cogs"></i>
+                            Sistemas
+                        </h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a class="text-light text-decoration-underline"
+                                    href="{{URL}}/admin">Início</a></li>
+                            <li class="breadcrumb-item active">Sistemas</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <main class="card card-navy card-outline">
+                    <div class="card-body">
+                        <table id="table-admin" class="table table-usuario">
+                            <thead>
+                                <tr>
+                                    <th class="ps-2">#</th>
+                                    <th class="ps-2">Sistema</th>
+                                    <th class="ps-2">Descrição</th>
+                                    <th class="ps-2">Status</th>
+                                    <th class="ps-2" style="width: 5%;">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{sistemas}}
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-azul-medio2" data-bs-toggle="modal"
+                            data-bs-target="#admin-novo-sistema">Inserir novo sistema</button>
+
+                        <div class="modal fade" id="admin-novo-sistema" tabindex="-1"
+                            aria-labelledby="admin-nova-sistemaLabel" aria-hidden="true" data-bs-backdrop="static">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="admin-nova-sistemaLabel">Nova Permissão</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form onsubmit="return false;">
+                                            <div class="col-12 ps-0">
+                                                <label for="nome" class="col-form-label">Nome do Sistema:</label>
+                                                <input type="text" class="form-control" name="nome" id="nome"
+                                                    required />
+                                            </div>
+                                            <div class="col-12 ps-0">
+                                                <label for="descricao" class="col-form-label">Descricao:</label>
+                                                <textarea name="descricao" class="form-control" id="descricao" rows="3"
+                                                    required style="max-height: 8rem;"></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Fechar</button>
+                                        <button type="button" class="btn btn-success"
+                                            id="admin-create-sistema">Criar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="admin-edit-system" tabindex="-1"
+                            aria-labelledby="admin-editar-systemLabel" aria-hidden="true" data-bs-backdrop="static">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="admin-editar-systemLabel">Editar Sistema</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form onsubmit="return false;">
+                                            <div class="col-12 ps-0">
+                                                <label for="nome-edit" class="col-form-label">Nome do Sistema:</label>
+                                                <input type="text" class="form-control" id="nome-edit" name="nome-edit" />
+                                            </div>
+                                            <div class="col-12 ps-0">
+                                                <label for="descricao-edit" class="col-form-label">Descricao:</label>
+                                                <textarea class="form-control" name="descricao-edit" id="descricao-edit"
+                                                    rows="3" required style="max-height: 8rem;"></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Fechar</button>
+                                        <button type="button" class="btn btn-success" id="admin-editar-system"
+                                            data-id="">Salvar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </section>
+    </div>
+    <!-- /.content -->
+</div>

@@ -1,0 +1,25 @@
+    <div id="divPergunta"></div>
+    <section class="content">
+        <div class="container-fluid">
+            <form onsubmit="event.preventDefault()" class="col-md-6 form-perguntas mt-2 mx-auto">
+                <div class="col-sm-12">
+                    <table id="table-perguntas" class="table table-borderless" role="grid" aria-describedby="table_recursos">
+                        <thead>
+                            <tr role="row">
+                                <th style="width: 10%;">Status</th>
+                                <th>Nome</th>
+                                <th>Categoria</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{perguntas}}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="form-group">
+                    <!-- <button type="submit" name="submit" class="btn btn-success btn-submit">Salvar</button> -->
+                    <button type="button" name="submit" class="btn btn-primary btn-add">Adicionar</button>
+                </div>
+            </form>
+        </div><!-- /.container-fluid -->
+    </section>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{URL}}/resources/css/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="{{URL}}/resources/css/fontawesome-free/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- Flatpickr -->
+    <link rel="stylesheet" href="{{URL}}/resources/css/flatpickr/css/flatpickr.min.css">
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="{{URL}}/resources/css/sweetalert2/sweetalert2.css">
+    <!-- Selectize -->
+    <link rel="stylesheet" href="{{URL}}/resources/css/selectize/css/selectize.bootstrap4.css">
+    <!-- Datatables  -->
+    <link rel="stylesheet" href="{{URL}}/resources/css/datatables/css/jquery.dataTables.min.css">
+    <!-- Utils  -->
+    <link rel="stylesheet" href="{{URL}}/resources/css/utils/utils.css">
+    <!-- Navbar central de serviÃ§os -->
+    <link rel="stylesheet" href="{{URL}}/resources/css/layout/layout.css">
+    <link rel="stylesheet" href="{{URL}}/resources/css/adminlte/adminlte.min.css">
+    <link rel="stylesheet" href="{{URL}}/resources/css/customs/sisnot/main.css">
+    <!-- daterangepicker -->
+    <link rel="stylesheet" href="{{URL}}/resources/css/daterangepicker/daterangepicker.css">
+    <!-- Customs -->
+    {{links-css}}
+    <title>{{title}}</title>
+
+    <style>
+        #menuNavBar li{
+            list-style: none;
+        }
+        #menuNavBar {
+            display: flex;
+        }
+        .wrapper > nav{
+            display: flex;
+            justify-content: space-between !important;
+            background-color: white;
+            border-bottom: 4px solid #03a34e;
+        }
+
+        .wrapper > nav .navbar-nav i, .wrapper > nav .navbar-nav a p{
+            color: black;
+        }
+    </style>
+
+</head>
+
+
+<body id='body'
+    class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed accent-blue">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-blue navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                </li>
+            </ul>
+
+            <div id="menuNavBar">
+                {{menu}}
+            </div>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="{{URL}}/logout" class="nav-link">
+                        <p><b>Sair</b></p>
+                    </a>
+                </li>
+                <!-- Messages Dropdown Menu -->
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-light-blue elevation-4">
+            <!-- Brand Logo -->
+            <a href="#" class="brand-link">
+                <img src="{{URL}}/resources/img/Logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                    style="opacity: .8">
+                <span class="brand-text">Central de Serviços</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar" style="border-top: 4px solid #03a34e;padding-top: 0px;">
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <li class="nav-item">
+                            <a id="btCentralVagas" href="{{URL}}/ouvimed" class="nav-link {{active-home}}">
+                                <i class="nav-icon fas fa-home"></i>
+                                <p>Home</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{URL}}/ouvimed/criar" class="nav-link {{active-new-manifestacao}}">
+                                <i class="nav-icon fas fa-file"></i>
+                                <p>
+                                    {{active-name}} Manifestação
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{URL}}/ouvimed/dashboard" class="nav-link {{active-indicadores}}">
+                                <i class="nav-icon fas fa-chart-bar"></i>
+                                <p>
+                                    Indicadores
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6 py-1">
+                            <h1 class="m-0"><i class="fas fa-headset"></i> {{title-nav}}</h1>
+                        </div>
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <section class="content mt-4">
+                {{content}}
+            </section>
+
+        </div>
+    </div>
+    <!-- {{header}} -->
+
+    <div class="position-fixed top-0 start-50 translate-middle-x p-3 fw-bold d-none" style="z-index: 9999999">
+        <div id="errorToastMain" class="toast align-items-center text-white border-0" role="alert" aria-live="assertive"
+            aria-atomic="true" data-bs-delay="3000">
+            <div class="d-flex">
+                <div class="toast-body" id="toast-message">
+                    {{mensagem}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="position-fixed bottom-0 end-0 p-3 invisible" style="z-index: 9999999">
+        <div id="notification-toast" class="toast align-items-center text-dark bg-white" role="alert"
+            aria-live="assertive" aria-atomic="true" data-bs-delay="3000">
+            <div class="toast-header bg-light">
+                <img src="{{URL}}/resources/img/central-servicos.png" width="100px" class="rounded me-2 me-auto"
+                    alt="...">
+                <small id="notification-sistema"></small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="notification-body">
+            </div>
+        </div>
+    </div>
+    <div class="loader-div">
+        <div class="loader mb-0"></div>
+        <h1 class="text-center mt-4">Carregando...</h1>
+    </div>
+    {{footer}}
+</body>
+<!-- Scripts Js -->
+<script> const _URL = '{{URL}}'; </script>
+<!-- Jquery -->
+<script src="{{URL}}/resources/js/jquery/jquery.min.js"></script>
+<!-- Jquery Mask -->
+<script src="{{URL}}/resources/js/jquery-mask/jquery.mask.min.js"></script>
+<!-- Bootstrap -->
+<script src="{{URL}}/resources/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Script layout -->
+<script src="{{URL}}/resources/js/layout/layout.js"></script>
+<!-- Script AdminLTE -->
+<script src="{{URL}}/resources/js/adminlte/adminlte.min.js"></script>
+<!-- SweetAlert2 -->
+<script src="{{URL}}/resources/js/sweetalert2/sweetalert2.js"></script>
+<!-- JQuery Validation -->
+<script src="{{URL}}/resources/js/jquery-validation/jquery.validate.min.js"></script>
+<script src="{{URL}}/resources/js/jquery-validation/additional-methods.min.js"></script>
+<!-- Utils -->
+<script src="{{URL}}/resources/js/customs/utils.js"></script>
+<!-- Flatpickr -->
+<script src="{{URL}}/resources/js/flatpickr/flatpickr.min.js"></script>
+<script src="{{URL}}/resources/js/flatpickr/rangePlugin.min.js"></script>
+<!-- Selectize -->
+<script src="{{URL}}/resources/js/selectize/js/standalone/selectize.min.js"></script>
+<!-- Datatables -->
+<script src="{{URL}}/resources/js/datatables/js/jquery.dataTables.min.js"></script>
+<!-- Canvas Js -->
+<script src="{{URL}}/resources/js/canvasjs/canvasjs.min.js"></script>
+<!-- Customs JS -->
+<script src="{{URL}}/resources/js/customs/sisnot/script.js"></script>
+<!-- moment js -->
+<script src="{{URL}}/resources/js/daterangepicker/moment.min.js"></script>
+<!-- daterangerpicker -->
+<script src="{{URL}}/resources/js/daterangepicker/daterangepicker.js"></script>
+
+<script src="https://unpkg.com/pdf-lib@1.4.0/dist/pdf-lib.min.js"></script>
+<script src="https://unpkg.com/downloadjs@1.4.7"></script>
+
+{{scripts}}
+
+</html>

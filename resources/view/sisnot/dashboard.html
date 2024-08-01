@@ -1,0 +1,60 @@
+<div
+  class="hold-transition sidebar-mini sidebar-collapse layout-footer-fixed layout-navbar-fixed layout-fixed accent-blue">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" style="margin-left: 0 !important;">
+    <!-- Content Header (Page header) -->
+    <div class="content-header mb-3">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">
+              <i class="far fa-chart-line"></i>
+              Dashboard
+            </h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a class="text-light text-decoration-underline"
+                  href="{{URL}}/sisnot/home">Início</a></li>
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <section class="my-1">
+          <div class="row my-2 mx-0 col-10 mx-auto justify-content-center">
+            <div class="col-md-5 col-lg-5 col-xl-5 col-sm-12 col-12 text-center">
+              <label for="dashboard-sisnot">Selecione as datas desejadas</label>
+              <div class="input-group">
+                <input type="text" id="startDateSisNot-dash" placeholder="Selecione a data inicial"
+                  class="form-control text-center cursor-pointer col-md-12 bg-white" autocomplete="off" required
+                  value="" />
+                <input type="text" id="endDateSisNot-dash" placeholder="Selecione a data final"
+                  class="form-control text-center cursor-pointer col-md-12 bg-white" autocomplete="off" required>
+              </div>
+            </div>
+            <div class="col-md-5 col-lg-5 col-xl-5 col-sm-12 col-12 text-left">
+              <div class="d-flex justify-content-between">
+                <label for="select-incidente-dashboard" class="ps-0">Incidentes</label>
+              </div>
+              <select id="select-incidente-dashboard" data-placeholder="Selecione os Incidentes">
+                {{options}}
+              </select>
+            </div>
+            <div class="col-md-10 col-lg-10 col-xl-10 col-sm-12 col-12 mx-auto text-left mt-1">
+              <button class="btn btn-dark w-100" id="search-calendar-sisnot"><i class="far fa-search"></i> Buscar</button>
+            </div>
+          </div>
+        </section>
+        <section class="my-0" id="container-sisnot-dashboard">
+        </section>
+      </div>
+    </section>
+  </div>
+</div><!-- /.container-fluid -->

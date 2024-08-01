@@ -1,0 +1,74 @@
+<div class="modal fade" id="modalDesc" tabindex="-1" role="dialog" aria-labelledby="modalDescLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title fw-bold" id="modalDescLabel">Descrição</h3>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="fw-bold">Paciente</h4>
+                        <hr>
+                        <div class="row justify-content-around">
+                            <div class="col-4">
+                                <p> <span class="fw-bold">Paciente:</span> {{nome}}</p>
+                                <p><span class="fw-bold">Origem:</span> {{origem}}</p>
+                            </div>
+                            <div class="col-4">
+                                <p> <span class="fw-bold">Registro:</span> {{registro}}</p>
+                                <p> <span class="fw-bold">Idade:</span> {{idade}}</p>
+                            </div>
+                            <div class="col-4">
+                                <p> <span class="fw-bold">Sexo:</span> {{sexo}}</p>
+                                <p> <span class="fw-bold">Convênio:</span> {{convenio}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="fw-bold">Solicitação</h4>
+                        <hr>
+                        <div class="d-flex justify-content-sm-around">
+                            <div class="col-3 mx-sm-5 mx-lg-0">
+                                <p><span class="fw-bold">Prioridade:</span> {{prioridade}}</p>
+                                <p><span class="fw-bold">Perfil do paciente:</span> {{perfil}}</p>
+                                <p><span class="fw-bold">Covid:</span> {{is-covid}}</p>
+                                <p><span class="fw-bold">Acomodação solicitada:</span> {{acomodacao-solicitada}}</p>
+                            </div>
+                            <div class="col-3 mx-sm-5 mx-lg-0">
+                                <p><span class="fw-bold">Pediatrico?</span> {{is-pediatrico}}</p>
+                                <p><span class="fw-bold">Isolamento:</span> {{isolamento}}</p>
+                                <p><span class="fw-bold">Motivo da Solicitação:</span> {{motivo-solicitacao}}</p>
+                                <p><span class="fw-bold">Data/Hora Admissão:</span> {{dthr-admissao}} </p>
+                            </div>
+                            <div class="col-3 mx-sm-5 mx-lg-0">
+                                <p><span class="fw-bold">Médico Assistente:</span> {{medico-assistente}}</p>
+                                <p><span class="fw-bold">Unidade / Setor Solicitante:</span> {{unidade-solicitante}}</p>
+                                <p><span class="fw-bold">Data de Solicitação:</span> {{dthr-criacao-solicitacao}}</p>
+                                <p><span class="fw-bold">Data do Atendimento:</span> {{dthr-atendimento}}</p> 
+                            </div>
+                            <div class="col-3 mx-sm-5 mx-lg-0">
+                                <p><span class="fw-bold">Data da Liberação:</span> {{dthr-liberacao}} </p>
+                                <p><span class="fw-bold">Unidade{{status-type}}:</span> {{nome-unidade}} </p>
+                                <p><span class="fw-bold">Leito{{status-type}}:</span> {{nome-leito}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-block btn-visualize" data-id="{{id-solicitacao}}">Visualizar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $('#modalDesc').on('hidden.bs.modal', function (e) {
+        $("#modalDesc").remove();
+    });
+    $(".btn-visualize").click(function(e){
+        location.href = _URL+"/gestaoleitos/solicitacao/"+$(this).data("id");
+    });
+</script>

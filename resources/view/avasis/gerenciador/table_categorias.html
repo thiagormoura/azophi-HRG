@@ -1,0 +1,20 @@
+<tr>
+    <td class="px-0 py-1">
+        <div class="custom-control custom-switch text-center">
+            <input type="checkbox" class="custom-control-input change-status-categoria" id="customSwitchCategoria{{id}}"
+                {{status_check}}>
+            <label class="custom-control-label font-weight-normal" for="customSwitchCategoria{{id}}"></label>
+        </div>
+    </td>
+    <td class="px-0 py-1">
+        <div class="input-group">
+            <input type="hidden" name="categoria-id[]" value="{{id}}" class="form-control" data-status="{{status}}"
+                disabled />
+            <input type="text" name="categoria-nome[]" value="{{nome}}"
+                class="form-control border-right-0 rounded-0 rounded-left" data-status="{{status}}" disabled />
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary bg-danger btn-cancel-categoria border-0" type="button"><i
+                        class="fas fa-lock"></i></button>
+            </div>
+        </div>
+    </td>

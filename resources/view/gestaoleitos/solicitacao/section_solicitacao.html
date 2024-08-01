@@ -1,0 +1,149 @@
+<div class="col-md-8 col-12">
+    <div class="card">
+        <div class="card-header bg-navy">
+            <h3 class="card-title d-flex align-items-center">
+                <span class="badge bg-{{status-color}} me-2 p-2">{{status}}</span><b>Solicitação {{id}}</b>
+            </h3>
+        </div>
+        <div class="card-body">
+            <fieldset class="form-group row" {{solicitacao-disabled}}>
+                <div class="col-md-5 col-12">
+                    <div>
+                        <label class="col-form-label pb-0">Perfil do paciente</label>
+
+                        <div class="row">
+                            {{perfis}}
+                            <div class="col offset-12"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="col-form-label pb-0">COVID</label>
+
+                        <div class="row">
+                            {{covid}}
+                            <div class="col offset-12"></div>
+                            <div id="gleitos-covid-container" class="col-12 d-none">
+                                <div>
+                                    <label for="gleitos-covid-observacao" class="col-form-label pb-0">Observações
+                                        COVID</label>
+                                    <textarea class="form-control" id="gleitos-covid-observacao"
+                                        rows="3">{{covid-observacao}}</textarea>
+                                </div>
+                                <label class="col-form-label pb-0">Suspeito de COVID?</label>
+                                <div class="row">
+                                    {{covid-suspeito}}
+                                    <div class="col offset-12"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-12">
+                    <div>
+                        <label class="col-form-label pb-0">Data/Hora da admissão
+                        </label>
+
+                        <div class="row">
+                            <div class="col">
+                                <input id="date-admissao" class="form-control" type="date" max="2030-12-31"
+                                    value="{{data-admissao}}">
+                            </div>
+                            <div class="col">
+                                <input id="time-admissao" class="form-control" type="time" min="00:00 " max="23:59"
+                                    value="{{hora-admissao}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="col-form-label pb-0">Pediátrico?</label>
+                        <div class="row">
+                            {{pediatrico}}
+                            <div class="col offset-12"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="gleitos-prioridade" class="col-form-label pb-0">Prioridade</label>
+                        <div class="row align-items-end">
+                            <div class="col d-flex align-items-center">
+                                <input type="range" class="custom-range custom-range-navy w-75" id="gleitos-prioridade"
+                                    name="prioridade" step="'1" min="1" max="5" value="{{prioridade}}">
+                                <span class="ms-2">{{prioridade-label}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <fieldset class="col-12" {{solicitacao-disabled}}>
+                <div class="form-group row">
+                    <div class="col-8">
+                        <label class="col-form-label pb-0">Acomodação solicitada</label>
+
+                        <div class="row">
+                            {{acomodacao-solicitada}}
+                            <div class="col offset-12"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <label class="col-form-label pb-0">Isolamento</label>
+
+                        <div class="row">
+                            {{isolamento}}
+                            <div class="col offset-12"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-12">
+                        <label for="gleitos-motivo-solicitacao" class="col-form-label pb-0">Motivo da
+                            Solicitação</label>
+                        {{motivo-solicitacao}}
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-12">
+                        <label for="gleitos-setor-solicitante" class="col-form-label pb-0">Unidade/Setor
+                            Solicitante</label>
+                        {{unidades-solicitantes}}
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-12">
+                        <label for="gleitos-medico-assistente" class="col-form-label pb-0">Médico Assistente</label>
+                        <div>
+                            <input type="text" class="form-control" id="gleitos-medico-assistente"
+                                name="medico-assistente" value="{{medico-assistente}}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-12">
+                        <label for="gleitos-diagnostico-internacao" class="col-form-label pb-0">Diagnostico da
+                            internação</label>
+                        <textarea class="form-control" id="gleitos-diagnostico-internacao"
+                            {{diagnostico-internacao-disabled}} rows="3">{{diagnostico-internacao}}</textarea>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-12">
+                        <label for="gleitos-informacoes-relevantes" class="col-form-label pb-0">Informações
+                            Relevantes
+                        </label>
+                        <textarea class="form-control" id="gleitos-informacoes-relevantes"
+                            rows="3">{{informacoes-relevantes}}</textarea>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div class="card" id="buttons">{{botoes-adicionais}}</div>
+</div>
