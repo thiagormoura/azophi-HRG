@@ -2,7 +2,7 @@
 
 use \App\Http\Response;
 use \App\Controller\Check_Exame;
-use \ShowPDF;
+// use \ShowPDF;
 
 $router->get('/check_exame', [
     'middlewares' => [

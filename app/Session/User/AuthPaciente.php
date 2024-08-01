@@ -45,8 +45,7 @@ class AuthPaciente
   public static function isLogged()
   {
     self::init();
-
-    return $_SESSION['paciente']['token'];
+    return isset($_SESSION['paciente']['token']) ? $_SESSION['paciente']['token'] : false;
   }
   // Método responsável por executar o logout do usuário;
   public static function logout()

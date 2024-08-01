@@ -23,10 +23,11 @@ class Auth
   }
   // Método responsável por verificar se o usuário está logado
   public static function isLogged()
-  {
+{
     self::init();
-    return $_SESSION['usuario']['token'];
-  }
+    return isset($_SESSION['usuario']['token']) ? $_SESSION['usuario']['token'] : false;
+}
+
   // Método responsável por executar o logout do usuário;
   public static function logout()
   {
@@ -52,12 +53,15 @@ class Auth
   }
   public static function sessionGestao($user = null, $permissao = null)
   {
-    self::init();
-    unset($user->senha);
-    $_SESSION['gestaodeleitos']['user'] = (array) $user;
-    $_SESSION['gestaodeleitos']['user']['perms'] = (array) $permissao;
-    return isset($_SESSION['user']) ? $_SESSION['user'] : false;
+      self::init();
+      if (is_object($user) && isset($user->senha)) {
+          unset($user->senha);
+      }
+      $_SESSION['gestaodeleitos']['user'] = (array) $user;
+      $_SESSION['gestaodeleitos']['user']['perms'] = (array) $permissao;
+      return isset($_SESSION['user']) ? $_SESSION['user'] : false;
   }
+  
   public static function dropSessionGestao()
   {
     self::init();

@@ -435,6 +435,32 @@ class Layout
     ]
   ];
 
+   // Método responsável por retornar os sistemas do painel
+   public static function getSystems()
+   {
+     $systems = self::$systems;
+     return $systems;
+   }
+
+    // Método responsável por retornar os módulos do painel com base nas permissões do usuário
+    private static function getUserPermissions()
+    {
+      // Suponha que a função `SessionUserLogin::getSession` retorne as permissões do usuário como uma matriz
+      return SessionUserLogin::getSession();
+    }
+  
+    // Método responsável por verificar as permissões do usuário
+    private static function checkPermissions($requiredPermissions, $userPermissions)
+    {
+      foreach ($requiredPermissions as $permission) {
+        if (in_array($permission, $userPermissions)) {
+          return true;
+        }
+      }
+      return false;
+    }
+  
+
   protected static function getSystemBox($user_permissoes)
   {
     $menuBox = '';
@@ -615,95 +641,101 @@ class Layout
 
   private static function getScriptsAndLinks(string $currentModule)
   {
-    $systems = self::$systems;
-    $user = self::getLoggedUser();
-    $permissions = $user->permissoes;
-    $scriptFolder = '';
-
-    // Percorre todas as categorias de sistemas
-    foreach ($systems as $options) {
-
-      // Verifica se já foi encontrado a pasta do script do sistema atual
-      if (!empty($scriptFolder))
-        break;
-      //Percorre todos os sistemas da categoria atual
-      foreach ($options['modules'] as $index => $module) {
-        // Verifica se o usuário possui acesso a esse sistema
-        if (!array_intersect($module['permission'], $permissions ?? []))
-          continue;
-        // Verifica se o modulo atual possui submodulos
-        if (isset($module['sub-modules'])) {
-          $active = false;
-          // Percorre os submodulos do modulo atual
-          foreach ($module['sub-modules'] as $subModule) {
-            if (!array_intersect($subModule['permission'], $permissions ?? []))
-              continue;
-            //Verifica se o link do submodulo é igual ao link atual,
-            // caso não pula para o próximo submodulo
-
-            // if ($currentModule !== $subModule['link'])
-            //   continue;
-            if (!str_contains($subModule['link'], $currentModule))
-              continue;
-
-            // Caso seja, define que o submodulo está ativo
-            $active = true;
-            break;
+      $systems = self::$systems;
+      $user = self::getLoggedUser();
+  
+      // Verifica se o usuário foi obtido e se tem permissões
+      if (!$user || !isset($user->permissoes)) {
+          // Caso não haja usuário logado ou sem permissões, retorne falso ou lide com isso de outra forma
+          return false;
+      }
+  
+      $permissions = $user->permissoes;
+      $scriptFolder = '';
+  
+      // Percorre todas as categorias de sistemas
+      foreach ($systems as $options) {
+  
+          if (!empty($scriptFolder)) {
+              break;
           }
-          // Caso o submodulo não esteja ativo, pula para o próximo modulo
-          if ($active === false)
-            continue;
-          // Caso esteja ativo, definimos a pasta do script
-          // como o index do modulo
-          $scriptFolder = $index;
-          break;
-        }
-
-        // Verifica se o link do modulo é igual ao modulo atual
-        // caso não seja, pula para o próximo modulo
-
-        if (!str_contains($module['link'], $currentModule))
-          continue;
-        // Caso seja, define a pasta do script como o index do modulo
-        $scriptFolder = $index;
-        break;
+  
+          foreach ($options['modules'] as $index => $module) {
+  
+              if (!array_intersect($module['permission'], $permissions)) {
+                  continue;
+              }
+  
+              if (isset($module['sub-modules'])) {
+                  $active = false;
+  
+                  foreach ($module['sub-modules'] as $subModule) {
+  
+                      if (!array_intersect($subModule['permission'], $permissions)) {
+                          continue;
+                      }
+  
+                      if (!str_contains($subModule['link'], $currentModule)) {
+                          continue;
+                      }
+  
+                      $active = true;
+                      break;
+                  }
+  
+                  if ($active === false) {
+                      continue;
+                  }
+  
+                  $scriptFolder = $index;
+                  break;
+              }
+  
+              if (!str_contains($module['link'], $currentModule)) {
+                  continue;
+              }
+  
+              $scriptFolder = $index;
+              break;
+          }
       }
-    }
-
-    if ($scriptFolder === '')
-      return false;
-
-    $path_script = __DIR__ . '/../../../resources/js/customs/' . $scriptFolder;
-    $path_link = __DIR__ . '/../../../resources/css/customs/' . $scriptFolder;
-    $files_script = scandir($path_script);
-    $files_link = scandir($path_link);
-
-    $scripts = '';
-    $links = '';
-
-    if ($files_script) {
-      for ($i = 2; $i < count($files_script); $i++) {
-        $scripts .= View::render('layout/centralservicos/script', [
-          'folder' => $scriptFolder,
-          'script' => $files_script[$i]
-        ]);
+  
+      if ($scriptFolder === '') {
+          return false;
       }
-    }
-
-    if ($files_link) {
-      for ($i = 2; $i < count($files_link); $i++) {
-        $links .= View::render('layout/centralservicos/link', [
-          'folder' => $scriptFolder,
-          'script' => $files_link[$i]
-        ]);
+  
+      $path_script = __DIR__ . '/../../../resources/js/customs/' . $scriptFolder;
+      $path_link = __DIR__ . '/../../../resources/css/customs/' . $scriptFolder;
+      $files_script = scandir($path_script);
+      $files_link = scandir($path_link);
+  
+      $scripts = '';
+      $links = '';
+  
+      if ($files_script) {
+          for ($i = 2; $i < count($files_script); $i++) {
+              $scripts .= View::render('layout/centralservicos/script', [
+                  'folder' => $scriptFolder,
+                  'script' => $files_script[$i]
+              ]);
+          }
       }
-    }
-
-    return [
-      "scripts" => $scripts,
-      "links" => $links
-    ];
+  
+      if ($files_link) {
+          for ($i = 2; $i < count($files_link); $i++) {
+              $links .= View::render('layout/centralservicos/link', [
+                  'folder' => $scriptFolder,
+                  'script' => $files_link[$i]
+              ]);
+          }
+      }
+  
+      return [
+          "scripts" => $scripts,
+          "links" => $links 
+      ];
   }
+  
 
   private static function getCurrentModule(Request $request)
   {
@@ -727,84 +759,93 @@ class Layout
   }
 
   public static function getPage(String $title, String $currentModule, String $content, Request $request = null, $isDefault=false)
-  {
+{
     $currentModule = is_null($request) ? "" : self::getCurrentModule($request);
     $currentLink = is_null($request) ? "" : $request->getRouter()->getCurrentUrl();
 
     if (!empty($currentLink) && $currentModule == 'gestaoleitos') {
-      $link_exploded = explode("/", $currentLink);
-      $element = array_pop($link_exploded);
-      if (is_numeric($element))
-        $currentLink = implode("/", $link_exploded);
-
-      $currentLink = str_replace("editarSolicitacao", 'solicitacao', $currentLink);
+        $link_exploded = explode("/", $currentLink);
+        $element = array_pop($link_exploded);
+        if (is_numeric($element)) {
+            $currentLink = implode("/", $link_exploded);
+        }
+        $currentLink = str_replace("editarSolicitacao", 'solicitacao', $currentLink);
     }
 
     $scriptsAndLinks = self::getScriptsAndLinks($currentModule);
-    
+
+    // Verifique se o retorno é um array
+    if (!is_array($scriptsAndLinks)) {
+        $scriptsAndLinks = ['scripts' => '', 'links' => ''];
+    }
+
+    // Verifica se $request não é nulo e se $request->user não é nulo antes de acessar $request->user->permissoes
+    $userPermissoes = (isset($request) && isset($request->user) && isset($request->user->permissoes)) ? $request->user->permissoes : [];
+
     $options = [
-      'title' => $title,
-      'header' => self::getHeader($request),
-      'content' => $content,
-      'footer' => self::getFooter(),
-      'menu' => self::getMenu($currentModule, $request->user->permissoes),
-      'scripts' => $scriptsAndLinks['scripts'],
-      'links-css' => $scriptsAndLinks['links']
+        'title' => $title,
+        'header' => self::getHeader($request),
+        'content' => $content,
+        'footer' => self::getFooter(),
+        'menu' => self::getMenu($currentModule, $userPermissoes),
+        'scripts' => $scriptsAndLinks['scripts'],
+        'links-css' => $scriptsAndLinks['links']
     ];
 
-    if($currentModule == 'ouvimed'){
-      $pageContent = 'ouviMed';
-      $options['title-nav'] = explode("/", $title)[1];
-      $options['title'] = explode("/", $title)[0];
+    if ($currentModule == 'ouvimed') {
+        $pageContent = 'ouviMed';
+        $options['title-nav'] = explode("/", $title)[1];
+        $options['title'] = explode("/", $title)[0];
 
-      $subModule = trim(strtolower(explode("-", $options['title-nav'])[1]));
-      if($subModule == 'home') {
-        $options['active-home'] = 'active disabled';
-        $options['active-name'] = 'Registrar';
-      }
-      elseif($subModule == 'registrar manifestação') {
-        $options['active-new-manifestacao'] = 'active disabled';
-        $options['active-name'] = 'Registrar';
-      }
-      elseif(explode(' ', $subModule)[0] == 'manifestação'){
-        $options['active-new-manifestacao'] = 'active disabled';
-        $options['active-name'] = 'Visualizar';
-      }
-      elseif(str_contains(trim($subModule), 'editar manifestação')){
-        $options['active-new-manifestacao'] = 'active disabled';
-        $options['active-name'] = 'Editar';
-      }
-      elseif(str_contains(trim($subModule), 'atualizar')){
-        $options['active-new-manifestacao'] = 'active disabled';
-        $options['active-name'] = 'Atualizar';
-      }
-      elseif($subModule == 'dashboard') {
-        $options['active-indicadores'] = 'active disabled';
-        $options['active-name'] = 'Registrar';
-      }
+        $subModule = trim(strtolower(explode("-", $options['title-nav'])[1]));
+        if ($subModule == 'home') {
+            $options['active-home'] = 'active disabled';
+            $options['active-name'] = 'Registrar';
+        } elseif ($subModule == 'registrar manifestação') {
+            $options['active-new-manifestacao'] = 'active disabled';
+            $options['active-name'] = 'Registrar';
+        } elseif (explode(' ', $subModule)[0] == 'manifestação') {
+            $options['active-new-manifestacao'] = 'active disabled';
+            $options['active-name'] = 'Visualizar';
+        } elseif (str_contains(trim($subModule), 'editar manifestação')) {
+            $options['active-new-manifestacao'] = 'active disabled';
+            $options['active-name'] = 'Editar';
+        } elseif (str_contains(trim($subModule), 'atualizar')) {
+            $options['active-new-manifestacao'] = 'active disabled';
+            $options['active-name'] = 'Atualizar';
+        } elseif ($subModule == 'dashboard') {
+            $options['active-indicadores'] = 'active disabled';
+            $options['active-name'] = 'Registrar';
+        }
+    } elseif ($currentModule == 'avasis' && $isDefault) {
+        $pageContent = "avasisPaciente";
+    } elseif ($isDefault) {
+        $pageContent = "defaultPage";
+    } else {
+        $pageContent = 'page';
     }
-    elseif($currentModule == 'avasis' && $isDefault){
-      $pageContent = "avasisPaciente";
+
+    return View::render('layout/centralservicos/' . $pageContent, $options);
+}
+
+
+public static function getUserInfos($request) {
+    // Verifica se $request não é nulo e se $request->user não é nulo antes de acessar propriedades
+    if (is_null($request) || !isset($request->user)) {
+        // Trate o erro de forma adequada, e.g., retornar uma mensagem de erro ou redirecionar
+        return 'Informações do usuário não estão disponíveis.';
     }
-    elseif($isDefault) $pageContent = "defaultPage";
-    else $pageContent = 'page';
-
-    return View::render('layout/centralservicos/'.($pageContent), $options);
-  }
-
-  public static function getUserInfos($request){
 
     $fortalezaTimeZone = new \DateTimeZone(CURRENT_TIMEZONE);
     $dataCriacao = new \DateTime($request->user->data_criacao, $fortalezaTimeZone);
 
-    $content = View::render('layout/centralservicos/user_info',
-    [
-      "usuario" => $request->user->nome . ' ' . $request->user->sobrenome,
-      "email" => $request->user->email,
-      "cpf" => self::formatCnpjCpf($request->user->cpf),
-      "date-registered" => $dataCriacao->format('d/m/Y H:i')
-
+    $content = View::render('layout/centralservicos/user_info', [
+        "usuario" => $request->user->nome . ' ' . $request->user->sobrenome,
+        "email" => $request->user->email,
+        "cpf" => self::formatCnpjCpf($request->user->cpf),
+        "date-registered" => $dataCriacao->format('d/m/Y H:i')
     ]);
+
     return self::getPage('Usuário', 'check_os', $content, $request);
-  }
+}
 }
